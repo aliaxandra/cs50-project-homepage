@@ -5,7 +5,8 @@ document.querySelector("#about").onclick = function () {
 
 // Status change
 let statusResult = document.querySelector('#statusResult');
-var statusNew = document.querySelector('#statusNew');
+let statusNew = document.querySelector('#statusNew');
+let statusSubmit = document.querySelector('#statusSubmit');
 
 if (!localStorage.getItem('statusNew')) {
     populateStorage();
@@ -27,25 +28,7 @@ function setStatus()
     statusResult.innerHTML = currentStatus;
 }
 
-statusNew.onchange = populateStorage;
-
-
-// let statusResult = document.querySelector('#statusResult');
-
-// function editStatus() {
-    
-//     if (typeof (Storage) !== "undefined") {
-        
-//         var statusNew = document.querySelector('#statusNew').value;
-//         localStorage.setItem("statusKey", statusNew);
-//         document.querySelector('#statusResult').innerHTML = localStorage.getItem("statusKey");
-
-//     } else {
-
-//         statusResult.innerHTML = "Sorry, your browser does not support web storage..."
-//     }
-    
-// }
+statusSubmit.onclick = populateStorage;
 
 // Today date
 let today = new Date();
