@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!-- Head -->
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Like nobody's watching - Dashboard</title>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <span id="about">About</span>
+        <a href="projects.html">Projects</a>
+        <a href="learning.html">Learning</a>
+        <a href="sport.html">Sport</a>
+        <a href="drawings.html">Drawings</a>
+        <a href="friends.html">Friends</a>
+        <a href="health.html">Health</a>
+    </nav>
+
+
+    <!-- Header -->
+    <header>
+        <h1>Sasha's Dashboard</h1>
+        <figure>
+            <img src="img/200x150@2x.png" alt="Sample Image 200x150px@2x" height="150" width="200">
+        </figure>
+    </header>
+
+
+    <!-- Main -->
+    <main>
+
+        <!-- Status Article -->
+        <article>
+
+            <!-- Time -->
+            <section>
+                <div id="today"></div>
+            </section>
+
+            <!-- Status -->
+            <section>
+                <header>
+                    <h2>Status</h2>
+                </header>
+                <div>
+                    <p id="statusResult"></p>
+                </div>
+                <form onsubmit="editStatus(); return false;">
+                    <input type="text" id="statusNew">
+                    <input type="submit">
+                </form>
+            </section>
+
+            <!-- Current Goal -->
+            <section>
+                <header>
+                    <h2>Current goal</h2>
+                </header>
+                <div>
+                    <p>Finish CS50 Harvard program</p>
+                </div>
+            </section>
+
+        </article>
+
+
+        <!-- Content Article -->
+        <article>
+            
+            <section>
+                <figure>
+                    <img src="img/110x150@2x.png" alt="Sample image for book cover" width="110" height="150">
+                    <figcaption>Recent book title</figcaption>
+                </figure>
+            </section>
+
+            <section>
+                <figure>
+                    <img src="img/110x150@2x.png" alt="Sample image for movie cover" width="110" height="150">
+                    <figcaption>Recent movie title</figcaption>
+                </figure>
+            </section>
+
+            <section>
+                <figure>
+                    <img src="img/150x110@2x.png" alt="Sample of photo" width="150" height="110">
+                    <figcaption>Recent photo taken</figcaption>
+                </figure>
+            </section>
+            
+            <section>
+                <figure>
+                    <img src="img/150x110@2x.png" alt="Sample of drawing" width="150" height="110">
+                    <figcaption>Recent drawing</figcaption>
+                </figure>
+            </section>
+
+        </article>
+
+
+        <!-- Don't Forget Article -->
+        <article>
+
+            <header>
+                <h2>Don't forget</h2>
+            </header>
+
+            <!-- Learn -->
+            <article>
+                <header>
+                    <h3>Learn</h3>
+                </header>
+
+                <section>
+                    <figure>
+                        <img src="img/100x100@2x.png" alt="Learn icon" width="100" height="100">
+                        <figcaption>CS50</figcaption>
+                    </figure>
+                    <p id="encouraging"></p>
+                    <button id="done">Done</button>
+                </section>
+
+                <section>
+                    <figure>
+                        <img src="img/100x100@2x.png" alt="Learn icon" width="100" height="100">
+                        <figcaption>English</figcaption>
+                    </figure>
+                    <p id="encouraging"></p>
+                    <button>Done</button>
+                </section>
+            </article>
+
+            <!-- Connect -->
+            <article>
+                <header>
+                    <h3>Connect</h3>
+                </header>
+                
+                <section>
+                    <figure>
+                        <img src="img/100x130@2x.png" alt="Connect person's photo" width="100" height="130">
+                        <figcaption>Name</figcaption>
+                    </figure>
+                    <p id="encouraging"></p>
+                    <button>Done</button>
+                </section>
+
+                <section>
+                    <figure>
+                        <img src="img/100x130@2x.png" alt="Connect person's photo" width="100" height="130">
+                        <figcaption>Name</figcaption>
+                    </figure>
+                    <p id="encouraging"></p>
+                    <button>Done</button>
+                </section>
+
+                <section>
+                    <figure>
+                        <img src="img/100x130@2x.png" alt="Connect person's photo" width="100" height="130">
+                        <figcaption>Name</figcaption>
+                    </figure>
+                    <p id="encouraging"></p>
+                    <button>Done</button>
+                </section>
+
+                <section>
+                    <figure>
+                        <img src="img/100x130@2x.png" alt="Reddit logo" width="100" height="130">
+                        <figcaption>Social random</figcaption>
+                    </figure>
+                    <p id="encouraging"></p>
+                    <button>Done</button>
+                </section>
+            </article>
+
+            <!-- Sport -->
+            <article>
+                
+                <header>
+                    <h3>Do sport</h3>
+                </header>
+                
+                <section>
+                    <figure>
+                        <img src="img/100x100@2x.png" alt="Some sport image" width="100" height="100">
+                        <figcaption>Sport name</figcaption>
+                    </figure>
+                    <p id="encouraging"></p>
+                    <button>Done</button>
+                </section>
+
+                <section>
+                    <figure>
+                        <img src="img/100x100@2x.png" alt="Some sport image" width="100" height="100">
+                        <figcaption>Sport name</figcaption>
+                    </figure>
+                    <p id="encouraging"></p>
+                    <button>Done</button>
+                </section>
+
+                <section>
+                    <figure>
+                        <img src="img/100x100@2x.png" alt="Some sport image" width="100" height="100">
+                        <figcaption>Sport name</figcaption>
+                    </figure>
+                    <p id="encouraging"></p>
+                    <button>Done</button>
+                </section>
+            </article>
+
+            <!-- Draw -->
+            <article>
+                <header>
+                    <h3>Draw</h3>
+                </header>
+
+                <section>
+                    <figure>
+                        <img src="img/130x100@2x.png" alt="Drawing in progress" width="130" height="100">
+                        <figcaption>Title</figcaption>
+                    </figure>
+                    <p id="encouraging"></p>
+                    <button>Done</button>
+                </section>
+
+                <section>
+                    <figure>
+                        <img src="img/100x130@2x.png" alt="Drawing in progress" width="100" height="130">
+                        <figcaption>Title</figcaption>
+                    </figure>
+                    <p id="encouraging"></p>
+                    <button>Done</button>
+                </section>
+
+                <section>
+                    <figure>
+                        <img src="img/130x100@2x.png" alt="Drawing in progress" width="130" height="100">
+                        <figcaption>Title</figcaption>
+                    </figure>
+                    <p id="encouraging"></p>
+                    <button>Done</button>
+                </section>
+
+                <section>
+                    <figure>
+                        <img src="img/100x130@2x.png" alt="Drawing in progress" width="100" height="130">
+                        <figcaption>Title</figcaption>
+                    </figure>
+                    <p id="encouraging"></p>
+                    <button>Done</button>
+                </section>
+            </article>
+
+        </article>
+
+
+        <!-- Recent Project Article -->
+        <article>
+
+            <header>
+                <h2>Recent project</h2>
+            </header>
+
+            <section>
+                <figure>
+                    <img src="img/150x110@2x.png" alt="Recent project image" width="150" height="110">
+                    <figcaption>Project name</figcaption>
+                </figure>
+                <p id="encouraging"></p>
+                <button>Done</button>
+            </section>
+
+        </article>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <button>Up</button>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
