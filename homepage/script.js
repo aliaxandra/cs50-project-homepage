@@ -9,23 +9,21 @@ document.querySelector("#about").onclick = function () {
 let today = new Date();
 document.querySelector("#today").innerHTML = today.toDateString();
 
-// edit - Open Status change form
-
-let editButton = document.querySelector('#editButton');
-let editForm = document.querySelector('#editForm');
-
-editButton.onclick = function() {
-    editForm.classList.remove('hide');
-    editButton.classList.add('hide');
-}
-    
-
 // editStatus - Status change
 function editStatus() {
     
     let statusResult = document.querySelector('#statusResult');
     let statusSubmit = document.querySelector('#statusSubmit');
     let statusNew = document.querySelector('#statusNew');
+
+
+    let editButton = document.querySelector('#editButton');
+    let editForm = document.querySelector('#editForm');
+
+    editButton.onclick = function () {
+        editForm.classList.remove('hide');
+        editButton.classList.add('hide');
+    }
     
     if (!localStorage.getItem('statusNew')) {
         populateStorage();
