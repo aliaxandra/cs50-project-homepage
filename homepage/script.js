@@ -1,4 +1,4 @@
-setDashboardStatus();
+editStatus()
 
 // About alert
 document.querySelector("#about").onclick = function () {
@@ -9,12 +9,23 @@ document.querySelector("#about").onclick = function () {
 let today = new Date();
 document.querySelector("#today").innerHTML = today.toDateString();
 
-// setDashboardStatus - Status change
-function setDashboardStatus() {
+// edit - Open Status change form
+
+let editButton = document.querySelector('#editButton');
+let editForm = document.querySelector('#editForm');
+
+editButton.onclick = function() {
+    editForm.classList.remove('hide');
+    editButton.classList.add('hide');
+}
+    
+
+// editStatus - Status change
+function editStatus() {
     
     let statusResult = document.querySelector('#statusResult');
-    let statusNew = document.querySelector('#statusNew');
     let statusSubmit = document.querySelector('#statusSubmit');
+    let statusNew = document.querySelector('#statusNew');
     
     if (!localStorage.getItem('statusNew')) {
         populateStorage();
@@ -24,13 +35,15 @@ function setDashboardStatus() {
     }
     
     function populateStorage() {
-        localStorage.setItem('statusKey', document.querySelector('#statusNew').value);
+        localStorage.setItem('statusKey', statusNew.value);
         setStatus();
+        editForm.classList.add('hide');
+        editButton.classList.remove('hide');
     }
     
     function setStatus() {
         var currentStatus = localStorage.getItem('statusKey');
-        statusResult.innerHTML = currentStatus;
+        statusResult.innerHTML = currentStatus;   
     }
     
     statusSubmit.onclick = populateStorage;
