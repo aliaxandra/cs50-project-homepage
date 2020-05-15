@@ -14,9 +14,6 @@ function editStatus() {
     
     let statusResult = document.querySelector('#statusResult');
     let statusSubmit = document.querySelector('#statusSubmit');
-    let statusNew = document.querySelector('#statusNew');
-
-
     let editButton = document.querySelector('#editButton');
     let editForm = document.querySelector('#editForm');
 
@@ -33,7 +30,7 @@ function editStatus() {
     }
     
     function populateStorage() {
-        localStorage.setItem('statusKey', statusNew.value);
+        localStorage.setItem('statusKey', document.querySelector('#statusNew').value);
         setStatus();
         editForm.classList.add('hide');
         editButton.classList.remove('hide');
