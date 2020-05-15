@@ -14,13 +14,6 @@ function editStatus() {
     
     let statusResult = document.querySelector('#statusResult');
     let statusSubmit = document.querySelector('#statusSubmit');
-    let editButton = document.querySelector('#editButton');
-    let editForm = document.querySelector('#editForm');
-
-    editButton.onclick = function () {
-        editForm.classList.remove('hide');
-        editButton.classList.add('hide');
-    }
     
     if (!localStorage.getItem('statusNew')) {
         populateStorage();
@@ -32,8 +25,6 @@ function editStatus() {
     function populateStorage() {
         localStorage.setItem('statusKey', document.querySelector('#statusNew').value);
         setStatus();
-        editForm.classList.add('hide');
-        editButton.classList.remove('hide');
     }
     
     function setStatus() {
