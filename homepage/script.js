@@ -65,7 +65,6 @@ function editStatus() {
 }
 
 // Done button
-
 document.querySelector("#done").onclick = function() {
     document.querySelector("#encouraging").innerHTML = today.toDateString();
 }
