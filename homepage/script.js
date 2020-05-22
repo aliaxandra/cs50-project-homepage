@@ -66,7 +66,7 @@ function setStatus()
 {
     // Get values from local storage
     // Method takes the key as a argument, and returns the data value
-    var currentStatus = localStorage.getItem('statusResult');
+    let currentStatus = localStorage.getItem('statusResult');
 
     // Set values to display to keep in sync when reload the page
     document.querySelector('#statusResult').innerHTML = currentStatus;
@@ -79,10 +79,10 @@ document.querySelector('#statusSubmit').onclick = populateStatus;
 // Done button
 
 // Check whether the storage object has already been populted
-if(!localStorage.getItem('doneResult'))
+if(!localStorage.getItem('doneResultCS50'))
 {
-    // Add the existing values to the storage
-    populateDone();
+    // If not - add the existing values to the storage when click done button
+    document.querySelector('#doneButtonCS50').onclick = populateDone;
 }
 else
 {
@@ -94,21 +94,19 @@ else
 function populateDone()
 {
     // Set key/value
-    localStorage.setItem('doneResult', todayDate);
+    localStorage.setItem('doneResultCS50', todayDate);
 
     // Update Done
-    setDone();
+    setDone();        
 }
 
 // Get values from storage
 function setDone()
 {
     // Get values from local storage
-    var currentDone = localStorage.getItem('doneResult');
+    let currentDoneCS50 = localStorage.getItem('doneResultCS50');
 
     // Set values to display to keep in sync when reload the page
-    document.querySelector('#doneResult').innerHTML = currentDone;
+    document.querySelector('#doneResultCS50').innerHTML = currentDoneCS50;
 }
 
-// Handler to Done button
-document.querySelector('#doneButton').onclick = populateDone;
