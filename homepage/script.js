@@ -13,6 +13,16 @@ document.querySelector("#today").innerHTML = todayDate;
 
 // Status edit
 
+let editForm = document.querySelector('#editForm');
+let editButton = document.querySelector('#editButton');
+
+// Open Status Form on Edit button
+editButton.onclick = function() 
+{
+    editForm.classList.remove('hide');
+    editButton.classList.add('hide');
+}
+
 // Check whether the storage object has already been populted
 // The Storage.getItem() method is used to get a data item from storage
 if (!localStorage.getItem('statusResult'))
@@ -29,10 +39,26 @@ else
 // Setting values in storage
 function populateStorage()
 {
-    localStorage.setItem('statusResult', document.querySelector('#statusNew').value);
+    // Check if Status value is empty
+    if (document.querySelector('#statusNew').value == "")
+    {
+        // Then hide Form
+        editForm.classList.add('hide');
+        editButton.classList.remove('hide');
+    }
+    else
+    {
+        // If Status value is not empty - set key/value
+        localStorage.setItem('statusResult', document.querySelector('#statusNew').value);
+        
+        // Update status
+        setStatus();
     
-    // Update status
-    setStatus();
+        // Hide Edit form, show Edit button
+        editForm.classList.add('hide');
+        editButton.classList.remove('hide');
+
+    }
 }
 
 // Get values from storage
