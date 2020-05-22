@@ -27,8 +27,8 @@ editButton.onclick = function()
 // The Storage.getItem() method is used to get a data item from storage
 if (!localStorage.getItem('statusResult'))
 {
-    // Add the existing customization values to the storage
-    populateStorage();
+    // Add the existing values to the storage
+    populateStatus();
 }
 else
 {
@@ -37,7 +37,7 @@ else
 }
 
 // Setting values in storage
-function populateStorage()
+function populateStatus()
 {
     // Check if Status value is empty
     if (document.querySelector('#statusNew').value == "")
@@ -73,4 +73,42 @@ function setStatus()
 }
 
 // Handler to take data when pressed
-document.querySelector('#statusSubmit').onclick = populateStorage;
+document.querySelector('#statusSubmit').onclick = populateStatus;
+
+
+// Done button
+
+// Check whether the storage object has already been populted
+if(!localStorage.getItem('doneResult'))
+{
+    // Add the existing values to the storage
+    populateDone();
+}
+else
+{
+    // Update the page with the stored values
+    setDone();
+}
+
+// Set value in storage
+function populateDone()
+{
+    // Set key/value
+    localStorage.setItem('doneResult', todayDate);
+
+    // Update Done
+    setDone();
+}
+
+// Get values from storage
+function setDone()
+{
+    // Get values from local storage
+    var currentDone = localStorage.getItem('doneResult');
+
+    // Set values to display to keep in sync when reload the page
+    document.querySelector('#doneResult').innerHTML = currentDone;
+}
+
+// Handler to Done button
+document.querySelector('#doneButton').onclick = populateDone;
