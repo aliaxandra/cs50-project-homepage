@@ -1,4 +1,3 @@
-setTodayDate();
 
 // About alert
 document.querySelector("#about").onclick = function () {
@@ -6,16 +5,10 @@ document.querySelector("#about").onclick = function () {
 }
 
 
-// Today date function
-function setTodayDate()
-{
-    let today = new Date();
-    let todayDate = today.toDateString();
-    return todayDate;
-}
-
-// Set today date
-document.querySelector("#today").innerHTML = setTodayDate();
+// Set Today date
+let today = new Date();
+let todayDate = today.toDateString();
+document.querySelector("#today").innerHTML = todayDate;
 
 
 // Status edit
