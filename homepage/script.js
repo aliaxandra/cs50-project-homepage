@@ -82,38 +82,46 @@ document.querySelector('#statusSubmit').onclick = populateStatus;
 
 
 
+// DONE BUTTONS
 
 
-// DONE BUTTON - LEARN - CS50s
-
+// BUTTON LEARN - CS50
 // Check whether the storage object has already been populted
-if(!localStorage.getItem('doneResultLearnCS50'))
-{
+if (!localStorage.getItem('doneResultLearnCS50')) {
     // If not - add the existing values to the storage when click done button
-    document.querySelector('#doneButtonLearnCS50').onclick = populateDoneLearnCS50;
+    document.querySelector('#doneButtonLearnCS50').onclick = function() {
+        // Set key/value
+        localStorage.setItem('doneResultLearnCS50', todayDate);
+        // Update  done date
+        setStorageCS50();  
+    }
 }
-else
-{
+else {
     // Update the page with the stored values
-    setDoneLearnCS50();
+    setStorageCS50();
 }
 
-// Set value in storage
-function populateDoneLearnCS50()
-{
-    // Set key/value
-    localStorage.setItem('doneResultLearnCS50', todayDate);
-
-    // Update Done
-    setDoneLearnCS50();        
-}
-
-// Get values from storage
-function setDoneLearnCS50()
-{
+// Set values
+function setStorageCS50() {
     // Get values from local storage
     let currentDoneCS50 = localStorage.getItem('doneResultLearnCS50');
-
     // Set values to display to keep in sync when reload the page
     document.querySelector('#doneResultLearnCS50').innerHTML = currentDoneCS50;
 }
+
+
+// BUTTON LEARN - ENG
+if (!localStorage.getItem('doneResultLearnEng')) {
+    document.querySelector('#doneButtonLearnEng').onclick = function () {
+        localStorage.setItem('doneResultLearnEng', todayDate);
+        setStorageEng();
+    }
+} else {
+    setStorageEng();
+}
+function setStorageEng() {
+    let currentDoneEng = localStorage.getItem('doneResultLearnEng');
+    document.querySelector('#doneResultLearnEng').innerHTML = currentDoneEng;
+}
+
+
