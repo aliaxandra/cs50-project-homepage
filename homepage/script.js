@@ -18,19 +18,19 @@ document.querySelector("#today").innerHTML = todayDate;
 
 // STATUS FORM
 
-let editForm = document.querySelector('#editForm');
-let editButton = document.querySelector('#editButton');
+let editFormStatus = document.querySelector('#editFormStatus');
+let editButtonStatus = document.querySelector('#editButtonStatus');
 
 // Open Status Form on Edit button
-editButton.onclick = function() 
+editButtonStatus.onclick = function() 
 {
-    editForm.classList.remove('hide');
-    editButton.classList.add('hide');
+    editFormStatus.classList.remove('hide');
+    editButtonStatus.classList.add('hide');
 }
 
 // Check whether the storage object has already been populted
 // The Storage.getItem() method is used to get a data item from storage
-if (!localStorage.getItem('statusResult'))
+if (!localStorage.getItem('resultStatus'))
 {
     // Add the existing values to the storage
     populateStatus();
@@ -45,23 +45,23 @@ else
 function populateStatus()
 {
     // Check if Status value is empty
-    if (document.querySelector('#statusNew').value == "")
+    if (document.querySelector('#newStatus').value == "")
     {
         // Then hide Form
-        editForm.classList.add('hide');
-        editButton.classList.remove('hide');
+        editFormStatus.classList.add('hide');
+        editButtonStatus.classList.remove('hide');
     }
     else
     {
         // If Status value is not empty - set key/value
-        localStorage.setItem('statusResult', document.querySelector('#statusNew').value);
+        localStorage.setItem('resultStatus', document.querySelector('#newStatus').value);
         
         // Update status
         setStatus();
     
         // Hide Edit form, show Edit button
-        editForm.classList.add('hide');
-        editButton.classList.remove('hide');
+        editFormStatus.classList.add('hide');
+        editButtonStatus.classList.remove('hide');
 
     }
 }
@@ -71,14 +71,198 @@ function setStatus()
 {
     // Get values from local storage
     // Method takes the key as a argument, and returns the data value
-    let currentStatus = localStorage.getItem('statusResult');
+    let currentStatus = localStorage.getItem('resultStatus');
 
     // Set values to display to keep in sync when reload the page
-    document.querySelector('#statusResult').innerHTML = currentStatus;
+    document.querySelector('#resultStatus').innerHTML = currentStatus;
 }
 
 // Handler to take data when pressed
-document.querySelector('#statusSubmit').onclick = populateStatus;
+document.querySelector('#submitStatus').onclick = populateStatus;
+
+
+
+
+
+// CURRENT GOAL FORM
+
+let editFormGoal = document.querySelector('#editFormGoal');
+let editButtonGoal = document.querySelector('#editButtonGoal');
+
+// Open Goal Form on Edit button
+editButtonGoal.onclick = function () {
+    editFormGoal.classList.remove('hide');
+    editButtonGoal.classList.add('hide');
+}
+
+// Check whether the storage object has already been populted
+// The Storage.getItem() method is used to get a data item from storage
+if (!localStorage.getItem('resultGoal')) {
+    // Add the existing values to the storage
+    populateGoal();
+}
+else {
+    // Update the page with the stored values
+    setGoal();
+}
+
+// Setting values in storage
+function populateGoal() {
+    // Check if Goal value is empty
+    if (document.querySelector('#newGoal').value == "") {
+        // Then hide Form
+        editFormGoal.classList.add('hide');
+        editButtonGoal.classList.remove('hide');
+    }
+    else {
+        // If Goal value is not empty - set key/value
+        localStorage.setItem('resultGoal', document.querySelector('#newGoal').value);
+
+        // Update goal
+        setGoal();
+
+        // Hide Edit form, show Edit button
+        editFormGoal.classList.add('hide');
+        editButtonGoal.classList.remove('hide');
+
+    }
+}
+
+// Get values from storage
+function setGoal() {
+    // Get values from local storage
+    // Method takes the key as a argument, and returns the data value
+    let currentGoal = localStorage.getItem('resultGoal');
+
+    // Set values to display to keep in sync when reload the page
+    document.querySelector('#resultGoal').innerHTML = currentGoal;
+}
+
+// Handler to take data when pressed
+document.querySelector('#submitGoal').onclick = populateGoal;
+
+
+
+
+
+// RECENT
+
+
+// RECENT BOOK TITLE
+
+let editFormRecentBook = document.querySelector('#editFormRecentBook');
+let editButtonRecentBook = document.querySelector('#editButtonRecentBook');
+
+// Open RecentBook Form on Edit button
+editButtonRecentBook.onclick = function () {
+    editFormRecentBook.classList.remove('hide');
+    editButtonRecentBook.classList.add('hide');
+}
+
+// Check whether the storage object has already been populted
+// The Storage.getItem() method is used to get a data item from storage
+if (!localStorage.getItem('resultRecentBook')) {
+    // Add the existing values to the storage
+    populateRecentBook();
+}
+else {
+    // Update the page with the stored values
+    setRecentBook();
+}
+
+// Setting values in storage
+function populateRecentBook() {
+    // Check if RecentBook value is empty
+    if (document.querySelector('#newRecentBook').value == "") {
+        // Then hide Form
+        editFormRecentBook.classList.add('hide');
+        editButtonRecentBook.classList.remove('hide');
+    }
+    else {
+        // If RecentBook value is not empty - set key/value
+        localStorage.setItem('resultRecentBook', document.querySelector('#newRecentBook').value);
+
+        // Update recentBook
+        setRecentBook();
+
+        // Hide Edit form, show Edit button
+        editFormRecentBook.classList.add('hide');
+        editButtonRecentBook.classList.remove('hide');
+
+    }
+}
+
+// Get values from storage
+function setRecentBook() {
+    // Get values from local storage
+    // Method takes the key as a argument, and returns the data value
+    let currentRecentBook = localStorage.getItem('resultRecentBook');
+
+    // Set values to display to keep in sync when reload the page
+    document.querySelector('#resultRecentBook').innerHTML = currentRecentBook;
+}
+
+// Handler to take data when pressed
+document.querySelector('#submitRecentBook').onclick = populateRecentBook;
+
+
+
+// RECENT MOVIE TITLE
+
+let editFormRecentMovie = document.querySelector('#editFormRecentMovie');
+let editButtonRecentMovie = document.querySelector('#editButtonRecentMovie');
+
+// Open RecentMovie Form on Edit button
+editButtonRecentMovie.onclick = function () {
+    editFormRecentMovie.classList.remove('hide');
+    editButtonRecentMovie.classList.add('hide');
+}
+
+// Check whether the storage object has already been populted
+// The Storage.getItem() method is used to get a data item from storage
+if (!localStorage.getItem('resultRecentMovie')) {
+    // Add the existing values to the storage
+    populateRecentMovie();
+}
+else {
+    // Update the page with the stored values
+    setRecentMovie();
+}
+
+// Setting values in storage
+function populateRecentMovie() {
+    // Check if RecentMovie value is empty
+    if (document.querySelector('#newRecentMovie').value == "") {
+        // Then hide Form
+        editFormRecentMovie.classList.add('hide');
+        editButtonRecentMovie.classList.remove('hide');
+    }
+    else {
+        // If RecentMovie value is not empty - set key/value
+        localStorage.setItem('resultRecentMovie', document.querySelector('#newRecentMovie').value);
+
+        // Update recentMovie
+        setRecentMovie();
+
+        // Hide Edit form, show Edit button
+        editFormRecentMovie.classList.add('hide');
+        editButtonRecentMovie.classList.remove('hide');
+
+    }
+}
+
+// Get values from storage
+function setRecentMovie() {
+    // Get values from local storage
+    // Method takes the key as a argument, and returns the data value
+    let currentRecentMovie = localStorage.getItem('resultRecentMovie');
+
+    // Set values to display to keep in sync when reload the page
+    document.querySelector('#resultRecentMovie').innerHTML = currentRecentMovie;
+}
+
+// Handler to take data when pressed
+document.querySelector('#submitRecentMovie').onclick = populateRecentMovie;
 
 
 
@@ -334,6 +518,67 @@ function setStorageDrawMisc() {
 }
 
 
+
+
+
+// CURRENT PROJECT
+
+// CURRENT PROJECT - FROM EDIT
+
+let editFormCurrentProject = document.querySelector('#editFormCurrentProject');
+let editButtonCurrentProject = document.querySelector('#editButtonCurrentProject');
+
+// Open CurrentProject Form on Edit button
+editButtonCurrentProject.onclick = function () {
+    editFormCurrentProject.classList.remove('hide');
+    editButtonCurrentProject.classList.add('hide');
+}
+
+// Check whether the storage object has already been populted
+// The Storage.getItem() method is used to get a data item from storage
+if (!localStorage.getItem('resultCurrentProject')) {
+    // Add the existing values to the storage
+    populateCurrentProject();
+}
+else {
+    // Update the page with the stored values
+    setCurrentProject();
+}
+
+// Setting values in storage
+function populateCurrentProject() {
+    // Check if CurrentProject value is empty
+    if (document.querySelector('#newCurrentProject').value == "") {
+        // Then hide Form
+        editFormCurrentProject.classList.add('hide');
+        editButtonCurrentProject.classList.remove('hide');
+    }
+    else {
+        // If CurrentProject value is not empty - set key/value
+        localStorage.setItem('resultCurrentProject', document.querySelector('#newCurrentProject').value);
+
+        // Update CurrentProject
+        setCurrentProject();
+
+        // Hide Edit form, show Edit button
+        editFormCurrentProject.classList.add('hide');
+        editButtonCurrentProject.classList.remove('hide');
+
+    }
+}
+
+// Get values from storage
+function setCurrentProject() {
+    // Get values from local storage
+    // Method takes the key as a argument, and returns the data value
+    let currentCurrentProject = localStorage.getItem('resultCurrentProject');
+
+    // Set values to display to keep in sync when reload the page
+    document.querySelector('#resultCurrentProject').innerHTML = currentCurrentProject;
+}
+
+// Handler to take data when pressed
+document.querySelector('#submitCurrentProject').onclick = populateCurrentProject;
 
 // BUTTON - CURRENT PROJECT
 

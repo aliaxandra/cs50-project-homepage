@@ -49,13 +49,13 @@
                     <h2>Status</h2>
                 </header>
                 <div>
-                    <p id="statusResult"></p>
+                    <p id="resultStatus"></p>
                 </div>
-                <button id="editButton">Edit</button>
-                <article id="editForm" class="hide">
+                <button id="editButtonStatus">Edit</button>
+                <article id="editFormStatus" class="hide">
                     <form>
-                        <input type="text" id="statusNew">
-                        <input type="submit" id="statusSubmit">
+                        <input type="text" id="newStatus">
+                        <input type="submit" id="submitStatus">
                     </form>
                 </article>
             </section>
@@ -66,8 +66,15 @@
                     <h2>Current goal</h2>
                 </header>
                 <div>
-                    <p>Finish CS50 Harvard program</p>
+                    <p id="resultGoal">Finish CS50 Harvard program</p>
                 </div>
+                <button id="editButtonGoal">Edit</button>
+                <article id="editFormGoal" class="hide">
+                    <form>
+                        <input type="text" id="newGoal">
+                        <input type="submit" id="submitGoal">
+                    </form>
+                </article>
             </section>
 
         </article>
@@ -76,19 +83,27 @@
         <!-- Content Article -->
         <article>
             
-            <section>
-                <figure>
-                    <img src="img/110x150@2x.png" alt="Sample image for book cover" width="110" height="150">
-                    <figcaption>Recent book title</figcaption>
-                </figure>
-            </section>
+            <div>
+                <p id="resultRecentBook">Recent book title</p>
+            </div>
+            <button id="editButtonRecentBook">Edit</button>
+            <article id="editFormRecentBook" class="hide">
+                <form>
+                    <input type="text" id="newRecentBook">
+                    <input type="submit" id="submitRecentBook">
+                </form>
+            </article>
 
-            <section>
-                <figure>
-                    <img src="img/110x150@2x.png" alt="Sample image for movie cover" width="110" height="150">
-                    <figcaption>Recent movie title</figcaption>
-                </figure>
-            </section>
+            <div>
+                <p id="resultRecentMovie">Recent movie title</p>
+            </div>
+            <button id="editButtonRecentMovie">Edit</button>
+            <article id="editFormRecentMovie" class="hide">
+                <form>
+                    <input type="text" id="newRecentMovie">
+                    <input type="submit" id="submitRecentMovie">
+                </form>
+            </article>
 
             <section>
                 <figure>
@@ -282,8 +297,15 @@
             <section>
                 <figure>
                     <img src="img/150x110@2x.png" alt="Recent project image" width="150" height="110">
-                    <figcaption>CS50 homepage</figcaption>
+                    <figcaption id="resultCurrentProject">CS50 homepage</figcaption>
                 </figure>
+                <button id="editButtonCurrentProject">Edit</button>
+                <article id="editFormCurrentProject" class="hide">
+                    <form>
+                        <input type="text" id="newCurrentProject">
+                        <input type="submit" id="submitCurrentProject">
+                    </form>
+                </article>
                 <p id="doneResultProject"></p>
                 <button id="doneButtonProject">Done</button>
             </section>
