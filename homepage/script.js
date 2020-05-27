@@ -273,25 +273,39 @@ document.querySelector('#submitRecentMovie').onclick = populateRecentMovie;
 
 // BUTTON LEARN - CS50
 
+// Get values from local storage
+let currentDoneLearnCS50 = localStorage.getItem('doneResultLearnCS50');
+
 // Check whether the storage object has already been populted
-if (!localStorage.getItem('doneResultLearnCS50')) {
+if (!localStorage.getItem('doneResultLearnCS50')) 
+{
     // If not - add the existing values to the storage when click done button
-    document.querySelector('#doneButtonLearnCS50').onclick = function() {
-        // Set key/value
-        localStorage.setItem('doneResultLearnCS50', todayDate);
-        // Update  done date
-        setStorageLearnCS50();  
-    }
+    document.querySelector('#doneButtonLearnCS50').onclick = populateStorageLearnCS50();
 }
-else {
-    // Update the page with the stored values
+else 
+{
+    // Set done date
+    setStorageLearnCS50();
+}
+
+// Check whether Done clicked in a new date
+if (!(currentDoneLearnCS50 == todayDate))
+{
+    document.querySelector('#doneButtonLearnCS50').onclick = populateStorageLearnCS50;
+}   
+
+// Populate Storage
+function populateStorageLearnCS50() {
+    // Set key/value
+    localStorage.setItem('doneResultLearnCS50', todayDate);
+    // Update  done date
     setStorageLearnCS50();
 }
 
 // Set values
 function setStorageLearnCS50() {
     // Get values from local storage
-    let currentDoneLearnCS50 = localStorage.getItem('doneResultLearnCS50');
+    currentDoneLearnCS50 = localStorage.getItem('doneResultLearnCS50');
     // Set values to display to keep in sync when reload the page
     document.querySelector('#doneResultLearnCS50').innerHTML = currentDoneLearnCS50;
 }
