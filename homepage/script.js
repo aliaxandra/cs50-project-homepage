@@ -314,221 +314,299 @@ function setStorageLearnCS50() {
 
 // BUTTON LEARN - ENG
 
+let currentDoneLearnEng = localStorage.getItem('doneResultLearnEng');
 if (!localStorage.getItem('doneResultLearnEng')) {
-    document.querySelector('#doneButtonLearnEng').onclick = function () {
-        localStorage.setItem('doneResultLearnEng', todayDate);
-        setStorageLearnEng();
-    }
-} else {
+    document.querySelector('#doneButtonLearnEng').onclick = populateStorageLearnEng;
+}
+else {
+    setStorageLearnEng();
+}
+function populateStorageLearnEng() {
+    localStorage.setItem('doneResultLearnEng', todayDate);
     setStorageLearnEng();
 }
 function setStorageLearnEng() {
-    let currentDoneLearnEng = localStorage.getItem('doneResultLearnEng');
+    currentDoneLearnEng = localStorage.getItem('doneResultLearnEng');
     document.querySelector('#doneResultLearnEng').innerHTML = currentDoneLearnEng;
+    if (!(currentDoneLearnEng == todayDate)) {
+        document.querySelector('#doneButtonLearnEng').onclick = populateStorageLearnEng;
+    }
 }
 
 
 
 // BUTTON CONNECT - CHAT
 
+let currentDoneConnectChat = localStorage.getItem('doneResultConnectChat');
 if (!localStorage.getItem('doneResultConnectChat')) {
-    document.querySelector('#doneButtonConnectChat').onclick = function () {
-        localStorage.setItem('doneResultConnectChat', todayDate);
-        setStorageConnectChat();
-    }
-} else {
+    document.querySelector('#doneButtonConnectChat').onclick = populateStorageConnectChat;
+}
+else {
+    setStorageConnectChat();
+}
+function populateStorageConnectChat() {
+    localStorage.setItem('doneResultConnectChat', todayDate);
     setStorageConnectChat();
 }
 function setStorageConnectChat() {
-    let currentDoneConnectChat = localStorage.getItem('doneResultConnectChat');
+    currentDoneConnectChat = localStorage.getItem('doneResultConnectChat');
     document.querySelector('#doneResultConnectChat').innerHTML = currentDoneConnectChat;
+    if (!(currentDoneConnectChat == todayDate)) {
+        document.querySelector('#doneButtonConnectChat').onclick = populateStorageConnectChat;
+    }
 }
 
 
 
 // BUTTON CONNECT - MEZHAKA
 
+let currentDoneConnectMezhaka = localStorage.getItem('doneResultConnectMezhaka');
 if (!localStorage.getItem('doneResultConnectMezhaka')) {
-    document.querySelector('#doneButtonConnectMezhaka').onclick = function () {
-        localStorage.setItem('doneResultConnectMezhaka', todayDate);
-        setStorageConnectMezhaka();
-    }
-} else {
+    document.querySelector('#doneButtonConnectMezhaka').onclick = populateStorageConnectMezhaka;
+}
+else {
+    setStorageConnectMezhaka();
+}
+function populateStorageConnectMezhaka() {
+    localStorage.setItem('doneResultConnectMezhaka', todayDate);
     setStorageConnectMezhaka();
 }
 function setStorageConnectMezhaka() {
-    let currentDoneConnectMezhaka = localStorage.getItem('doneResultConnectMezhaka');
+    currentDoneConnectMezhaka = localStorage.getItem('doneResultConnectMezhaka');
     document.querySelector('#doneResultConnectMezhaka').innerHTML = currentDoneConnectMezhaka;
+    if (!(currentDoneConnectMezhaka == todayDate)) {
+        document.querySelector('#doneButtonConnectMezhaka').onclick = populateStorageConnectMezhaka;
+    }
 }
 
 
 
 // BUTTON CONNECT - SASHA D
 
+let currentDoneConnectSashaD = localStorage.getItem('doneResultConnectSashaD');
 if (!localStorage.getItem('doneResultConnectSashaD')) {
-    document.querySelector('#doneButtonConnectSashaD').onclick = function () {
-        localStorage.setItem('doneResultConnectSashaD', todayDate);
-        setStorageConnectSashaD();
-    }
-} else {
+    document.querySelector('#doneButtonConnectSashaD').onclick = populateStorageConnectSashaD;
+}
+else {
+    setStorageConnectSashaD();
+}
+function populateStorageConnectSashaD() {
+    localStorage.setItem('doneResultConnectSashaD', todayDate);
     setStorageConnectSashaD();
 }
 function setStorageConnectSashaD() {
-    let currentDoneConnectSashaD = localStorage.getItem('doneResultConnectSashaD');
+    currentDoneConnectSashaD = localStorage.getItem('doneResultConnectSashaD');
     document.querySelector('#doneResultConnectSashaD').innerHTML = currentDoneConnectSashaD;
+    if (!(currentDoneConnectSashaD == todayDate)) {
+        document.querySelector('#doneButtonConnectSashaD').onclick = populateStorageConnectSashaD;
+    }
 }
 
 
 
 // BUTTON CONNECT - RANDOM
 
+let currentDoneConnectRandom = localStorage.getItem('doneResultConnectRandom');
 if (!localStorage.getItem('doneResultConnectRandom')) {
-    document.querySelector('#doneButtonConnectRandom').onclick = function () {
-        localStorage.setItem('doneResultConnectRandom', todayDate);
-        setStorageConnectRandom();
-    }
-} else {
+    document.querySelector('#doneButtonConnectRandom').onclick = populateStorageConnectRandom;
+}
+else {
+    setStorageConnectRandom();
+}
+function populateStorageConnectRandom() {
+    localStorage.setItem('doneResultConnectRandom', todayDate);
     setStorageConnectRandom();
 }
 function setStorageConnectRandom() {
-    let currentDoneConnectRandom = localStorage.getItem('doneResultConnectRandom');
+    currentDoneConnectRandom = localStorage.getItem('doneResultConnectRandom');
     document.querySelector('#doneResultConnectRandom').innerHTML = currentDoneConnectRandom;
+    if (!(currentDoneConnectRandom == todayDate)) {
+        document.querySelector('#doneButtonConnectRandom').onclick = populateStorageConnectRandom;
+    }
 }
 
 
 
 // BUTTON SPORT - EXERCISES
 
+let currentDoneSportExercises = localStorage.getItem('doneResultSportExercises');
 if (!localStorage.getItem('doneResultSportExercises')) {
-    document.querySelector('#doneButtonSportExercises').onclick = function () {
-        localStorage.setItem('doneResultSportExercises', todayDate);
-        setStorageSportExercises();
-    }
-} else {
+    document.querySelector('#doneButtonSportExercises').onclick = populateStorageSportExercises;
+}
+else {
+    setStorageSportExercises();
+}
+function populateStorageSportExercises() {
+    localStorage.setItem('doneResultSportExercises', todayDate);
     setStorageSportExercises();
 }
 function setStorageSportExercises() {
-    let currentDoneSportExercises = localStorage.getItem('doneResultSportExercises');
+    currentDoneSportExercises = localStorage.getItem('doneResultSportExercises');
     document.querySelector('#doneResultSportExercises').innerHTML = currentDoneSportExercises;
+    if (!(currentDoneSportExercises == todayDate)) {
+        document.querySelector('#doneButtonSportExercises').onclick = populateStorageSportExercises;
+    }
 }
 
 
 
 // BUTTON SPORT - RUNNING
 
+let currentDoneSportRunning = localStorage.getItem('doneResultSportRunning');
 if (!localStorage.getItem('doneResultSportRunning')) {
-    document.querySelector('#doneButtonSportRunning').onclick = function () {
-        localStorage.setItem('doneResultSportRunning', todayDate);
-        setStorageSportRunning();
-    }
-} else {
+    document.querySelector('#doneButtonSportRunning').onclick = populateStorageSportRunning;
+}
+else {
+    setStorageSportRunning();
+}
+function populateStorageSportRunning() {
+    localStorage.setItem('doneResultSportRunning', todayDate);
     setStorageSportRunning();
 }
 function setStorageSportRunning() {
-    let currentDoneSportRunning = localStorage.getItem('doneResultSportRunning');
+    currentDoneSportRunning = localStorage.getItem('doneResultSportRunning');
     document.querySelector('#doneResultSportRunning').innerHTML = currentDoneSportRunning;
+    if (!(currentDoneSportRunning == todayDate)) {
+        document.querySelector('#doneButtonSportRunning').onclick = populateStorageSportRunning;
+    }
 }
 
 
 
 // BUTTON SPORT - BIKE
 
+let currentDoneSportBike = localStorage.getItem('doneResultSportBike');
 if (!localStorage.getItem('doneResultSportBike')) {
-    document.querySelector('#doneButtonSportBike').onclick = function () {
-        localStorage.setItem('doneResultSportBike', todayDate);
-        setStorageSportBike();
-    }
-} else {
+    document.querySelector('#doneButtonSportBike').onclick = populateStorageSportBike;
+}
+else {
+    setStorageSportBike();
+}
+function populateStorageSportBike() {
+    localStorage.setItem('doneResultSportBike', todayDate);
     setStorageSportBike();
 }
 function setStorageSportBike() {
-    let currentDoneSportBike = localStorage.getItem('doneResultSportBike');
+    currentDoneSportBike = localStorage.getItem('doneResultSportBike');
     document.querySelector('#doneResultSportBike').innerHTML = currentDoneSportBike;
+    if (!(currentDoneSportBike == todayDate)) {
+        document.querySelector('#doneButtonSportBike').onclick = populateStorageSportBike;
+    }
 }
 
 
 
 // BUTTON SPORT - STRENGTH
 
+let currentDoneSportStrength = localStorage.getItem('doneResultSportStrength');
 if (!localStorage.getItem('doneResultSportStrength')) {
-    document.querySelector('#doneButtonSportStrength').onclick = function () {
-        localStorage.setItem('doneResultSportStrength', todayDate);
-        setStorageSportStrength();
-    }
-} else {
+    document.querySelector('#doneButtonSportStrength').onclick = populateStorageSportStrength;
+}
+else {
+    setStorageSportStrength();
+}
+function populateStorageSportStrength() {
+    localStorage.setItem('doneResultSportStrength', todayDate);
     setStorageSportStrength();
 }
 function setStorageSportStrength() {
-    let currentDoneSportStrength = localStorage.getItem('doneResultSportStrength');
+    currentDoneSportStrength = localStorage.getItem('doneResultSportStrength');
     document.querySelector('#doneResultSportStrength').innerHTML = currentDoneSportStrength;
+    if (!(currentDoneSportStrength == todayDate)) {
+        document.querySelector('#doneButtonSportStrength').onclick = populateStorageSportStrength;
+    }
 }
 
 
 
 // BUTTON DRAW - DPRN DIARY
 
+let currentDoneDrawDprnDiary = localStorage.getItem('doneResultDrawDprnDiary');
 if (!localStorage.getItem('doneResultDrawDprnDiary')) {
-    document.querySelector('#doneButtonDrawDprnDiary').onclick = function () {
-        localStorage.setItem('doneResultDrawDprnDiary', todayDate);
-        setStorageDrawDprnDiary();
-    }
-} else {
+    document.querySelector('#doneButtonDrawDprnDiary').onclick = populateStorageDrawDprnDiary;
+}
+else {
+    setStorageDrawDprnDiary();
+}
+function populateStorageDrawDprnDiary() {
+    localStorage.setItem('doneResultDrawDprnDiary', todayDate);
     setStorageDrawDprnDiary();
 }
 function setStorageDrawDprnDiary() {
-    let currentDoneDrawDprnDiary = localStorage.getItem('doneResultDrawDprnDiary');
+    currentDoneDrawDprnDiary = localStorage.getItem('doneResultDrawDprnDiary');
     document.querySelector('#doneResultDrawDprnDiary').innerHTML = currentDoneDrawDprnDiary;
+    if (!(currentDoneDrawDprnDiary == todayDate)) {
+        document.querySelector('#doneButtonDrawDprnDiary').onclick = populateStorageDrawDprnDiary;
+    }
 }
 
 
 
 // BUTTON DRAW - LINE DRAWING
 
+let currentDoneDrawLineDrawing = localStorage.getItem('doneResultDrawLineDrawing');
 if (!localStorage.getItem('doneResultDrawLineDrawing')) {
-    document.querySelector('#doneButtonDrawLineDrawing').onclick = function () {
-        localStorage.setItem('doneResultDrawLineDrawing', todayDate);
-        setStorageDrawLineDrawing();
-    }
-} else {
+    document.querySelector('#doneButtonDrawLineDrawing').onclick = populateStorageDrawLineDrawing;
+}
+else {
+    setStorageDrawLineDrawing();
+}
+function populateStorageDrawLineDrawing() {
+    localStorage.setItem('doneResultDrawLineDrawing', todayDate);
     setStorageDrawLineDrawing();
 }
 function setStorageDrawLineDrawing() {
-    let currentDoneDrawLineDrawing = localStorage.getItem('doneResultDrawLineDrawing');
+    currentDoneDrawLineDrawing = localStorage.getItem('doneResultDrawLineDrawing');
     document.querySelector('#doneResultDrawLineDrawing').innerHTML = currentDoneDrawLineDrawing;
+    if (!(currentDoneDrawLineDrawing == todayDate)) {
+        document.querySelector('#doneButtonDrawLineDrawing').onclick = populateStorageDrawLineDrawing;
+    }
 }
 
 
 
 // BUTTON DRAW - COLOR PENCIL
 
+let currentDoneDrawColorPencil = localStorage.getItem('doneResultDrawColorPencil');
 if (!localStorage.getItem('doneResultDrawColorPencil')) {
-    document.querySelector('#doneButtonDrawColorPencil').onclick = function () {
-        localStorage.setItem('doneResultDrawColorPencil', todayDate);
-        setStorageDrawColorPencil();
-    }
-} else {
+    document.querySelector('#doneButtonDrawColorPencil').onclick = populateStorageDrawColorPencil;
+}
+else {
+    setStorageDrawColorPencil();
+}
+function populateStorageDrawColorPencil() {
+    localStorage.setItem('doneResultDrawColorPencil', todayDate);
     setStorageDrawColorPencil();
 }
 function setStorageDrawColorPencil() {
-    let currentDoneDrawColorPencil = localStorage.getItem('doneResultDrawColorPencil');
+    currentDoneDrawColorPencil = localStorage.getItem('doneResultDrawColorPencil');
     document.querySelector('#doneResultDrawColorPencil').innerHTML = currentDoneDrawColorPencil;
+    if (!(currentDoneDrawColorPencil == todayDate)) {
+        document.querySelector('#doneButtonDrawColorPencil').onclick = populateStorageDrawColorPencil;
+    }
 }
 
 
 
 // BUTTON DRAW - MISC
 
+let currentDoneDrawMisc = localStorage.getItem('doneResultDrawMisc');
 if (!localStorage.getItem('doneResultDrawMisc')) {
-    document.querySelector('#doneButtonDrawMisc').onclick = function () {
-        localStorage.setItem('doneResultDrawMisc', todayDate);
-        setStorageDrawMisc();
-    }
-} else {
+    document.querySelector('#doneButtonDrawMisc').onclick = populateStorageDrawMisc;
+}
+else {
+    setStorageDrawMisc();
+}
+function populateStorageDrawMisc() {
+    localStorage.setItem('doneResultDrawMisc', todayDate);
     setStorageDrawMisc();
 }
 function setStorageDrawMisc() {
-    let currentDoneDrawMisc = localStorage.getItem('doneResultDrawMisc');
+    currentDoneDrawMisc = localStorage.getItem('doneResultDrawMisc');
     document.querySelector('#doneResultDrawMisc').innerHTML = currentDoneDrawMisc;
+    if (!(currentDoneDrawMisc == todayDate)) {
+        document.querySelector('#doneButtonDrawMisc').onclick = populateStorageDrawMisc;
+    }
 }
 
 
@@ -596,15 +674,21 @@ document.querySelector('#submitCurrentProject').onclick = populateCurrentProject
 
 // BUTTON - CURRENT PROJECT
 
-if (!localStorage.getItem('doneResultProject')) {
-    document.querySelector('#doneButtonProject').onclick = function () {
-        localStorage.setItem('doneResultProject', todayDate);
-        setStorageProject();
-    }
-} else {
-    setStorageProject();
+let currentDoneCurrentProject = localStorage.getItem('doneResultCurrentProject');
+if (!localStorage.getItem('doneResultCurrentProject')) {
+    document.querySelector('#doneButtonCurrentProject').onclick = populateStorageCurrentProject;
 }
-function setStorageProject() {
-    let currentDoneProject = localStorage.getItem('doneResultProject');
-    document.querySelector('#doneResultProject').innerHTML = currentDoneProject;
+else {
+    setStorageCurrentProject();
+}
+function populateStorageCurrentProject() {
+    localStorage.setItem('doneResultCurrentProject', todayDate);
+    setStorageCurrentProject();
+}
+function setStorageCurrentProject() {
+    currentDoneCurrentProject = localStorage.getItem('doneResultCurrentProject');
+    document.querySelector('#doneResultCurrentProject').innerHTML = currentDoneCurrentProject;
+    if (!(currentDoneCurrentProject == todayDate)) {
+        document.querySelector('#doneButtonCurrentProject').onclick = populateStorageCurrentProject;
+    }
 }

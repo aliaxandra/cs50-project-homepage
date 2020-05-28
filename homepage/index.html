@@ -49,7 +49,7 @@
                     <h2>Status</h2>
                 </header>
                 <div>
-                    <p id="resultStatus"></p>
+                    <p id="resultStatus">Current status</p>
                 </div>
                 <button id="editButtonStatus">Edit</button>
                 <article id="editFormStatus" class="hide">
@@ -66,7 +66,7 @@
                     <h2>Current goal</h2>
                 </header>
                 <div>
-                    <p id="resultGoal">Finish CS50 Harvard program</p>
+                    <p id="resultGoal">Current goal</p>
                 </div>
                 <button id="editButtonGoal">Edit</button>
                 <article id="editFormGoal" class="hide">
@@ -80,43 +80,48 @@
         </article>
 
 
-        <!-- Content Article -->
+        <!-- Recent Article -->
         <article>
-            
-            <div>
-                <p id="resultRecentBook">Recent book title</p>
-            </div>
-            <button id="editButtonRecentBook">Edit</button>
-            <article id="editFormRecentBook" class="hide">
-                <form>
-                    <input type="text" id="newRecentBook">
-                    <input type="submit" id="submitRecentBook">
-                </form>
-            </article>
-
-            <div>
-                <p id="resultRecentMovie">Recent movie title</p>
-            </div>
-            <button id="editButtonRecentMovie">Edit</button>
-            <article id="editFormRecentMovie" class="hide">
-                <form>
-                    <input type="text" id="newRecentMovie">
-                    <input type="submit" id="submitRecentMovie">
-                </form>
-            </article>
-
             <section>
-                <figure>
-                    <img src="img/150x110@2x.png" alt="Sample of photo" width="150" height="110">
-                    <figcaption>Recent photo taken</figcaption>
-                </figure>
-            </section>
-            
-            <section>
-                <figure>
-                    <img src="img/150x110@2x.png" alt="Sample of drawing" width="150" height="110">
-                    <figcaption>Recent drawing made</figcaption>
-                </figure>
+                <header>
+                    <h2>Recent content</h2>
+                </header>
+                <div>
+                    <p id="resultRecentBook">Recent book title</p>
+                </div>
+                <button id="editButtonRecentBook">Edit</button>
+                <article id="editFormRecentBook" class="hide">
+                    <form>
+                        <input type="text" id="newRecentBook">
+                        <input type="submit" id="submitRecentBook">
+                    </form>
+                </article>
+    
+                <div>
+                    <p id="resultRecentMovie">Recent movie title</p>
+                </div>
+                <button id="editButtonRecentMovie">Edit</button>
+                <article id="editFormRecentMovie" class="hide">
+                    <form>
+                        <input type="text" id="newRecentMovie">
+                        <input type="submit" id="submitRecentMovie">
+                    </form>
+                </article>
+    
+                <section>
+                    <figure>
+                        <img src="img/150x110@2x.png" alt="Sample of photo" width="150" height="110">
+                        <figcaption>Recent photo taken</figcaption>
+                    </figure>
+                </section>
+                
+                <section>
+                    <figure>
+                        <img src="img/150x110@2x.png" alt="Sample of drawing" width="150" height="110">
+                        <figcaption>Recent drawing made</figcaption>
+                    </figure>
+                </section>
+
             </section>
 
         </article>
@@ -306,8 +311,8 @@
                         <input type="submit" id="submitCurrentProject">
                     </form>
                 </article>
-                <p id="doneResultProject"></p>
-                <button id="doneButtonProject">Done</button>
+                <p id="doneResultCurrentProject"></p>
+                <button id="doneButtonCurrentProject">Done</button>
             </section>
 
         </article>
