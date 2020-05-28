@@ -110,16 +110,30 @@
     
                 <section>
                     <figure>
-                        <img src="img/150x110@2x.png" alt="Sample of photo" width="150" height="110">
+                        <img id="resultRecentPhoto" src="img/150x110@2x.png" alt="Sample of photo" width="150" height="110">
                         <figcaption>Recent photo taken</figcaption>
                     </figure>
+                    <button id="editButtonRecentPhoto">Edit</button>
+                    <article id="editFormRecentPhoto" class="hide">
+                        <form>
+                            <input type="text" id="newRecentPhoto">
+                            <input type="submit" id="submitRecentPhoto">
+                        </form>
+                    </article>
                 </section>
                 
                 <section>
                     <figure>
-                        <img src="img/150x110@2x.png" alt="Sample of drawing" width="150" height="110">
+                        <img id="resultRecentDrawing" src="img/150x110@2x.png" alt="Sample of drawing" width="150" height="110">
                         <figcaption>Recent drawing made</figcaption>
                     </figure>
+                    <button id="editButtonRecentDrawing">Edit</button>
+                    <article id="editFormRecentDrawing" class="hide">
+                        <form>
+                            <input type="text" id="newRecentDrawing">
+                            <input type="submit" id="submitRecentDrawing">
+                        </form>
+                    </article>
                 </section>
 
             </section>
@@ -141,19 +155,13 @@
                 </header>
 
                 <section>
-                    <figure>
-                        <img src="img/100x100@2x.png" alt="Learn icon" width="100" height="100">
-                        <figcaption>CS50</figcaption>
-                    </figure>
+                    <div>CS50</div>
                     <p id="doneResultLearnCS50"></p>
                     <button id="doneButtonLearnCS50">Done</button>
                 </section>
 
                 <section>
-                    <figure>
-                        <img src="img/100x100@2x.png" alt="Learn icon" width="100" height="100">
-                        <figcaption>English</figcaption>
-                    </figure>
+                    <div>English</div>
                     <p id="doneResultLearnEng"></p>
                     <button id="doneButtonLearnEng">Done</button>
                 </section>
@@ -210,37 +218,25 @@
                 </header>
                 
                 <section>
-                    <figure>
-                        <img src="img/100x100@2x.png" alt="Some sport image" width="100" height="100">
-                        <figcaption>Morning exercises</figcaption>
-                    </figure>
+                    <div>Morning exercises</div>
                     <p id="doneResultSportExercises"></p>
                     <button id="doneButtonSportExercises">Done</button>
                 </section>
 
                 <section>
-                    <figure>
-                        <img src="img/100x100@2x.png" alt="Some sport image" width="100" height="100">
-                        <figcaption>Running</figcaption>
-                    </figure>
+                    <div>Running</div>
                     <p id="doneResultSportRunning"></p>
                     <button id="doneButtonSportRunning">Done</button>
                 </section>
 
                 <section>
-                    <figure>
-                        <img src="img/100x100@2x.png" alt="Some sport image" width="100" height="100">
-                        <figcaption>Bike</figcaption>
-                    </figure>
+                    <div>Bike</div>
                     <p id="doneResultSportBike"></p>
                     <button id="doneButtonSportBike">Done</button>
                 </section>
                 
                 <section>
-                    <figure>
-                        <img src="img/100x100@2x.png" alt="Some sport image" width="100" height="100">
-                        <figcaption>Strength training</figcaption>
-                    </figure>
+                    <div>Strength training</div>
                     <p id="doneResultSportStrength"></p>
                     <button id="doneButtonSportStrength">Done</button>
                 </section>
@@ -254,36 +250,64 @@
 
                 <section>
                     <figure>
-                        <img src="img/130x100@2x.png" alt="Drawing in progress" width="130" height="100">
+                        <img id="resultDrawDprnDiary" src="img/130x100@2x.png" alt="Drawing in progress" width="130" height="100">
                         <figcaption>#dprndiary</figcaption>
                     </figure>
+                    <button id="editButtonDrawDprnDiary">Edit</button>
+                    <article id="editFormDrawDprnDiary" class="hide">
+                        <form>
+                            <input type="text" id="newDrawDprnDiary">
+                            <input type="submit" id="submitDrawDprnDiary">
+                        </form>
+                    </article>
                     <p id="doneResultDrawDprnDiary"></p>
                     <button id="doneButtonDrawDprnDiary">Done</button>
                 </section>
 
                 <section>
                     <figure>
-                        <img src="img/100x130@2x.png" alt="Drawing in progress" width="100" height="130">
+                        <img id="resultDrawLineDrawing" src="img/100x130@2x.png" alt="Drawing in progress" width="100" height="130">
                         <figcaption>#linedrawing</figcaption>
                     </figure>
+                    <button id="editButtonDrawLineDrawing">Edit</button>
+                    <article id="editFormDrawLineDrawing" class="hide">
+                        <form>
+                            <input type="text" id="newDrawLineDrawing">
+                            <input type="submit" id="submitDrawLineDrawing">
+                        </form>
+                    </article>
                     <p id="doneResultDrawLineDrawing"></p>
                     <button id="doneButtonDrawLineDrawing">Done</button>
                 </section>
 
                 <section>
                     <figure>
-                        <img src="img/130x100@2x.png" alt="Drawing in progress" width="130" height="100">
+                        <img id="resultDrawColorPencil" src="img/130x100@2x.png" alt="Drawing in progress" width="130" height="100">
                         <figcaption>#colorpencil</figcaption>
                     </figure>
+                    <button id="editButtonDrawColorPencil">Edit</button>
+                    <article id="editFormDrawColorPencil" class="hide">
+                        <form>
+                            <input type="text" id="newDrawColorPencil">
+                            <input type="submit" id="submitDrawColorPencil">
+                        </form>
+                    </article>
                     <p id="doneResultDrawColorPencil"></p>
                     <button id="doneButtonDrawColorPencil">Done</button>
                 </section>
 
                 <section>
                     <figure>
-                        <img src="img/100x130@2x.png" alt="Drawing in progress" width="100" height="130">
+                        <img id="resultDrawMisc" src="img/100x130@2x.png" alt="Drawing in progress" width="100" height="130">
                         <figcaption>misc</figcaption>
                     </figure>
+                    <button id="editButtonDrawMisc">Edit</button>
+                    <article id="editFormDrawMisc" class="hide">
+                        <form>
+                            <input type="text" id="newDrawMisc">
+                            <input type="submit" id="submitDrawMisc">
+                        </form>
+                    </article>
                     <p id="doneResultDrawMisc"></p>
                     <button id="doneButtonDrawMisc">Done</button>
                 </section>
@@ -300,10 +324,7 @@
             </header>
 
             <section>
-                <figure>
-                    <img src="img/150x110@2x.png" alt="Recent project image" width="150" height="110">
-                    <figcaption id="resultCurrentProject">CS50 homepage</figcaption>
-                </figure>
+                <div id="resultCurrentProject">CS50 homepage</div>
                 <button id="editButtonCurrentProject">Edit</button>
                 <article id="editFormCurrentProject" class="hide">
                     <form>

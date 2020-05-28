@@ -267,6 +267,126 @@ document.querySelector('#submitRecentMovie').onclick = populateRecentMovie;
 
 
 
+// RECENT PHOTO
+
+let editFormRecentPhoto = document.querySelector('#editFormRecentPhoto');
+let editButtonRecentPhoto = document.querySelector('#editButtonRecentPhoto');
+
+// Open RecentPhoto Form on Edit button
+editButtonRecentPhoto.onclick = function () {
+    editFormRecentPhoto.classList.remove('hide');
+    editButtonRecentPhoto.classList.add('hide');
+}
+
+// Check whether the storage object has already been populted
+// The Storage.getItem() method is used to get a data item from storage
+if (!localStorage.getItem('resultRecentPhoto')) {
+    // Add the existing values to the storage
+    populateRecentPhoto();
+}
+else {
+    // Update the page with the stored values
+    setRecentPhoto();
+}
+
+// Setting values in storage
+function populateRecentPhoto() {
+    // Check if RecentPhoto value is empty
+    if (document.querySelector('#newRecentPhoto').value == "") {
+        // Then hide Form
+        editFormRecentPhoto.classList.add('hide');
+        editButtonRecentPhoto.classList.remove('hide');
+    }
+    else {
+        // If RecentPhoto value is not empty - set key/value
+        localStorage.setItem('resultRecentPhoto', document.querySelector('#newRecentPhoto').value);
+
+        // Update recentPhoto
+        setRecentPhoto();
+
+        // Hide Edit form, show Edit button
+        editFormRecentPhoto.classList.add('hide');
+        editButtonRecentPhoto.classList.remove('hide');
+
+    }
+}
+
+// Get values from storage
+function setRecentPhoto() {
+    // Get values from local storage
+    // Method takes the key as a argument, and returns the data value
+    let currentRecentPhoto = localStorage.getItem('resultRecentPhoto');
+
+    // Set values to display to keep in sync when reload the page
+    document.querySelector('#resultRecentPhoto').setAttribute('src', currentRecentPhoto);
+}
+
+// Handler to take data when pressed
+document.querySelector('#submitRecentPhoto').onclick = populateRecentPhoto;
+
+
+
+// RECENT DRAWING
+
+let editFormRecentDrawing = document.querySelector('#editFormRecentDrawing');
+let editButtonRecentDrawing = document.querySelector('#editButtonRecentDrawing');
+
+// Open RecentDrawing Form on Edit button
+editButtonRecentDrawing.onclick = function () {
+    editFormRecentDrawing.classList.remove('hide');
+    editButtonRecentDrawing.classList.add('hide');
+}
+
+// Check whether the storage object has already been populted
+// The Storage.getItem() method is used to get a data item from storage
+if (!localStorage.getItem('resultRecentDrawing')) {
+    // Add the existing values to the storage
+    populateRecentDrawing();
+}
+else {
+    // Update the page with the stored values
+    setRecentDrawing();
+}
+
+// Setting values in storage
+function populateRecentDrawing() {
+    // Check if RecentDrawing value is empty
+    if (document.querySelector('#newRecentDrawing').value == "") {
+        // Then hide Form
+        editFormRecentDrawing.classList.add('hide');
+        editButtonRecentDrawing.classList.remove('hide');
+    }
+    else {
+        // If RecentDrawing value is not empty - set key/value
+        localStorage.setItem('resultRecentDrawing', document.querySelector('#newRecentDrawing').value);
+
+        // Update recentDrawing
+        setRecentDrawing();
+
+        // Hide Edit form, show Edit button
+        editFormRecentDrawing.classList.add('hide');
+        editButtonRecentDrawing.classList.remove('hide');
+
+    }
+}
+
+// Get values from storage
+function setRecentDrawing() {
+    // Get values from local storage
+    // Method takes the key as a argument, and returns the data value
+    let currentRecentDrawing = localStorage.getItem('resultRecentDrawing');
+
+    // Set values to display to keep in sync when reload the page
+    document.querySelector('#resultRecentDrawing').setAttribute('src', currentRecentDrawing);
+}
+
+// Handler to take data when pressed
+document.querySelector('#submitRecentDrawing').onclick = populateRecentDrawing;
+
+
+
+
+
 
 // DONE BUTTONS
 
@@ -519,6 +639,65 @@ function setStorageSportStrength() {
 
 
 
+// EDIT DRAWING - DPRN DIARY
+
+let editFormDrawDprnDiary = document.querySelector('#editFormDrawDprnDiary');
+let editButtonDrawDprnDiary = document.querySelector('#editButtonDrawDprnDiary');
+
+// Open DrawDprnDiary Form on Edit button
+editButtonDrawDprnDiary.onclick = function () {
+    editFormDrawDprnDiary.classList.remove('hide');
+    editButtonDrawDprnDiary.classList.add('hide');
+}
+
+// Check whether the storage object has already been populted
+// The Storage.getItem() method is used to get a data item from storage
+if (!localStorage.getItem('resultDrawDprnDiary')) {
+    // Add the existing values to the storage
+    populateDrawDprnDiary();
+}
+else {
+    // Update the page with the stored values
+    setDrawDprnDiary();
+}
+
+// Setting values in storage
+function populateDrawDprnDiary() {
+    // Check if DrawDprnDiary value is empty
+    if (document.querySelector('#newDrawDprnDiary').value == "") {
+        // Then hide Form
+        editFormDrawDprnDiary.classList.add('hide');
+        editButtonDrawDprnDiary.classList.remove('hide');
+    }
+    else {
+        // If DrawDprnDiary value is not empty - set key/value
+        localStorage.setItem('resultDrawDprnDiary', document.querySelector('#newDrawDprnDiary').value);
+
+        // Update DrawDprnDiary
+        setDrawDprnDiary();
+
+        // Hide Edit form, show Edit button
+        editFormDrawDprnDiary.classList.add('hide');
+        editButtonDrawDprnDiary.classList.remove('hide');
+
+    }
+}
+
+// Get values from storage
+function setDrawDprnDiary() {
+    // Get values from local storage
+    // Method takes the key as a argument, and returns the data value
+    let currentDrawDprnDiary = localStorage.getItem('resultDrawDprnDiary');
+
+    // Set values to display to keep in sync when reload the page
+    document.querySelector('#resultDrawDprnDiary').setAttribute('src', currentDrawDprnDiary);
+}
+
+// Handler to take data when pressed
+document.querySelector('#submitDrawDprnDiary').onclick = populateDrawDprnDiary;
+
+
+
 // BUTTON DRAW - DPRN DIARY
 
 let currentDoneDrawDprnDiary = localStorage.getItem('doneResultDrawDprnDiary');
@@ -539,6 +718,65 @@ function setStorageDrawDprnDiary() {
         document.querySelector('#doneButtonDrawDprnDiary').onclick = populateStorageDrawDprnDiary;
     }
 }
+
+
+
+// EDIT DRAWING - LINE DRAWING
+
+let editFormDrawLineDrawing = document.querySelector('#editFormDrawLineDrawing');
+let editButtonDrawLineDrawing = document.querySelector('#editButtonDrawLineDrawing');
+
+// Open DrawLineDrawing Form on Edit button
+editButtonDrawLineDrawing.onclick = function () {
+    editFormDrawLineDrawing.classList.remove('hide');
+    editButtonDrawLineDrawing.classList.add('hide');
+}
+
+// Check whether the storage object has already been populted
+// The Storage.getItem() method is used to get a data item from storage
+if (!localStorage.getItem('resultDrawLineDrawing')) {
+    // Add the existing values to the storage
+    populateDrawLineDrawing();
+}
+else {
+    // Update the page with the stored values
+    setDrawLineDrawing();
+}
+
+// Setting values in storage
+function populateDrawLineDrawing() {
+    // Check if DrawLineDrawing value is empty
+    if (document.querySelector('#newDrawLineDrawing').value == "") {
+        // Then hide Form
+        editFormDrawLineDrawing.classList.add('hide');
+        editButtonDrawLineDrawing.classList.remove('hide');
+    }
+    else {
+        // If DrawLineDrawing value is not empty - set key/value
+        localStorage.setItem('resultDrawLineDrawing', document.querySelector('#newDrawLineDrawing').value);
+
+        // Update DrawLineDrawing
+        setDrawLineDrawing();
+
+        // Hide Edit form, show Edit button
+        editFormDrawLineDrawing.classList.add('hide');
+        editButtonDrawLineDrawing.classList.remove('hide');
+
+    }
+}
+
+// Get values from storage
+function setDrawLineDrawing() {
+    // Get values from local storage
+    // Method takes the key as a argument, and returns the data value
+    let currentDrawLineDrawing = localStorage.getItem('resultDrawLineDrawing');
+
+    // Set values to display to keep in sync when reload the page
+    document.querySelector('#resultDrawLineDrawing').setAttribute('src', currentDrawLineDrawing);
+}
+
+// Handler to take data when pressed
+document.querySelector('#submitDrawLineDrawing').onclick = populateDrawLineDrawing;
 
 
 
@@ -565,6 +803,65 @@ function setStorageDrawLineDrawing() {
 
 
 
+// EDIT DRAWING - COLOR PENCIL
+
+let editFormDrawColorPencil = document.querySelector('#editFormDrawColorPencil');
+let editButtonDrawColorPencil = document.querySelector('#editButtonDrawColorPencil');
+
+// Open DrawColorPencil Form on Edit button
+editButtonDrawColorPencil.onclick = function () {
+    editFormDrawColorPencil.classList.remove('hide');
+    editButtonDrawColorPencil.classList.add('hide');
+}
+
+// Check whether the storage object has already been populted
+// The Storage.getItem() method is used to get a data item from storage
+if (!localStorage.getItem('resultDrawColorPencil')) {
+    // Add the existing values to the storage
+    populateDrawColorPencil();
+}
+else {
+    // Update the page with the stored values
+    setDrawColorPencil();
+}
+
+// Setting values in storage
+function populateDrawColorPencil() {
+    // Check if DrawColorPencil value is empty
+    if (document.querySelector('#newDrawColorPencil').value == "") {
+        // Then hide Form
+        editFormDrawColorPencil.classList.add('hide');
+        editButtonDrawColorPencil.classList.remove('hide');
+    }
+    else {
+        // If DrawColorPencil value is not empty - set key/value
+        localStorage.setItem('resultDrawColorPencil', document.querySelector('#newDrawColorPencil').value);
+
+        // Update DrawColorPencil
+        setDrawColorPencil();
+
+        // Hide Edit form, show Edit button
+        editFormDrawColorPencil.classList.add('hide');
+        editButtonDrawColorPencil.classList.remove('hide');
+
+    }
+}
+
+// Get values from storage
+function setDrawColorPencil() {
+    // Get values from local storage
+    // Method takes the key as a argument, and returns the data value
+    let currentDrawColorPencil = localStorage.getItem('resultDrawColorPencil');
+
+    // Set values to display to keep in sync when reload the page
+    document.querySelector('#resultDrawColorPencil').setAttribute('src', currentDrawColorPencil);
+}
+
+// Handler to take data when pressed
+document.querySelector('#submitDrawColorPencil').onclick = populateDrawColorPencil;
+
+
+
 // BUTTON DRAW - COLOR PENCIL
 
 let currentDoneDrawColorPencil = localStorage.getItem('doneResultDrawColorPencil');
@@ -585,6 +882,65 @@ function setStorageDrawColorPencil() {
         document.querySelector('#doneButtonDrawColorPencil').onclick = populateStorageDrawColorPencil;
     }
 }
+
+
+
+// EDIT DRAWING - MISC
+
+let editFormDrawMisc = document.querySelector('#editFormDrawMisc');
+let editButtonDrawMisc = document.querySelector('#editButtonDrawMisc');
+
+// Open DrawMisc Form on Edit button
+editButtonDrawMisc.onclick = function () {
+    editFormDrawMisc.classList.remove('hide');
+    editButtonDrawMisc.classList.add('hide');
+}
+
+// Check whether the storage object has already been populted
+// The Storage.getItem() method is used to get a data item from storage
+if (!localStorage.getItem('resultDrawMisc')) {
+    // Add the existing values to the storage
+    populateDrawMisc();
+}
+else {
+    // Update the page with the stored values
+    setDrawMisc();
+}
+
+// Setting values in storage
+function populateDrawMisc() {
+    // Check if DrawMisc value is empty
+    if (document.querySelector('#newDrawMisc').value == "") {
+        // Then hide Form
+        editFormDrawMisc.classList.add('hide');
+        editButtonDrawMisc.classList.remove('hide');
+    }
+    else {
+        // If DrawMisc value is not empty - set key/value
+        localStorage.setItem('resultDrawMisc', document.querySelector('#newDrawMisc').value);
+
+        // Update DrawMisc
+        setDrawMisc();
+
+        // Hide Edit form, show Edit button
+        editFormDrawMisc.classList.add('hide');
+        editButtonDrawMisc.classList.remove('hide');
+
+    }
+}
+
+// Get values from storage
+function setDrawMisc() {
+    // Get values from local storage
+    // Method takes the key as a argument, and returns the data value
+    let currentDrawMisc = localStorage.getItem('resultDrawMisc');
+
+    // Set values to display to keep in sync when reload the page
+    document.querySelector('#resultDrawMisc').setAttribute('src', currentDrawMisc);
+}
+
+// Handler to take data when pressed
+document.querySelector('#submitDrawMisc').onclick = populateDrawMisc;
 
 
 
