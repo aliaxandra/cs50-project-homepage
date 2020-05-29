@@ -1,8 +1,8 @@
 
-// ABOUT ALERT
-document.querySelector("#about").onclick = function () {
-    alert("About Text");
-}
+// // ABOUT ALERT
+// document.querySelector("#about").onclick = function () {
+//     alert("About Text");
+// }
 
 
 
