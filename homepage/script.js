@@ -1,8 +1,6 @@
 
-// // ABOUT ALERT
-// document.querySelector("#about").onclick = function () {
-//     alert("About Text");
-// }
+// NAVIGATION
+
 
 
 
