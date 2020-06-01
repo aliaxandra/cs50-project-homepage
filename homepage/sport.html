@@ -48,11 +48,11 @@
                     
                     <header>
                         <h3>Workout #1</h3>
-                        <button onclick="expandExercise()">Expand</button>
+                        <button onclick="workout1Expand()" id="buttonWorkout1">Expand</button>
                     </header>
 
                     <!-- Expandable -->
-                    <section>
+                    <section id="workout1" class="hide">
                         <!-- Exercise 1 -->
                         <article>
                             <header>
@@ -84,6 +84,8 @@
                                 </p>
                             </section>
                         </article>
+
+                        <button onclick="workout1Hide()">Hide</button>
                     </section>
                         
                 </article>
@@ -93,11 +95,11 @@
                 
                     <header>
                         <h3>Workout #2</h3>
-                        <button onclick="expandExercise()">Expand</button>
+                        <button onclick="workout2Expand()" id="buttonWorkout2">Expand</button>
                     </header>
                     
                     <!-- Expandable -->
-                    <section>
+                    <section id="workout2" class="hide">
                         <!-- Exercise 1 -->
                         <article>
                             <header>
@@ -129,6 +131,8 @@
                                 </p>
                             </section>
                         </article>
+
+                        <button onclick="workout2Hide()">Hide</button>
                     </section>
                 
                 </article>
