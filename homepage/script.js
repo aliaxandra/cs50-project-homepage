@@ -561,6 +561,33 @@ if (location.pathname == "/index.html")
 
 
 
+    // BUTTON CONNECT - FAMILY
+
+    function checkDoneConnectFamily()
+    {
+        let currentDoneConnectFamily = localStorage.getItem('doneResultConnectFamily');
+        if (!localStorage.getItem('doneResultConnectFamily')) {
+            document.querySelector('#doneButtonConnectFamily').onclick = populateStorageConnectFamily;
+        }
+        else {
+            setStorageConnectFamily();
+        }
+        function populateStorageConnectFamily() {
+            localStorage.setItem('doneResultConnectFamily', todayDate);
+            setStorageConnectFamily();
+        }
+        function setStorageConnectFamily() {
+            currentDoneConnectFamily = localStorage.getItem('doneResultConnectFamily');
+            document.querySelector('#doneResultConnectFamily').innerHTML = currentDoneConnectFamily;
+            if (!(currentDoneConnectFamily == todayDate)) {
+                document.querySelector('#doneButtonConnectFamily').onclick = populateStorageConnectFamily;
+            }
+        }
+    }
+    checkDoneConnectFamily();
+
+
+
     // BUTTON SPORT - EXERCISES
 
     function checkDoneSportExercises()
