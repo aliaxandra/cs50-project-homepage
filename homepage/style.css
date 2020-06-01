@@ -6,3 +6,7 @@
     pointer-events: none;
     color: dimgray;
 }
+
+img {
+    max-width: 100%;
+}
