@@ -10,77 +10,83 @@
 
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="/index.html">Home</a>
-        <a href="/about.html">About</a>
-        <a href="/projects.html">Projects</a>
-        <a href="/learning.html">Learning</a>
-        <a href="/sport.html">Sport</a>
-        <a href="/drawings.html">Drawings</a>
-        <a href="/friends.html">Friends</a>
-        <a href="/health.html">Health</a>
-    </nav>
+    <!-- Container -->
+    <div class="container">
+    
+        <!-- Navigation -->
+        <nav>
+            <a href="/index.html">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/projects.html">Projects</a>
+            <a href="/learning.html">Learning</a>
+            <a href="/sport.html">Sport</a>
+            <a href="/drawings.html">Drawings</a>
+            <a href="/friends.html">Friends</a>
+            <a href="/health.html">Health</a>
+        </nav>
+        
+        
+        <!-- Header -->
+        <header>
+            <h1>Health</h1>
+        </header>
+        
+        <!-- Main -->
+        <main>
+    
+            <!--- Stats Article-->
+            <article>
+                <header>
+                    <h2>My tests</h2>
+                </header>
+                <section>
+                    
+                    <!-- Bootstrap Table -->
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Date</th>
+                                <th scope="col">Test</th>
+                                <th scope="col">Results</th>
+                                <th scope="col">Norms</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">2020-04-24</th>
+                                <td>Oxygen</td>
+                                <td>99%</td>
+                                <td>95-100</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2020-04-24</th>
+                                <td>Oxygen</td>
+                                <td>99%</td>
+                                <td>95-100</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2020-04-24</th>
+                                <td>Oxygen</td>
+                                <td>99%</td>
+                                <td>95-100</td>
+                            </tr>
+                        </tbody>
+                    </table>
+    
+                </section>
+            </article>
     
     
-    <!-- Header -->
-    <header>
-        <h1>Health</h1>
-    </header>
+        </main>
     
-    <!-- Main -->
-    <main>
+        <!-- Footer -->
+        <footer>
+            <button onclick="scrollToTop()" id="buttonUp" title="Go to top" 
+                type="button" class="btn btn-outline-dark">Up</button>
+        </footer>
+    
+    </div>
 
-        <!--- Stats Article-->
-        <article>
-            <header>
-                <h2>My tests</h2>
-            </header>
-            <section>
-                
-                <!-- Bootstrap Table -->
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col">Date</th>
-                            <th scope="col">Test</th>
-                            <th scope="col">Results</th>
-                            <th scope="col">Norms</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">2020-04-24</th>
-                            <td>Oxygen</td>
-                            <td>99%</td>
-                            <td>95-100</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2020-04-24</th>
-                            <td>Oxygen</td>
-                            <td>99%</td>
-                            <td>95-100</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2020-04-24</th>
-                            <td>Oxygen</td>
-                            <td>99%</td>
-                            <td>95-100</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-            </section>
-        </article>
-
-
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <button onclick="scrollToTop()" id="buttonUp" title="Go to top" 
-            type="button" class="btn btn-outline-dark">Up</button>
-    </footer>
     
     <!-- Script -->
     <script src="script.js"></script>
