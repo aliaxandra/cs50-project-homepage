@@ -1,17 +1,20 @@
-.hide {
+.js-hide {
   display: none;
 }
 
-.disabled {
+.js-disabled {
   pointer-events: none;
   color: dimgray;
 }
 
 img {
-  max-width: 100%;
+  /* max-width: 100%; */
 }
 
-/* Using BEM-namig convention block-name__element-name--modifier-name */
+/** 
+Using BEM-namig convention block-name__element-name--modifier-name with namespaces 
+from: https: //csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/
+*/
 
 .c-page-head__main {
   text-align: center;

@@ -12,7 +12,7 @@ function setNavigation()
     {
         if (navLinks[i].getAttribute("href").indexOf(currentPathname) !== -1)
         {
-            navLinks[i].classList.add("disabled");
+            navLinks[i].classList.add("js-disabled");
         }
     }
 }
@@ -41,16 +41,16 @@ function scrollToTop()
 // EXPAND 
 function workout1Expand()
 {
-    document.querySelector('#workout1').classList.remove('hide');
-    document.querySelector('#buttonWorkout1').classList.add('hide');
+    document.querySelector('#workout1').classList.remove('js-hide');
+    document.querySelector('#buttonWorkout1').classList.add('js-hide');
 }
 
 // HIDE
 
 function workout1Hide()
 {
-    document.querySelector('#workout1').classList.add('hide');
-    document.querySelector('#buttonWorkout1').classList.remove('hide');
+    document.querySelector('#workout1').classList.add('js-hide');
+    document.querySelector('#buttonWorkout1').classList.remove('js-hide');
 }
 
 
@@ -59,15 +59,15 @@ function workout1Hide()
 
 // EXPAND 
 function workout2Expand() {
-    document.querySelector('#workout2').classList.remove('hide');
-    document.querySelector('#buttonWorkout2').classList.add('hide');
+    document.querySelector('#workout2').classList.remove('js-hide');
+    document.querySelector('#buttonWorkout2').classList.add('js-hide');
 }
 
 // HIDE
 
 function workout2Hide() {
-    document.querySelector('#workout2').classList.add('hide');
-    document.querySelector('#buttonWorkout2').classList.remove('hide');
+    document.querySelector('#workout2').classList.add('js-hide');
+    document.querySelector('#buttonWorkout2').classList.remove('js-hide');
 }
 
 
@@ -98,8 +98,8 @@ if (location.pathname == "/index.html")
         // Open Status Form on Edit button
         editButtonStatus.onclick = function() 
         {
-            editFormStatus.classList.remove('hide');
-            editButtonStatus.classList.add('hide');
+            editFormStatus.classList.remove('js-hide');
+            editButtonStatus.classList.add('js-hide');
         }
     
         // Check whether the storage object has already been populted
@@ -122,8 +122,8 @@ if (location.pathname == "/index.html")
             if (document.querySelector('#newStatus').value == "")
             {
                 // Then hide Form
-                editFormStatus.classList.add('hide');
-                editButtonStatus.classList.remove('hide');
+                editFormStatus.classList.add('js-hide');
+                editButtonStatus.classList.remove('js-hide');
             }
             else
             {
@@ -134,8 +134,8 @@ if (location.pathname == "/index.html")
                 setStatus();
             
                 // Hide Edit form, show Edit button
-                editFormStatus.classList.add('hide');
-                editButtonStatus.classList.remove('hide');
+                editFormStatus.classList.add('js-hide');
+                editButtonStatus.classList.remove('js-hide');
             }
         }
     
@@ -165,8 +165,8 @@ if (location.pathname == "/index.html")
         let editButtonGoal = document.querySelector('#editButtonGoal');
     
         editButtonGoal.onclick = function () {
-            editFormGoal.classList.remove('hide');
-            editButtonGoal.classList.add('hide');
+            editFormGoal.classList.remove('js-hide');
+            editButtonGoal.classList.add('js-hide');
         }
     
         if (!localStorage.getItem('resultGoal')) {
@@ -178,14 +178,14 @@ if (location.pathname == "/index.html")
     
         function populateGoal() {
             if (document.querySelector('#newGoal').value == "") {
-                editFormGoal.classList.add('hide');
-                editButtonGoal.classList.remove('hide');
+                editFormGoal.classList.add('js-hide');
+                editButtonGoal.classList.remove('js-hide');
             }
             else {
                 localStorage.setItem('resultGoal', document.querySelector('#newGoal').value);
                 setGoal();
-                editFormGoal.classList.add('hide');
-                editButtonGoal.classList.remove('hide');
+                editFormGoal.classList.add('js-hide');
+                editButtonGoal.classList.remove('js-hide');
             }
         }
     
@@ -212,8 +212,8 @@ if (location.pathname == "/index.html")
         let editButtonRecentBook = document.querySelector('#editButtonRecentBook');
     
         editButtonRecentBook.onclick = function () {
-            editFormRecentBook.classList.remove('hide');
-            editButtonRecentBook.classList.add('hide');
+            editFormRecentBook.classList.remove('js-hide');
+            editButtonRecentBook.classList.add('js-hide');
         }
     
         if (!localStorage.getItem('resultRecentBook')) {
@@ -225,14 +225,14 @@ if (location.pathname == "/index.html")
     
         function populateRecentBook() {
             if (document.querySelector('#newRecentBook').value == "") {
-                editFormRecentBook.classList.add('hide');
-                editButtonRecentBook.classList.remove('hide');
+                editFormRecentBook.classList.add('js-hide');
+                editButtonRecentBook.classList.remove('js-hide');
             }
             else {
                 localStorage.setItem('resultRecentBook', document.querySelector('#newRecentBook').value);
                 setRecentBook();
-                editFormRecentBook.classList.add('hide');
-                editButtonRecentBook.classList.remove('hide');
+                editFormRecentBook.classList.add('js-hide');
+                editButtonRecentBook.classList.remove('js-hide');
             }
         }
     
@@ -255,8 +255,8 @@ if (location.pathname == "/index.html")
         let editButtonRecentMovie = document.querySelector('#editButtonRecentMovie');
     
         editButtonRecentMovie.onclick = function () {
-            editFormRecentMovie.classList.remove('hide');
-            editButtonRecentMovie.classList.add('hide');
+            editFormRecentMovie.classList.remove('js-hide');
+            editButtonRecentMovie.classList.add('js-hide');
         }
     
         if (!localStorage.getItem('resultRecentMovie')) {
@@ -268,14 +268,14 @@ if (location.pathname == "/index.html")
     
         function populateRecentMovie() {
             if (document.querySelector('#newRecentMovie').value == "") {
-                editFormRecentMovie.classList.add('hide');
-                editButtonRecentMovie.classList.remove('hide');
+                editFormRecentMovie.classList.add('js-hide');
+                editButtonRecentMovie.classList.remove('js-hide');
             }
             else {
                 localStorage.setItem('resultRecentMovie', document.querySelector('#newRecentMovie').value);
                 setRecentMovie();
-                editFormRecentMovie.classList.add('hide');
-                editButtonRecentMovie.classList.remove('hide');
+                editFormRecentMovie.classList.add('js-hide');
+                editButtonRecentMovie.classList.remove('js-hide');
             }
         }
     
@@ -299,8 +299,8 @@ if (location.pathname == "/index.html")
         let editButtonRecentPhoto = document.querySelector('#editButtonRecentPhoto');
     
         editButtonRecentPhoto.onclick = function () {
-            editFormRecentPhoto.classList.remove('hide');
-            editButtonRecentPhoto.classList.add('hide');
+            editFormRecentPhoto.classList.remove('js-hide');
+            editButtonRecentPhoto.classList.add('js-hide');
         }
     
         if (!localStorage.getItem('resultRecentPhoto')) {
@@ -312,14 +312,14 @@ if (location.pathname == "/index.html")
     
         function populateRecentPhoto() {
             if (document.querySelector('#newRecentPhoto').value == "") {
-                editFormRecentPhoto.classList.add('hide');
-                editButtonRecentPhoto.classList.remove('hide');
+                editFormRecentPhoto.classList.add('js-hide');
+                editButtonRecentPhoto.classList.remove('js-hide');
             }
             else {
                 localStorage.setItem('resultRecentPhoto', document.querySelector('#newRecentPhoto').value);
                 setRecentPhoto();
-                editFormRecentPhoto.classList.add('hide');
-                editButtonRecentPhoto.classList.remove('hide');
+                editFormRecentPhoto.classList.add('js-hide');
+                editButtonRecentPhoto.classList.remove('js-hide');
             }
         }
     
@@ -342,8 +342,8 @@ if (location.pathname == "/index.html")
         let editButtonRecentDrawing = document.querySelector('#editButtonRecentDrawing');
     
         editButtonRecentDrawing.onclick = function () {
-            editFormRecentDrawing.classList.remove('hide');
-            editButtonRecentDrawing.classList.add('hide');
+            editFormRecentDrawing.classList.remove('js-hide');
+            editButtonRecentDrawing.classList.add('js-hide');
         }
     
         if (!localStorage.getItem('resultRecentDrawing')) {
@@ -355,14 +355,14 @@ if (location.pathname == "/index.html")
     
         function populateRecentDrawing() {
             if (document.querySelector('#newRecentDrawing').value == "") {
-                editFormRecentDrawing.classList.add('hide');
-                editButtonRecentDrawing.classList.remove('hide');
+                editFormRecentDrawing.classList.add('js-hide');
+                editButtonRecentDrawing.classList.remove('js-hide');
             }
             else {
                 localStorage.setItem('resultRecentDrawing', document.querySelector('#newRecentDrawing').value);
                 setRecentDrawing();
-                editFormRecentDrawing.classList.add('hide');
-                editButtonRecentDrawing.classList.remove('hide');
+                editFormRecentDrawing.classList.add('js-hide');
+                editButtonRecentDrawing.classList.remove('js-hide');
             }
         }
     
@@ -706,8 +706,8 @@ if (location.pathname == "/index.html")
         let editButtonDrawDprnDiary = document.querySelector('#editButtonDrawDprnDiary');
     
         editButtonDrawDprnDiary.onclick = function () {
-            editFormDrawDprnDiary.classList.remove('hide');
-            editButtonDrawDprnDiary.classList.add('hide');
+            editFormDrawDprnDiary.classList.remove('js-hide');
+            editButtonDrawDprnDiary.classList.add('js-hide');
         }
     
         if (!localStorage.getItem('resultDrawDprnDiary')) {
@@ -719,14 +719,14 @@ if (location.pathname == "/index.html")
     
         function populateDrawDprnDiary() {
             if (document.querySelector('#newDrawDprnDiary').value == "") {
-                editFormDrawDprnDiary.classList.add('hide');
-                editButtonDrawDprnDiary.classList.remove('hide');
+                editFormDrawDprnDiary.classList.add('js-hide');
+                editButtonDrawDprnDiary.classList.remove('js-hide');
             }
             else {
                 localStorage.setItem('resultDrawDprnDiary', document.querySelector('#newDrawDprnDiary').value);
                 setDrawDprnDiary();
-                editFormDrawDprnDiary.classList.add('hide');
-                editButtonDrawDprnDiary.classList.remove('hide');
+                editFormDrawDprnDiary.classList.add('js-hide');
+                editButtonDrawDprnDiary.classList.remove('js-hide');
             }
         }
     
@@ -776,8 +776,8 @@ if (location.pathname == "/index.html")
         let editButtonDrawLineDrawing = document.querySelector('#editButtonDrawLineDrawing');
     
         editButtonDrawLineDrawing.onclick = function () {
-            editFormDrawLineDrawing.classList.remove('hide');
-            editButtonDrawLineDrawing.classList.add('hide');
+            editFormDrawLineDrawing.classList.remove('js-hide');
+            editButtonDrawLineDrawing.classList.add('js-hide');
         }
     
         if (!localStorage.getItem('resultDrawLineDrawing')) {
@@ -789,14 +789,14 @@ if (location.pathname == "/index.html")
     
         function populateDrawLineDrawing() {
             if (document.querySelector('#newDrawLineDrawing').value == "") {
-                editFormDrawLineDrawing.classList.add('hide');
-                editButtonDrawLineDrawing.classList.remove('hide');
+                editFormDrawLineDrawing.classList.add('js-hide');
+                editButtonDrawLineDrawing.classList.remove('js-hide');
             }
             else {
                 localStorage.setItem('resultDrawLineDrawing', document.querySelector('#newDrawLineDrawing').value);
                 setDrawLineDrawing();
-                editFormDrawLineDrawing.classList.add('hide');
-                editButtonDrawLineDrawing.classList.remove('hide');
+                editFormDrawLineDrawing.classList.add('js-hide');
+                editButtonDrawLineDrawing.classList.remove('js-hide');
             }
         }
     
@@ -846,8 +846,8 @@ if (location.pathname == "/index.html")
         let editButtonDrawColorPencil = document.querySelector('#editButtonDrawColorPencil');
     
         editButtonDrawColorPencil.onclick = function () {
-            editFormDrawColorPencil.classList.remove('hide');
-            editButtonDrawColorPencil.classList.add('hide');
+            editFormDrawColorPencil.classList.remove('js-hide');
+            editButtonDrawColorPencil.classList.add('js-hide');
         }
     
         if (!localStorage.getItem('resultDrawColorPencil')) {
@@ -859,14 +859,14 @@ if (location.pathname == "/index.html")
     
         function populateDrawColorPencil() {
             if (document.querySelector('#newDrawColorPencil').value == "") {
-                editFormDrawColorPencil.classList.add('hide');
-                editButtonDrawColorPencil.classList.remove('hide');
+                editFormDrawColorPencil.classList.add('js-hide');
+                editButtonDrawColorPencil.classList.remove('js-hide');
             }
             else {
                 localStorage.setItem('resultDrawColorPencil', document.querySelector('#newDrawColorPencil').value);
                 setDrawColorPencil();
-                editFormDrawColorPencil.classList.add('hide');
-                editButtonDrawColorPencil.classList.remove('hide');
+                editFormDrawColorPencil.classList.add('js-hide');
+                editButtonDrawColorPencil.classList.remove('js-hide');
             }
         }
     
@@ -916,8 +916,8 @@ if (location.pathname == "/index.html")
         let editButtonDrawMisc = document.querySelector('#editButtonDrawMisc');
     
         editButtonDrawMisc.onclick = function () {
-            editFormDrawMisc.classList.remove('hide');
-            editButtonDrawMisc.classList.add('hide');
+            editFormDrawMisc.classList.remove('js-hide');
+            editButtonDrawMisc.classList.add('js-hide');
         }
     
         if (!localStorage.getItem('resultDrawMisc')) {
@@ -929,14 +929,14 @@ if (location.pathname == "/index.html")
     
         function populateDrawMisc() {
             if (document.querySelector('#newDrawMisc').value == "") {
-                editFormDrawMisc.classList.add('hide');
-                editButtonDrawMisc.classList.remove('hide');
+                editFormDrawMisc.classList.add('js-hide');
+                editButtonDrawMisc.classList.remove('js-hide');
             }
             else {
                 localStorage.setItem('resultDrawMisc', document.querySelector('#newDrawMisc').value);
                 setDrawMisc();
-                editFormDrawMisc.classList.add('hide');
-                editButtonDrawMisc.classList.remove('hide');
+                editFormDrawMisc.classList.add('js-hide');
+                editButtonDrawMisc.classList.remove('js-hide');
             }
         }
     
@@ -990,8 +990,8 @@ if (location.pathname == "/index.html")
         let editButtonCurrentProject = document.querySelector('#editButtonCurrentProject');
     
         editButtonCurrentProject.onclick = function () {
-            editFormCurrentProject.classList.remove('hide');
-            editButtonCurrentProject.classList.add('hide');
+            editFormCurrentProject.classList.remove('js-hide');
+            editButtonCurrentProject.classList.add('js-hide');
         }
     
         if (!localStorage.getItem('resultCurrentProject')) {
@@ -1003,14 +1003,14 @@ if (location.pathname == "/index.html")
     
         function populateCurrentProject() {
             if (document.querySelector('#newCurrentProject').value == "") {
-                editFormCurrentProject.classList.add('hide');
-                editButtonCurrentProject.classList.remove('hide');
+                editFormCurrentProject.classList.add('js-hide');
+                editButtonCurrentProject.classList.remove('js-hide');
             }
             else {
                 localStorage.setItem('resultCurrentProject', document.querySelector('#newCurrentProject').value);
                 setCurrentProject();
-                editFormCurrentProject.classList.add('hide');
-                editButtonCurrentProject.classList.remove('hide');
+                editFormCurrentProject.classList.add('js-hide');
+                editButtonCurrentProject.classList.remove('js-hide');
             }
         }
     
