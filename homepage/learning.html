@@ -11,31 +11,68 @@
 <body>
 
     <!-- Container -->
-    <div class="container">
+    <div class="container  wrapper">
     
-        <!-- Navigation -->
-        <nav>
-            <a href="/index.html">Home</a>
-            <a href="/about.html">About</a>
-            <a href="/projects.html">Projects</a>
-            <a href="/learning.html">Learning</a>
-            <a href="/sport.html">Sport</a>
-            <a href="/drawings.html">Drawings</a>
-            <a href="/health.html">Health</a>
-        </nav>
-        
-        
         <!-- Header -->
-        <header>
-            <h1>Learning</h1>
+        <header class="o-header  o-layout">
+        
+            <div class="c-layout__item">
+        
+                <!-- Navigation -->
+                <nav class="o-nav">
+                    <ul class="c-nav__list ">
+                        <li class="c-nav__item">
+                            <a href="/index.html">Home</a>
+                        </li>
+                        <li class="c-nav__item">
+                            <a href="/about.html">About</a>
+                        </li>
+                        <li class="c-nav__item">
+                            <a href="/projects.html" class="nav__link">Projects</a>
+                        </li>
+                        <li class="c-nav__item">
+                            <a href="/learning.html" class="nav__link">Learning</a>
+                        </li>
+                        <li class="c-nav__item">
+                            <a href="/sport.html" class="nav__link">Sport</a>
+                        </li>
+                        <li class="c-nav__item">
+                            <a href="/drawings.html" class="nav__link">Drawings</a>
+                        </li>
+                        <li class="c-nav__item">
+                            <a href="/health.html" class="nav__link">Health</a>
+                        </li>
+                    </ul>
+                </nav>
+        
+                <!-- Main Title  -->
+                <section>
+        
+                    <h1>Learning</h1>
+        
+                    <figure>
+                        <img src="img/zebaka-small.jpg" alt="Logo Zebaka" class="c-header__logo">
+                    </figure>
+        
+                </section>
+        
+                <!-- Time -->
+                <section>
+                    <div id="today"></div>
+                </section>
+            </div>
+        
         </header>
-    
-    
+        
+
+
+
+
         <!-- Main -->
-        <main>
+        <main class="o-layout">
     
             <!-- I am Learning Article -->
-            <article>
+            <article class="c-layout__item">
     
                 <header>
                     <h2>I am learning</h2>
@@ -88,7 +125,7 @@
             
             
             <!-- I have Learned Article -->
-            <article>
+            <article class="c-layout__item">
                 <header>
                     <h2>I have learned</h2>
                 </header>
@@ -132,7 +169,7 @@
             </article>
     
             <!-- Want to Learn Article -->
-            <article>
+            <article class="c-layout__item">
                 <header>
                     <h2>Want to learn</h2>
                 </header>
@@ -159,7 +196,7 @@
         </main>
     
         <!-- Footer -->
-        <footer>
+        <footer class="c-layout__item">
             <button onclick="scrollToTop()" id="buttonUp" title="Go to top"
                 type="button" class="btn btn-outline-dark">Up</button>
         </footer>

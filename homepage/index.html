@@ -12,56 +12,65 @@
 <body>
     
     <!-- Container -->
-    <div class="container">
+    <div class="container wrapper">
         
         <!-- Header -->
-        <header class="o-page-head  c-page-head__main">
+        <header class="o-header  o-layout">
 
-            <!-- Navigation -->
-            <nav class="o-main-nav">
-                <ul class="c-main-nav__list">
-                    <li class="c-main-nav__item">
-                        <a href="/index.html">Home</a>
-                    </li>
-                    <li class="c-main-nav__item">
-                        <a href="/about.html">About</a>
-                    </li>
-                    <li class="c-main-nav__item">
-                        <a href="/projects.html" class="main-nav__link">Projects</a>
-                    </li>
-                    <li class="c-main-nav__item">
-                        <a href="/learning.html" class="main-nav__link">Learning</a>
-                    </li>
-                    <li class="c-main-nav__item">
-                        <a href="/sport.html" class="main-nav__link">Sport</a>
-                    </li>
-                    <li class="c-main-nav__item">
-                        <a href="/drawings.html" class="main-nav__link">Drawings</a>
-                    </li>
-                    <li class="c-main-nav__item">
-                        <a href="/health.html" class="main-nav__link">Health</a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="c-layout__item">
 
-            <!-- Main Title  -->
-            <h1>Sasha's Dashboard</h1>
-            <figure>
-                <img src="img/200x150@2x.png" alt="Sample Image 200x150px@2x">
-            </figure>
-        </header>
+                <!-- Navigation -->
+                <nav class="o-nav">
+                    <ul class="c-nav__list ">
+                        <li class="c-nav__item">
+                            <a href="/index.html">Home</a>
+                        </li>
+                        <li class="c-nav__item">
+                            <a href="/about.html">About</a>
+                        </li>
+                        <li class="c-nav__item">
+                            <a href="/projects.html" class="nav__link">Projects</a>
+                        </li>
+                        <li class="c-nav__item">
+                            <a href="/learning.html" class="nav__link">Learning</a>
+                        </li>
+                        <li class="c-nav__item">
+                            <a href="/sport.html" class="nav__link">Sport</a>
+                        </li>
+                        <li class="c-nav__item">
+                            <a href="/drawings.html" class="nav__link">Drawings</a>
+                        </li>
+                        <li class="c-nav__item">
+                            <a href="/health.html" class="nav__link">Health</a>
+                        </li>
+                    </ul>
+                </nav>
     
+                <!-- Main Title  -->
+                <section>
     
-        <!-- Main -->
-        <main>
+                    <h1>Sasha's Dashboard</h1>
     
-            <!-- Status Article -->
-            <article>
-    
+                    <figure>
+                        <img src="img/zebaka-small.jpg" alt="Logo Zebaka" class="c-header__logo">
+                    </figure>
+                    
+                </section>
+                
                 <!-- Time -->
                 <section>
                     <div id="today"></div>
                 </section>
+            </div>
+
+        </header>
+    
+    
+        <!-- Main -->
+        <main class="o-layout">
+    
+            <!-- Status Article -->
+            <article class="c-layout__item">
     
                 <!-- Status -->
                 <section>
@@ -81,7 +90,7 @@
                 </section>
     
                 <!-- Current Goal -->
-                <section>
+                <section class="c-layout__item">
                     <header>
                         <h2>Current goal</h2>
                     </header>
@@ -101,7 +110,7 @@
     
     
             <!-- Recent Article -->
-            <article>
+            <article class="c-layout__item">
                 <section>
                     <header>
                         <h2>Recent content</h2>
@@ -162,7 +171,7 @@
     
     
             <!-- Don't Forget Article -->
-            <article>
+            <article class="c-layout__item">
     
                 <header>
                     <h2>Don't forget</h2>
@@ -346,7 +355,7 @@
     
     
             <!-- Recent Project Article -->
-            <article>
+            <article class="c-layout__item">
     
                 <header>
                     <h2>Current project</h2>
@@ -371,7 +380,7 @@
     
     
         <!-- Footer -->
-        <footer>
+        <footer class="c-layout__item">
             <button onclick="scrollToTop()" id="buttonUp" title="Go to top"
                 type="button" class="btn btn-outline-dark">Up</button>
         </footer>
