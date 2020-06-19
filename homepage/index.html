@@ -10,382 +10,383 @@
 </head>
 
 <body>
-    
-    <!-- Container -->
-    <div class="container wrapper">
-        
-        <!-- Header -->
-        <header class="o-header  o-layout">
 
-            <div class="c-layout__item">
+    <!-- Grid -->
+    <div class="wrapper">
 
-                <!-- Navigation -->
-                <nav class="o-nav">
-                    <ul class="c-nav__list ">
-                        <li class="c-nav__item">
-                            <a href="/index.html">Home</a>
-                        </li>
-                        <li class="c-nav__item">
-                            <a href="/about.html">About</a>
-                        </li>
-                        <li class="c-nav__item">
-                            <a href="/projects.html" class="nav__link">Projects</a>
-                        </li>
-                        <li class="c-nav__item">
-                            <a href="/learning.html" class="nav__link">Learning</a>
-                        </li>
-                        <li class="c-nav__item">
-                            <a href="/sport.html" class="nav__link">Sport</a>
-                        </li>
-                        <li class="c-nav__item">
-                            <a href="/drawings.html" class="nav__link">Drawings</a>
-                        </li>
-                        <li class="c-nav__item">
-                            <a href="/health.html" class="nav__link">Health</a>
-                        </li>
-                    </ul>
-                </nav>
+        <!-- Container -->
+        <div class="u-wrapper--center">
+            
+            <!-- Header -->
+            <header class="o-header  o-layout">
     
-                <!-- Main Title  -->
-                <section>
+                <div class="c-layout__item">
     
-                    <h1>Sasha's Dashboard</h1>
-    
-                    <figure>
-                        <img src="img/zebaka-small.jpg" alt="Logo Zebaka" class="c-header__logo">
-                    </figure>
+                    <!-- Navigation -->
+                    <nav class="o-nav">
+                        <ul class="c-nav__list ">
+                            <li class="c-nav__item">
+                                <a href="/index.html">Home</a>
+                            </li>
+                            <li class="c-nav__item">
+                                <a href="/about.html">About</a>
+                            </li>
+                            <li class="c-nav__item">
+                                <a href="/projects.html" class="nav__link">Projects</a>
+                            </li>
+                            <li class="c-nav__item">
+                                <a href="/learning.html" class="nav__link">Learning</a>
+                            </li>
+                            <li class="c-nav__item">
+                                <a href="/sport.html" class="nav__link">Sport</a>
+                            </li>
+                            <li class="c-nav__item">
+                                <a href="/drawings.html" class="nav__link">Drawings</a>
+                            </li>
+                            <li class="c-nav__item">
+                                <a href="/health.html" class="nav__link">Health</a>
+                            </li>
+                        </ul>
+                    </nav>
+        
+                    <!-- Main Title  -->
+                    <section class="c-header__overlap">
+                        <img src="img/zebaka-small.jpg" alt="Logo Zebaka" class="c-header__logo">                
+                        <h1 class="c-header__title">Sasha's Dashboard</h1>
+                    </section>
                     
-                </section>
-                
-                <!-- Time -->
-                <section>
-                    <div id="today"></div>
-                </section>
-            </div>
-
-        </header>
+                    <!-- Time -->
+                    <section>
+                        <div id="today"></div>
+                    </section>
+                </div>
     
-    
-        <!-- Main -->
-        <main class="o-layout">
-    
-            <!-- Status Article -->
-            <article class="c-layout__item">
-    
-                <!-- Status -->
-                <section>
+            </header>
+        
+        
+            <!-- Main -->
+            <main class="o-layout">
+        
+                <!-- Status Article -->
+                <article class="c-layout__item">
+        
+                    <!-- Status -->
+                    <section>
+                        <header>
+                            <h2>Status</h2>
+                        </header>
+                        <div>
+                            <p id="resultStatus">Current status</p>
+                        </div>
+                        <button id="editButtonStatus">Edit</button>
+                        <article id="editFormStatus" class="js-hide">
+                            <form>
+                                <input type="text" id="newStatus">
+                                <input type="submit" id="submitStatus">
+                            </form>
+                        </article>
+                    </section>
+        
+                    <!-- Current Goal -->
+                    <section class="c-layout__item">
+                        <header>
+                            <h2>Current goal</h2>
+                        </header>
+                        <div>
+                            <p id="resultGoal">Current goal</p>
+                        </div>
+                        <button id="editButtonGoal">Edit</button>
+                        <article id="editFormGoal" class="js-hide">
+                            <form>
+                                <input type="text" id="newGoal">
+                                <input type="submit" id="submitGoal">
+                            </form>
+                        </article>
+                    </section>
+        
+                </article>
+        
+        
+                <!-- Recent Article -->
+                <article class="c-layout__item">
+                    <section>
+                        <header>
+                            <h2>Recent content</h2>
+                        </header>
+                        <div>
+                            <p id="resultRecentBook">Recent book title</p>
+                        </div>
+                        <button id="editButtonRecentBook">Edit</button>
+                        <article id="editFormRecentBook" class="js-hide">
+                            <form>
+                                <input type="text" id="newRecentBook">
+                                <input type="submit" id="submitRecentBook">
+                            </form>
+                        </article>
+            
+                        <div>
+                            <p id="resultRecentMovie">Recent movie title</p>
+                        </div>
+                        <button id="editButtonRecentMovie">Edit</button>
+                        <article id="editFormRecentMovie" class="js-hide">
+                            <form>
+                                <input type="text" id="newRecentMovie">
+                                <input type="submit" id="submitRecentMovie">
+                            </form>
+                        </article>
+            
+                        <section>
+                            <figure>
+                                <img id="resultRecentPhoto" src="img/150x110@2x.png" alt="Sample of photo">
+                                <figcaption>Recent photo taken</figcaption>
+                            </figure>
+                            <button id="editButtonRecentPhoto">Edit</button>
+                            <article id="editFormRecentPhoto" class="js-hide">
+                                <form>
+                                    <input type="text" id="newRecentPhoto">
+                                    <input type="submit" id="submitRecentPhoto">
+                                </form>
+                            </article>
+                        </section>
+                        
+                        <section>
+                            <figure>
+                                <img id="resultRecentDrawing" src="img/150x110@2x.png" alt="Sample of drawing">
+                                <figcaption>Recent drawing made</figcaption>
+                            </figure>
+                            <button id="editButtonRecentDrawing">Edit</button>
+                            <article id="editFormRecentDrawing" class="js-hide">
+                                <form>
+                                    <input type="text" id="newRecentDrawing">
+                                    <input type="submit" id="submitRecentDrawing">
+                                </form>
+                            </article>
+                        </section>
+        
+                    </section>
+        
+                </article>
+        
+        
+                <!-- Don't Forget Article -->
+                <article class="c-layout__item">
+        
                     <header>
-                        <h2>Status</h2>
+                        <h2>Don't forget</h2>
                     </header>
-                    <div>
-                        <p id="resultStatus">Current status</p>
-                    </div>
-                    <button id="editButtonStatus">Edit</button>
-                    <article id="editFormStatus" class="js-hide">
-                        <form>
-                            <input type="text" id="newStatus">
-                            <input type="submit" id="submitStatus">
-                        </form>
-                    </article>
-                </section>
-    
-                <!-- Current Goal -->
-                <section class="c-layout__item">
-                    <header>
-                        <h2>Current goal</h2>
-                    </header>
-                    <div>
-                        <p id="resultGoal">Current goal</p>
-                    </div>
-                    <button id="editButtonGoal">Edit</button>
-                    <article id="editFormGoal" class="js-hide">
-                        <form>
-                            <input type="text" id="newGoal">
-                            <input type="submit" id="submitGoal">
-                        </form>
-                    </article>
-                </section>
-    
-            </article>
-    
-    
-            <!-- Recent Article -->
-            <article class="c-layout__item">
-                <section>
-                    <header>
-                        <h2>Recent content</h2>
-                    </header>
-                    <div>
-                        <p id="resultRecentBook">Recent book title</p>
-                    </div>
-                    <button id="editButtonRecentBook">Edit</button>
-                    <article id="editFormRecentBook" class="js-hide">
-                        <form>
-                            <input type="text" id="newRecentBook">
-                            <input type="submit" id="submitRecentBook">
-                        </form>
+        
+                    <!-- Learn -->
+                    <article>
+                        <header>
+                            <h3>to Learn</h3>
+                        </header>
+        
+                        <section>
+                            <div>CS50</div>
+                            <p id="doneResultLearnCS50"></p>
+                            <button id="doneButtonLearnCS50">Done</button>
+                        </section>
+        
+                        <section>
+                            <div>English</div>
+                            <p id="doneResultLearnEng"></p>
+                            <button id="doneButtonLearnEng">Done</button>
+                        </section>
                     </article>
         
-                    <div>
-                        <p id="resultRecentMovie">Recent movie title</p>
-                    </div>
-                    <button id="editButtonRecentMovie">Edit</button>
-                    <article id="editFormRecentMovie" class="js-hide">
-                        <form>
-                            <input type="text" id="newRecentMovie">
-                            <input type="submit" id="submitRecentMovie">
-                        </form>
+                    <!-- Connect -->
+                    <article>
+                        <header>
+                            <h3>to Connect</h3>
+                        </header>
+                        
+                        <section>
+                            <figure>
+                                <img src="img/100x130@2x.png" alt="Connect person's photo">
+                                <figcaption>Chat</figcaption>
+                            </figure>
+                            <p id="doneResultConnectChat"></p>
+                            <button id="doneButtonConnectChat">Done</button>
+                        </section>
+        
+                        <section>
+                            <figure>
+                                <img src="img/100x130@2x.png" alt="Connect person's photo">
+                                <figcaption>Mezhaka</figcaption>
+                            </figure>
+                            <p id="doneResultConnectMezhaka"></p>
+                            <button id="doneButtonConnectMezhaka">Done</button>
+                        </section>
+        
+                        <section>
+                            <figure>
+                                <img src="img/100x130@2x.png" alt="Connect person's photo">
+                                <figcaption>Sasha D</figcaption>
+                            </figure>
+                            <p id="doneResultConnectSashaD"></p>
+                            <button id="doneButtonConnectSashaD">Done</button>
+                        </section>
+        
+                        <section>
+                            <figure>
+                                <img src="img/100x130@2x.png" alt="Reddit logo">
+                                <figcaption>Social random</figcaption>
+                            </figure>
+                            <p id="doneResultConnectRandom"></p>
+                            <button id="doneButtonConnectRandom">Done</button>
+                        </section>
+                        
+                        <section>
+                            <figure>
+                                <img src="img/100x130@2x.png" alt="Connect family's photo">
+                                <figcaption>Parent/brother family</figcaption>
+                            </figure>
+                            <p id="doneResultConnectFamily"></p>
+                            <button id="doneButtonConnectFamily">Done</button>
+                        </section>
                     </article>
         
-                    <section>
-                        <figure>
-                            <img id="resultRecentPhoto" src="img/150x110@2x.png" alt="Sample of photo">
-                            <figcaption>Recent photo taken</figcaption>
-                        </figure>
-                        <button id="editButtonRecentPhoto">Edit</button>
-                        <article id="editFormRecentPhoto" class="js-hide">
-                            <form>
-                                <input type="text" id="newRecentPhoto">
-                                <input type="submit" id="submitRecentPhoto">
-                            </form>
-                        </article>
-                    </section>
-                    
-                    <section>
-                        <figure>
-                            <img id="resultRecentDrawing" src="img/150x110@2x.png" alt="Sample of drawing">
-                            <figcaption>Recent drawing made</figcaption>
-                        </figure>
-                        <button id="editButtonRecentDrawing">Edit</button>
-                        <article id="editFormRecentDrawing" class="js-hide">
-                            <form>
-                                <input type="text" id="newRecentDrawing">
-                                <input type="submit" id="submitRecentDrawing">
-                            </form>
-                        </article>
-                    </section>
-    
-                </section>
-    
-            </article>
-    
-    
-            <!-- Don't Forget Article -->
-            <article class="c-layout__item">
-    
-                <header>
-                    <h2>Don't forget</h2>
-                </header>
-    
-                <!-- Learn -->
-                <article>
-                    <header>
-                        <h3>to Learn</h3>
-                    </header>
-    
-                    <section>
-                        <div>CS50</div>
-                        <p id="doneResultLearnCS50"></p>
-                        <button id="doneButtonLearnCS50">Done</button>
-                    </section>
-    
-                    <section>
-                        <div>English</div>
-                        <p id="doneResultLearnEng"></p>
-                        <button id="doneButtonLearnEng">Done</button>
-                    </section>
-                </article>
-    
-                <!-- Connect -->
-                <article>
-                    <header>
-                        <h3>to Connect</h3>
-                    </header>
-                    
-                    <section>
-                        <figure>
-                            <img src="img/100x130@2x.png" alt="Connect person's photo">
-                            <figcaption>Chat</figcaption>
-                        </figure>
-                        <p id="doneResultConnectChat"></p>
-                        <button id="doneButtonConnectChat">Done</button>
-                    </section>
-    
-                    <section>
-                        <figure>
-                            <img src="img/100x130@2x.png" alt="Connect person's photo">
-                            <figcaption>Mezhaka</figcaption>
-                        </figure>
-                        <p id="doneResultConnectMezhaka"></p>
-                        <button id="doneButtonConnectMezhaka">Done</button>
-                    </section>
-    
-                    <section>
-                        <figure>
-                            <img src="img/100x130@2x.png" alt="Connect person's photo">
-                            <figcaption>Sasha D</figcaption>
-                        </figure>
-                        <p id="doneResultConnectSashaD"></p>
-                        <button id="doneButtonConnectSashaD">Done</button>
-                    </section>
-    
-                    <section>
-                        <figure>
-                            <img src="img/100x130@2x.png" alt="Reddit logo">
-                            <figcaption>Social random</figcaption>
-                        </figure>
-                        <p id="doneResultConnectRandom"></p>
-                        <button id="doneButtonConnectRandom">Done</button>
-                    </section>
-                    
-                    <section>
-                        <figure>
-                            <img src="img/100x130@2x.png" alt="Connect family's photo">
-                            <figcaption>Parent/brother family</figcaption>
-                        </figure>
-                        <p id="doneResultConnectFamily"></p>
-                        <button id="doneButtonConnectFamily">Done</button>
-                    </section>
-                </article>
-    
-                <!-- Sport -->
-                <article>
-                    
-                    <header>
-                        <h3>do Sport</h3>
-                    </header>
-                    
-                    <section>
-                        <div>Morning exercises</div>
-                        <p id="doneResultSportExercises"></p>
-                        <button id="doneButtonSportExercises">Done</button>
-                    </section>
-    
-                    <section>
-                        <div>Running</div>
-                        <p id="doneResultSportRunning"></p>
-                        <button id="doneButtonSportRunning">Done</button>
-                    </section>
-    
-                    <section>
-                        <div>Bike</div>
-                        <p id="doneResultSportBike"></p>
-                        <button id="doneButtonSportBike">Done</button>
-                    </section>
-                    
-                    <section>
-                        <div>Strength training</div>
-                        <p id="doneResultSportStrength"></p>
-                        <button id="doneButtonSportStrength">Done</button>
-                    </section>
-                </article>
-    
-                <!-- Draw -->
-                <article>
-                    <header>
-                        <h3>to Draw</h3>
-                    </header>
-    
-                    <section>
-                        <figure>
-                            <img id="resultDrawDprnDiary" src="img/130x100@2x.png" alt="Drawing in progress">
-                            <figcaption>#dprndiary</figcaption>
-                        </figure>
-                        <button id="editButtonDrawDprnDiary">Edit</button>
-                        <article id="editFormDrawDprnDiary" class="js-hide">
-                            <form>
-                                <input type="text" id="newDrawDprnDiary">
-                                <input type="submit" id="submitDrawDprnDiary">
-                            </form>
-                        </article>
-                        <p id="doneResultDrawDprnDiary"></p>
-                        <button id="doneButtonDrawDprnDiary">Done</button>
-                    </section>
-    
-                    <section>
-                        <figure>
-                            <img id="resultDrawLineDrawing" src="img/100x130@2x.png" alt="Drawing in progress">
-                            <figcaption>#linedrawing</figcaption>
-                        </figure>
-                        <button id="editButtonDrawLineDrawing">Edit</button>
-                        <article id="editFormDrawLineDrawing" class="js-hide">
-                            <form>
-                                <input type="text" id="newDrawLineDrawing">
-                                <input type="submit" id="submitDrawLineDrawing">
-                            </form>
-                        </article>
-                        <p id="doneResultDrawLineDrawing"></p>
-                        <button id="doneButtonDrawLineDrawing">Done</button>
-                    </section>
-    
-                    <section>
-                        <figure>
-                            <img id="resultDrawColorPencil" src="img/130x100@2x.png" alt="Drawing in progress">
-                            <figcaption>#colorpencil</figcaption>
-                        </figure>
-                        <button id="editButtonDrawColorPencil">Edit</button>
-                        <article id="editFormDrawColorPencil" class="js-hide">
-                            <form>
-                                <input type="text" id="newDrawColorPencil">
-                                <input type="submit" id="submitDrawColorPencil">
-                            </form>
-                        </article>
-                        <p id="doneResultDrawColorPencil"></p>
-                        <button id="doneButtonDrawColorPencil">Done</button>
-                    </section>
-    
-                    <section>
-                        <figure>
-                            <img id="resultDrawMisc" src="img/100x130@2x.png" alt="Drawing in progress">
-                            <figcaption>misc</figcaption>
-                        </figure>
-                        <button id="editButtonDrawMisc">Edit</button>
-                        <article id="editFormDrawMisc" class="js-hide">
-                            <form>
-                                <input type="text" id="newDrawMisc">
-                                <input type="submit" id="submitDrawMisc">
-                            </form>
-                        </article>
-                        <p id="doneResultDrawMisc"></p>
-                        <button id="doneButtonDrawMisc">Done</button>
-                    </section>
-                </article>
-    
-            </article>
-    
-    
-            <!-- Recent Project Article -->
-            <article class="c-layout__item">
-    
-                <header>
-                    <h2>Current project</h2>
-                </header>
-    
-                <section>
-                    <div id="resultCurrentProject">CS50 homepage</div>
-                    <button id="editButtonCurrentProject">Edit</button>
-                    <article id="editFormCurrentProject" class="js-hide">
-                        <form>
-                            <input type="text" id="newCurrentProject">
-                            <input type="submit" id="submitCurrentProject">
-                        </form>
+                    <!-- Sport -->
+                    <article>
+                        
+                        <header>
+                            <h3>do Sport</h3>
+                        </header>
+                        
+                        <section>
+                            <div>Morning exercises</div>
+                            <p id="doneResultSportExercises"></p>
+                            <button id="doneButtonSportExercises">Done</button>
+                        </section>
+        
+                        <section>
+                            <div>Running</div>
+                            <p id="doneResultSportRunning"></p>
+                            <button id="doneButtonSportRunning">Done</button>
+                        </section>
+        
+                        <section>
+                            <div>Bike</div>
+                            <p id="doneResultSportBike"></p>
+                            <button id="doneButtonSportBike">Done</button>
+                        </section>
+                        
+                        <section>
+                            <div>Strength training</div>
+                            <p id="doneResultSportStrength"></p>
+                            <button id="doneButtonSportStrength">Done</button>
+                        </section>
                     </article>
-                    <p id="doneResultCurrentProject"></p>
-                    <button id="doneButtonCurrentProject">Done</button>
-                </section>
+        
+                    <!-- Draw -->
+                    <article>
+                        <header>
+                            <h3>to Draw</h3>
+                        </header>
+        
+                        <section>
+                            <figure>
+                                <img id="resultDrawDprnDiary" src="img/130x100@2x.png" alt="Drawing in progress">
+                                <figcaption>#dprndiary</figcaption>
+                            </figure>
+                            <button id="editButtonDrawDprnDiary">Edit</button>
+                            <article id="editFormDrawDprnDiary" class="js-hide">
+                                <form>
+                                    <input type="text" id="newDrawDprnDiary">
+                                    <input type="submit" id="submitDrawDprnDiary">
+                                </form>
+                            </article>
+                            <p id="doneResultDrawDprnDiary"></p>
+                            <button id="doneButtonDrawDprnDiary">Done</button>
+                        </section>
+        
+                        <section>
+                            <figure>
+                                <img id="resultDrawLineDrawing" src="img/100x130@2x.png" alt="Drawing in progress">
+                                <figcaption>#linedrawing</figcaption>
+                            </figure>
+                            <button id="editButtonDrawLineDrawing">Edit</button>
+                            <article id="editFormDrawLineDrawing" class="js-hide">
+                                <form>
+                                    <input type="text" id="newDrawLineDrawing">
+                                    <input type="submit" id="submitDrawLineDrawing">
+                                </form>
+                            </article>
+                            <p id="doneResultDrawLineDrawing"></p>
+                            <button id="doneButtonDrawLineDrawing">Done</button>
+                        </section>
+        
+                        <section>
+                            <figure>
+                                <img id="resultDrawColorPencil" src="img/130x100@2x.png" alt="Drawing in progress">
+                                <figcaption>#colorpencil</figcaption>
+                            </figure>
+                            <button id="editButtonDrawColorPencil">Edit</button>
+                            <article id="editFormDrawColorPencil" class="js-hide">
+                                <form>
+                                    <input type="text" id="newDrawColorPencil">
+                                    <input type="submit" id="submitDrawColorPencil">
+                                </form>
+                            </article>
+                            <p id="doneResultDrawColorPencil"></p>
+                            <button id="doneButtonDrawColorPencil">Done</button>
+                        </section>
+        
+                        <section>
+                            <figure>
+                                <img id="resultDrawMisc" src="img/100x130@2x.png" alt="Drawing in progress">
+                                <figcaption>misc</figcaption>
+                            </figure>
+                            <button id="editButtonDrawMisc">Edit</button>
+                            <article id="editFormDrawMisc" class="js-hide">
+                                <form>
+                                    <input type="text" id="newDrawMisc">
+                                    <input type="submit" id="submitDrawMisc">
+                                </form>
+                            </article>
+                            <p id="doneResultDrawMisc"></p>
+                            <button id="doneButtonDrawMisc">Done</button>
+                        </section>
+                    </article>
+        
+                </article>
+        
+        
+                <!-- Recent Project Article -->
+                <article class="c-layout__item">
+        
+                    <header>
+                        <h2>Current project</h2>
+                    </header>
+        
+                    <section>
+                        <div id="resultCurrentProject">CS50 homepage</div>
+                        <button id="editButtonCurrentProject">Edit</button>
+                        <article id="editFormCurrentProject" class="js-hide">
+                            <form>
+                                <input type="text" id="newCurrentProject">
+                                <input type="submit" id="submitCurrentProject">
+                            </form>
+                        </article>
+                        <p id="doneResultCurrentProject"></p>
+                        <button id="doneButtonCurrentProject">Done</button>
+                    </section>
+        
+                </article>
+        
+            </main>
+        
+        
+            <!-- Footer -->
+            <footer class="c-layout__item">
+                <button onclick="scrollToTop()" id="buttonUp" title="Go to top"
+                    type="button" class="btn btn-outline-dark">Up</button>
+            </footer>
     
-            </article>
-    
-        </main>
-    
-    
-        <!-- Footer -->
-        <footer class="c-layout__item">
-            <button onclick="scrollToTop()" id="buttonUp" title="Go to top"
-                type="button" class="btn btn-outline-dark">Up</button>
-        </footer>
+        </div>
 
     </div>
+    
 
     <!-- Script -->
     <script src="script.js"></script>

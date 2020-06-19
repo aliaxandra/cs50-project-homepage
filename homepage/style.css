@@ -24,8 +24,23 @@ from: https: //csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/
 
 /* LAYOUT */
 
-.container.wrapper {
-  max-width: 720px;
+body {
+  --highlight: #0275D8;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 25px 1fr 25px;
+}
+
+@media (min-width: 720px) {
+  .wrapper {
+    grid-template-columns: 1fr 640px 1fr;
+  }
+}
+
+.u-wrapper--center {
+  grid-column: 2 / 3;
 }
 
 .c-layout__item {
@@ -34,6 +49,13 @@ from: https: //csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/
 
 
 
+
+
+/** 
+--------------------------
+          HEADER
+--------------------------
+*/
 
 
 /* NAVIGATION SECTION */
@@ -50,10 +72,41 @@ from: https: //csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/
 }
 
 
+/* Overlap  */
+
+.c-header__overlap {
+  /* display: grid;
+  grid-template-rows: auto auto auto; */
+}
+
+
+/* LOGO */
+
+.c-header__logo {
+  height: 96px;
+  width: 96px;
+}
+
+
+/* TITLE */
+
+.c-header__title {
+  color: var(--highlight);
+  font-weight: 300;
+  font-size: 22px;  
+  margin: 0;
+}
 
 
 
-/* MAIN SECTION */
+
+
+
+/** 
+--------------------------
+           MAIN
+--------------------------
+*/
 
 .c-layout__item {
   text-align: center;
