@@ -58,7 +58,7 @@ body {
 */
 
 
-/* NAVIGATION SECTION */
+/* NAVIGATION */
 
 .c-nav__list {
   list-style: none;
@@ -72,31 +72,28 @@ body {
 }
 
 
-/* Overlap  */
+/* LOGO  */
 
-.c-header__overlap {
-  /* display: grid;
-  grid-template-rows: auto auto auto; */
-}
-
-
-/* LOGO */
-
-.c-header__logo {
+.c-logo-main__header {
   height: 96px;
-  width: 96px;
+  margin-top: 25px;
 }
 
 
 /* TITLE */
 
-.c-header__title {
-  color: var(--highlight);
+.c-title-main__header {
+  font-family: Helvetica Neue;
+  font-style: normal;
   font-weight: 300;
-  font-size: 22px;  
-  margin: 0;
-}
+  font-size: 22px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: var(--highlight);
 
+  position: relative;
+  top: -19px;
+}
 
 
 
