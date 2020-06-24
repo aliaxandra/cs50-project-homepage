@@ -61,14 +61,28 @@ body {
 /* NAVIGATION */
 
 .c-nav__list {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+
   list-style: none;
-  margin: 0;
-  padding:0;
-  text-align: center;
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 31px;
+
+  padding-inline-start: 0px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .c-nav__item {
-  display: inline;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+}
+
+.c-nav__link {
+  text-transform: lowercase;
 }
 
 
