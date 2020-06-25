@@ -131,7 +131,7 @@ a:hover {
 /* TODAY DATE */
 
 .c-date__today {
-  margin: 0 auto 25px auto;
+  margin: 0 auto 50px auto;
   padding: 0 10px 6px 10px;
   border-bottom: 1px solid;
   width: max-content;
@@ -201,4 +201,22 @@ a:hover {
   background-color: transparent;
   
   cursor: pointer;
+}
+
+
+
+
+
+/* RECENT CONTENT */
+
+.c-subheader {
+  margin: 50px auto;
+  padding: 10px;
+
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
 }
