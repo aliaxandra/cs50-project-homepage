@@ -17,6 +17,10 @@
         <!-- Container -->
         <div class="u-wrapper--center">
             
+
+
+
+
             <!-- Header -->
             <header class="o-header  o-layout">
     
@@ -69,6 +73,9 @@
     
             </header>
         
+
+
+
         
             <!-- Main -->
             <main class="o-layout">
@@ -76,23 +83,27 @@
                 <!-- Status Article -->
                 <article class="c-layout__item">
         
+
                     <!-- Status -->
-                    <section>
-                        <header>
-                            <h2>Status</h2>
-                        </header>
-                        <div>
-                            <p id="resultStatus">Current status</p>
+                    <section class="o-card">                        
+                        
+                        <div class="c-card--main">
+                            <div id="editButtonStatus">
+                                <h2 class="c-card__header">Status</h2>
+                                <p class="c-card__body" id="resultStatus">Current status</p>
+                            </div>
+    
+                            <div id="editFormStatus" class="js-hide  o-form">
+                                <form class="c-form__edit">
+                                    <input class="c-form__input" type="text" id="newStatus" placeholder="Type a new goal">
+                                    <input class="c-form__button" type="submit" id="submitStatus">
+                                </form>
+                            </div>
                         </div>
-                        <button id="editButtonStatus">Edit</button>
-                        <article id="editFormStatus" class="js-hide">
-                            <form>
-                                <input type="text" id="newStatus">
-                                <input type="submit" id="submitStatus">
-                            </form>
-                        </article>
+
                     </section>
         
+
                     <!-- Current Goal -->
                     <section class="c-layout__item">
                         <header>

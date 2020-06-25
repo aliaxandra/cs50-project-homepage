@@ -147,10 +147,66 @@ a:hover {
 --------------------------
 */
 
-.c-layout__item {
-  text-align: center;
+
+/* MAIN CARD */
+
+.o-card {
+
 }
 
-.c-text__left {
-  text-align: left;
+.c-card--main {
+  width: 100%;
+  margin: 25px auto;
+  padding: 40px 15px 40px 15px;
+
+  background-color: black;
+  border-radius: 5px;
+  color: white;
+
+  cursor: pointer;
+}
+
+.c-card__header {
+  margin-bottom: 20px; 
+
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.c-card__body {
+  margin-block-end: 0;
+
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+/* Edit Form */
+
+.o-form {
+
+}
+
+.c-form__edit {
+  display: flex;
+}
+
+.c-form__input {
+  width: 100%;
+  padding: 7px 12px;
+  border: 0;
+  border-radius: 5px;
+
+  color: var(--second-color);
+}
+
+.c-form__button {
+  margin-left: 10px;
+  border: 0;
+  
+  color: white;
+  background-color: transparent;
+  
+  cursor: pointer;
 }
