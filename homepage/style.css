@@ -22,10 +22,18 @@ from: https: //csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/
 
 
 
+/** 
+--------------------------
+          GENERAL
+--------------------------
+*/
+
+
 /* LAYOUT */
 
 body {
   --highlight: #0275D8;
+  --second-color: dimgray;
 }
 
 .wrapper {
@@ -45,6 +53,13 @@ body {
 
 .c-layout__item {
   text-align: center;
+}
+
+/* Links */
+
+a:hover {
+  color: var(--second-color);
+  text-decoration: none;
 }
 
 
