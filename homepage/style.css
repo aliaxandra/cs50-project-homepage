@@ -150,10 +150,6 @@ a:hover {
 
 /* MAIN CARD */
 
-.o-card {
-
-}
-
 .c-card--main {
   width: 100%;
   margin: 25px auto;
@@ -183,10 +179,6 @@ a:hover {
 }
 
 /* Edit Form */
-
-.o-form {
-
-}
 
 .c-form__edit {
   display: flex;
