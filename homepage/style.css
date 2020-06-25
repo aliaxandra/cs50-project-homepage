@@ -5,9 +5,12 @@ from: https: //csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/
 
 
 
+/** 
+--------------------------
+          JAVASCRIPT
+--------------------------
+*/
 
-
-/* JAVASCRIPT */
 
 .js-hide {
   display: none;
@@ -55,7 +58,7 @@ body {
   text-align: center;
 }
 
-/* Links */
+/* LINKS */
 
 a:hover {
   color: var(--second-color);
@@ -122,6 +125,16 @@ a:hover {
 
   position: relative;
   top: -19px;
+}
+
+
+/* TODAY DATE */
+
+.c-date__today {
+  margin: 0 auto 25px auto;
+  padding: 0 10px 6px 10px;
+  border-bottom: 1px solid;
+  width: max-content;
 }
 
 
