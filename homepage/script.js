@@ -213,7 +213,7 @@ if (location.pathname == "/index.html")
     
         editButtonRecentBook.onclick = function () {
             editFormRecentBook.classList.remove('js-hide');
-            editButtonRecentBook.classList.add('js-hide');
+            resultRecentBook.classList.add('js-hide');
         }
     
         if (!localStorage.getItem('resultRecentBook')) {
@@ -256,7 +256,7 @@ if (location.pathname == "/index.html")
     
         editButtonRecentMovie.onclick = function () {
             editFormRecentMovie.classList.remove('js-hide');
-            editButtonRecentMovie.classList.add('js-hide');
+            resultRecentMovie.classList.add('js-hide');
         }
     
         if (!localStorage.getItem('resultRecentMovie')) {

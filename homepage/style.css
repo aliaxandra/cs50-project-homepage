@@ -37,6 +37,7 @@ from: https: //csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/
 body {
   --highlight: #0275D8;
   --second-color: dimgray;
+  --main-line: 1px solid;
 }
 
 .wrapper {
@@ -133,7 +134,7 @@ a:hover {
 .c-date__today {
   margin: 0 auto 50px auto;
   padding: 0 10px 6px 10px;
-  border-bottom: 1px solid;
+  border-bottom: var(--main-line);
   width: max-content;
 }
 
@@ -148,18 +149,23 @@ a:hover {
 */
 
 
+/* CARD */
+
+.o-card {
+  background-color: black;
+  border-radius: 5px;
+  color: white;
+  
+  cursor: pointer;
+}
+
+
 /* MAIN CARD */
 
 .c-card--main {
   width: 100%;
   margin: 25px auto;
   padding: 40px 15px 40px 15px;
-
-  background-color: black;
-  border-radius: 5px;
-  color: white;
-
-  cursor: pointer;
 }
 
 .c-card__header {
@@ -170,7 +176,7 @@ a:hover {
   line-height: 24px;
 }
 
-.c-card__body {
+.c-card__text {
   margin-block-end: 0;
 
   font-weight: bold;
@@ -210,7 +216,7 @@ a:hover {
 /* RECENT CONTENT */
 
 .c-subheader {
-  margin: 50px auto;
+  margin: 50px auto 25px auto;
   padding: 10px;
 
   border-top: 1px solid black;
@@ -220,3 +226,59 @@ a:hover {
   font-size: 20px;
   line-height: 24px;
 }
+
+.o-module-pair {
+  margin: 25px auto;
+  padding-bottom: 25px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: var(--main-line);
+}
+
+.c-card--sub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-card__text--sub {
+  margin-block-start: 0;
+  margin-block-end: 0;
+
+  font-size: 20px;
+  line-height: 24px;
+}
+
+
+/* Form  */
+
+.c-form__edit--sub {
+  display: block;
+  margin: 0 15px;
+
+}
+
+.c-form__button.c-form__button--sub {
+  margin-top: 15px;
+}
+
+
+/* Book container */
+
+.u-card--vertical {
+  min-width: 160px;
+  min-height: 230px;
+}
+
+.c-card--first {
+  margin-right: 20px; 
+}
+
+
+/* Movie container */
+  
+.u-card--horizontal {
+  min-width: 220px;
+  min-height: 120px;
+  }

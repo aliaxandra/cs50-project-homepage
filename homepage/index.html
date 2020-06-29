@@ -90,7 +90,7 @@
                         <div class="c-card--main">
                             <div id="editButtonStatus">
                                 <h2 class="c-card__header">Status</h2>
-                                <p class="c-card__body" id="resultStatus">Current status</p>
+                                <p class="c-card__text" id="resultStatus">Current status</p>
                             </div>
     
                             <div id="editFormStatus" class="js-hide  o-form">
@@ -110,7 +110,7 @@
                         <div class="c-card--main">
                             <div id="editButtonGoal">
                                 <h2 class="c-card__header">Current goal</h2>
-                                <p class="c-card__body" id="resultGoal">Current goal</p>
+                                <p class="c-card__text" id="resultGoal">Current goal</p>
                             </div>
                             
                             <div id="editFormGoal" class="js-hide  o-form">
@@ -135,29 +135,43 @@
                             <h2 class="c-subheader">Recent content</h2>
                         </header>
 
-                        <div>
-                            <p id="resultRecentBook">Recent book title</p>
+                        <!-- Module Pair -->
+                        <div class="o-module-pair">
+                            
+                            <!-- Book -->
+                            <div class="o-card  c-card--sub  c-card--first  u-card--vertical" id="editButtonRecentBook">
+
+                                <div>
+                                    <p class="c-card__text--sub" id="resultRecentBook">Recent book title</p>
+                                </div>
+
+                                <div id="editFormRecentBook" class="js-hide">
+                                    <form class="c-form__edit--sub">
+                                        <input class="c-form__input" type="text" id="newRecentBook">
+                                        <input class="c-form__button c-form__button--sub" type="submit" id="submitRecentBook">
+                                    </form>
+                                </div>
+
+                            </div>
+
+                            <!-- Movie -->
+                            <div class="o-card  c-card--sub  u-card--horizontal" id="editButtonRecentMovie">
+
+                                <div>
+                                    <p class="c-card__text--sub" id="resultRecentMovie">Recent movie title</p>
+                                </div>
+
+                                <div id="editFormRecentMovie" class="js-hide">
+                                    <form class="c-form__edit--sub">
+                                        <input class="c-form__input" type="text" id="newRecentMovie">
+                                        <input class="c-form__button c-form__button--sub" type="submit" id="submitRecentMovie">
+                                    </form>
+                                </div>
+                                
+                            </div>
+
                         </div>
 
-                        <button id="editButtonRecentBook">Edit</button>
-
-                        <article id="editFormRecentBook" class="js-hide">
-                            <form>
-                                <input type="text" id="newRecentBook">
-                                <input type="submit" id="submitRecentBook">
-                            </form>
-                        </article>
-            
-                        <div>
-                            <p id="resultRecentMovie">Recent movie title</p>
-                        </div>
-                        <button id="editButtonRecentMovie">Edit</button>
-                        <article id="editFormRecentMovie" class="js-hide">
-                            <form>
-                                <input type="text" id="newRecentMovie">
-                                <input type="submit" id="submitRecentMovie">
-                            </form>
-                        </article>
             
                         <section>
                             <figure>
