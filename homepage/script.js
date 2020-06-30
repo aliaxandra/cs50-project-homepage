@@ -300,7 +300,7 @@ if (location.pathname == "/index.html")
     
         editButtonRecentPhoto.onclick = function () {
             editFormRecentPhoto.classList.remove('js-hide');
-            editButtonRecentPhoto.classList.add('js-hide');
+            resultRecentPhoto.classList.add('js-hide');
         }
     
         if (!localStorage.getItem('resultRecentPhoto')) {
@@ -343,7 +343,7 @@ if (location.pathname == "/index.html")
     
         editButtonRecentDrawing.onclick = function () {
             editFormRecentDrawing.classList.remove('js-hide');
-            editButtonRecentDrawing.classList.add('js-hide');
+            resultRecentDrawing.classList.add('js-hide');
         }
     
         if (!localStorage.getItem('resultRecentDrawing')) {

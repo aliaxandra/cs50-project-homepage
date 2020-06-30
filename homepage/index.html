@@ -135,18 +135,19 @@
                             <h2 class="c-subheader">Recent content</h2>
                         </header>
 
-                        <!-- Module Pair -->
+
+                        <!-- Module Pair Book & Movie-->
                         <div class="o-module-pair">
                             
                             <!-- Book -->
-                            <div class="o-card  c-card--sub  c-card--first  u-card--vertical" id="editButtonRecentBook">
+                            <div class="o-card  u-flex--center  c-card--first  u-card--vertical" id="editButtonRecentBook">
 
                                 <div>
                                     <p class="c-card__text--sub" id="resultRecentBook">Recent book title</p>
                                 </div>
 
                                 <div id="editFormRecentBook" class="js-hide">
-                                    <form class="c-form__edit--sub">
+                                    <form class="c-form__edit--sub u-flex--center">
                                         <input class="c-form__input" type="text" id="newRecentBook">
                                         <input class="c-form__button c-form__button--sub" type="submit" id="submitRecentBook">
                                     </form>
@@ -155,14 +156,14 @@
                             </div>
 
                             <!-- Movie -->
-                            <div class="o-card  c-card--sub  u-card--horizontal" id="editButtonRecentMovie">
+                            <div class="o-card  u-flex--center  u-card--horizontal" id="editButtonRecentMovie">
 
                                 <div>
                                     <p class="c-card__text--sub" id="resultRecentMovie">Recent movie title</p>
                                 </div>
 
                                 <div id="editFormRecentMovie" class="js-hide">
-                                    <form class="c-form__edit--sub">
+                                    <form class="c-form__edit--sub  u-flex--center">
                                         <input class="c-form__input" type="text" id="newRecentMovie">
                                         <input class="c-form__button c-form__button--sub" type="submit" id="submitRecentMovie">
                                     </form>
@@ -173,33 +174,42 @@
                         </div>
 
             
-                        <section>
-                            <figure>
-                                <img id="resultRecentPhoto" src="img/150x110@2x.png" alt="Sample of photo">
-                                <figcaption>Recent photo taken</figcaption>
-                            </figure>
-                            <button id="editButtonRecentPhoto">Edit</button>
-                            <article id="editFormRecentPhoto" class="js-hide">
-                                <form>
-                                    <input type="text" id="newRecentPhoto">
-                                    <input type="submit" id="submitRecentPhoto">
-                                </form>
-                            </article>
-                        </section>
+                        <!-- Module Pair Photo  & Drawing -->
+                        <div class="o-module-pair">
+
+                            <!-- Photo -->
+                            <div class="o-card  c-card--first" id="editButtonRecentPhoto">
+
+                                <div>
+                                    <img class="c-card__image" id="resultRecentPhoto" src="img/150x110@2x.png" alt="Sample of photo">
+                                </div>
+
+                                <div id="editFormRecentPhoto" class="js-hide">
+                                    <form class="c-form__edit--sub  u-flex--center  c-form__edit--sub--images">
+                                        <input class="c-form__input" type="text" id="newRecentPhoto">
+                                        <input class="c-form__button c-form__button--sub" type="submit" id="submitRecentPhoto">
+                                    </form>
+                                </div>
+
+                            </div>
+                            
+                            <!-- Drawing -->
+                            <div class="o-card  u-flex--center"  id="editButtonRecentDrawing">
+
+                                <div>
+                                    <img class="c-card__image" id="resultRecentDrawing" src="img/150x110@2x.png" alt="Sample of drawing">
+                                </div>
+
+                                <div id="editFormRecentDrawing" class="js-hide">
+                                    <form class="c-form__edit--sub  u-flex--center  c-form__edit--sub--images">
+                                        <input class="c-form__input" type="text" id="newRecentDrawing">
+                                        <input class="c-form__button c-form__button--sub" type="submit" id="submitRecentDrawing">
+                                    </form>
+                                </div>
+
+                            </div>
                         
-                        <section>
-                            <figure>
-                                <img id="resultRecentDrawing" src="img/150x110@2x.png" alt="Sample of drawing">
-                                <figcaption>Recent drawing made</figcaption>
-                            </figure>
-                            <button id="editButtonRecentDrawing">Edit</button>
-                            <article id="editFormRecentDrawing" class="js-hide">
-                                <form>
-                                    <input type="text" id="newRecentDrawing">
-                                    <input type="submit" id="submitRecentDrawing">
-                                </form>
-                            </article>
-                        </section>
+                        </div>
         
                     </section>
         

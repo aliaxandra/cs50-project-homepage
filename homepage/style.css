@@ -66,8 +66,14 @@ a:hover {
   text-decoration: none;
 }
 
+/* UTILITY */
 
-
+.u-flex--center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 
 /** 
@@ -209,6 +215,14 @@ a:hover {
   cursor: pointer;
 }
 
+.c-form__edit--sub {
+  height: 220px;
+  margin: 0 15px;
+}
+
+.c-form__button.c-form__button--sub {
+  margin-top: 15px;
+}
 
 
 
@@ -236,39 +250,22 @@ a:hover {
   border-bottom: var(--main-line);
 }
 
-.c-card--sub {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .c-card__text--sub {
   margin-block-start: 0;
   margin-block-end: 0;
+
+  padding: 10px;
 
   font-size: 20px;
   line-height: 24px;
 }
 
 
-/* Form  */
-
-.c-form__edit--sub {
-  display: block;
-  margin: 0 15px;
-
-}
-
-.c-form__button.c-form__button--sub {
-  margin-top: 15px;
-}
-
-
 /* Book container */
 
 .u-card--vertical {
-  min-width: 160px;
-  min-height: 230px;
+  width: 160px;
+  min-height: 220px;
 }
 
 .c-card--first {
@@ -279,6 +276,19 @@ a:hover {
 /* Movie container */
   
 .u-card--horizontal {
-  min-width: 220px;
+  width: 220px;
   min-height: 120px;
-  }
+}
+
+
+/* Image container */
+
+.c-card__image {
+  max-width: 215px;
+  max-height: 280px;
+}
+
+.c-form__edit--sub--images {
+  width: 200px;
+  height: 200px;
+}
