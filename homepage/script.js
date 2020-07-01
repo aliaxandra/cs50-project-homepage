@@ -543,6 +543,10 @@ if (location.pathname == "/index.html")
         function setStorageConnectSashaD() {
             currentDoneConnectSashaD = localStorage.getItem('doneResultConnectSashaD');
             document.querySelector('#doneResultConnectSashaD').innerHTML = currentDoneConnectSashaD;
+            if (currentDoneConnectSashaD == todayDate) {
+                document.querySelector('#doneResultConnectSashaD').classList.add('c-card__date--today');
+                document.querySelector('#doneResultConnectSashaD').innerHTML = "today";
+            }
             if (!(currentDoneConnectSashaD == todayDate)) {
                 document.querySelector('#doneButtonConnectSashaD').onclick = populateStorageConnectSashaD;
             }
@@ -570,6 +574,10 @@ if (location.pathname == "/index.html")
         function setStorageConnectRandom() {
             currentDoneConnectRandom = localStorage.getItem('doneResultConnectRandom');
             document.querySelector('#doneResultConnectRandom').innerHTML = currentDoneConnectRandom;
+            if (currentDoneConnectRandom == todayDate) {
+                document.querySelector('#doneResultConnectRandom').classList.add('c-card__date--today');
+                document.querySelector('#doneResultConnectRandom').innerHTML = "today";
+            }
             if (!(currentDoneConnectRandom == todayDate)) {
                 document.querySelector('#doneButtonConnectRandom').onclick = populateStorageConnectRandom;
             }
@@ -597,6 +605,10 @@ if (location.pathname == "/index.html")
         function setStorageConnectFamily() {
             currentDoneConnectFamily = localStorage.getItem('doneResultConnectFamily');
             document.querySelector('#doneResultConnectFamily').innerHTML = currentDoneConnectFamily;
+            if (currentDoneConnectFamily == todayDate) {
+                document.querySelector('#doneResultConnectFamily').classList.add('c-card__date--today');
+                document.querySelector('#doneResultConnectFamily').innerHTML = "today";
+            }
             if (!(currentDoneConnectFamily == todayDate)) {
                 document.querySelector('#doneButtonConnectFamily').onclick = populateStorageConnectFamily;
             }

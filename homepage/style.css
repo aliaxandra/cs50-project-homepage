@@ -315,9 +315,17 @@ a:hover {
 
 /* to Learn */
 
+.c-module-pair--check {
+  align-items: flex-start;
+}
+
 .c-card__check {
   width: 150px;
   height: 150px;
+}
+
+.c-card__check-text {
+  width: 200px;
 }
 
 .c-card__date--sub {
