@@ -137,7 +137,7 @@
 
 
                         <!-- Module pair Book & Movie-->
-                        <div class="o-module-pair">
+                        <div class="o-module-pair  u-line--bottom">
                             
                             <!-- Book -->
                             <div class="o-card  u-flex--center  u-card--first  u-card--vertical" id="editButtonRecentBook">
@@ -175,7 +175,7 @@
 
             
                         <!-- Module pair Photo  & Drawing -->
-                        <div class="o-module-pair">
+                        <div class="o-module-pair  u-line--bottom">
 
                             <!-- Photo -->
                             <div class="o-card  u-card--first" id="editButtonRecentPhoto">
@@ -252,27 +252,34 @@
         
                     <!-- Connect -->
                     <article>
-                        <header>
-                            <h3>to Connect</h3>
+                        <header class="o-subheader">
+                            <h3 class="c-subheader">to Connect</h3>
                         </header>
+
+                        <!-- Module pair Learn -->
+                        <div class="o-module-pair">
                         
-                        <section>
-                            <figure>
-                                <img src="img/100x130@2x.png" alt="Connect person's photo">
-                                <figcaption>Chat</figcaption>
-                            </figure>
-                            <p id="doneResultConnectChat"></p>
-                            <button id="doneButtonConnectChat">Done</button>
-                        </section>
-        
-                        <section>
-                            <figure>
-                                <img src="img/100x130@2x.png" alt="Connect person's photo">
-                                <figcaption>Mezhaka</figcaption>
-                            </figure>
-                            <p id="doneResultConnectMezhaka"></p>
-                            <button id="doneButtonConnectMezhaka">Done</button>
-                        </section>
+                            <div class="u-card--first">
+                                <div id="doneButtonConnectChat">
+                                    <img class="c-card__check" src="img/chat.jpeg" alt="Connect person's photo">
+                                </div>
+                                <div>
+                                    <p class="c-card__header--sub">Chat</p>
+                                    <p class="c-card__date--sub" id="doneResultConnectChat"></p>
+                                </div>
+                            </div>
+            
+                            <div>
+                                <div id="doneButtonConnectMezhaka">
+                                    <img class="c-card__check"  src="img/mezhaka.jpeg" alt="Connect person's photo">
+                                </div>
+                                <div>
+                                    <p class="c-card__header--sub">Mezhaka</p>
+                                    <p class="c-card__date--sub" id="doneResultConnectMezhaka"></p>
+                                </div>
+                            </div>
+
+                        </div>
         
                         <section>
                             <figure>

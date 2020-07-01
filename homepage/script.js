@@ -481,6 +481,10 @@ if (location.pathname == "/index.html")
         function setStorageConnectChat() {
             currentDoneConnectChat = localStorage.getItem('doneResultConnectChat');
             document.querySelector('#doneResultConnectChat').innerHTML = currentDoneConnectChat;
+            if (currentDoneConnectChat == todayDate) {
+                document.querySelector('#doneResultConnectChat').classList.add('c-card__date--today');
+                document.querySelector('#doneResultConnectChat').innerHTML = "today";
+            }
             if (!(currentDoneConnectChat == todayDate)) {
                 document.querySelector('#doneButtonConnectChat').onclick = populateStorageConnectChat;
             }
@@ -508,6 +512,10 @@ if (location.pathname == "/index.html")
         function setStorageConnectMezhaka() {
             currentDoneConnectMezhaka = localStorage.getItem('doneResultConnectMezhaka');
             document.querySelector('#doneResultConnectMezhaka').innerHTML = currentDoneConnectMezhaka;
+            if (currentDoneConnectMezhaka == todayDate) {
+                document.querySelector('#doneResultConnectMezhaka').classList.add('c-card__date--today');
+                document.querySelector('#doneResultConnectMezhaka').innerHTML = "today";
+            }
             if (!(currentDoneConnectMezhaka == todayDate)) {
                 document.querySelector('#doneButtonConnectMezhaka').onclick = populateStorageConnectMezhaka;
             }
