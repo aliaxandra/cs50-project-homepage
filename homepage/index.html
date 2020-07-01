@@ -136,14 +136,14 @@
                         </header>
 
 
-                        <!-- Module Pair Book & Movie-->
+                        <!-- Module pair Book & Movie-->
                         <div class="o-module-pair">
                             
                             <!-- Book -->
-                            <div class="o-card  u-flex--center  c-card--first  u-card--vertical" id="editButtonRecentBook">
+                            <div class="o-card  u-flex--center  u-card--first  u-card--vertical" id="editButtonRecentBook">
 
                                 <div>
-                                    <p class="c-card__text--sub" id="resultRecentBook">Recent book title</p>
+                                    <p class="c-card__header--sub" id="resultRecentBook">Recent book title</p>
                                 </div>
 
                                 <div id="editFormRecentBook" class="js-hide">
@@ -159,7 +159,7 @@
                             <div class="o-card  u-flex--center  u-card--horizontal" id="editButtonRecentMovie">
 
                                 <div>
-                                    <p class="c-card__text--sub" id="resultRecentMovie">Recent movie title</p>
+                                    <p class="c-card__header--sub" id="resultRecentMovie">Recent movie title</p>
                                 </div>
 
                                 <div id="editFormRecentMovie" class="js-hide">
@@ -174,11 +174,11 @@
                         </div>
 
             
-                        <!-- Module Pair Photo  & Drawing -->
+                        <!-- Module pair Photo  & Drawing -->
                         <div class="o-module-pair">
 
                             <!-- Photo -->
-                            <div class="o-card  c-card--first" id="editButtonRecentPhoto">
+                            <div class="o-card  u-card--first" id="editButtonRecentPhoto">
 
                                 <div>
                                     <img class="c-card__image" id="resultRecentPhoto" src="img/150x110@2x.png" alt="Sample of photo">
@@ -219,27 +219,35 @@
                 <!-- Don't Forget Article -->
                 <article class="c-layout__item">
         
-                    <header>
-                        <h2>Don't forget</h2>
+                    <header class="o-header">
+                        <h2 class="c-header">Don't forget</h2>
                     </header>
         
                     <!-- Learn -->
                     <article>
-                        <header>
-                            <h3>to Learn</h3>
+                        <header class="o-subheader">
+                            <h3 class="c-subheader">to Learn</h3>
                         </header>
-        
-                        <section>
-                            <div>CS50</div>
-                            <p id="doneResultLearnCS50"></p>
-                            <button id="doneButtonLearnCS50">Done</button>
-                        </section>
-        
-                        <section>
-                            <div>English</div>
-                            <p id="doneResultLearnEng"></p>
-                            <button id="doneButtonLearnEng">Done</button>
-                        </section>
+                        
+                        <!-- Module pair Learn -->
+                        <div class="o-module-pair">
+
+                            <div class="o-card c-card__check  u-flex--center  u-card--first">
+                                <div id="doneButtonLearnCS50">
+                                    <p class="c-card__header--sub">CS50</p>
+                                    <p class="c-card__date--sub" id="doneResultLearnCS50"></p>
+                                </div>
+                            </div>
+            
+                            <div class="o-card c-card__check  u-flex--center">
+                                <div id="doneButtonLearnEng">
+                                    <p class="c-card__header--sub">English</p>
+                                    <p class="c-card__date--sub" id="doneResultLearnEng"></p>
+                                </div>
+                            </div>
+
+                        </div>
+
                     </article>
         
                     <!-- Connect -->

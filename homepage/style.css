@@ -59,6 +59,28 @@ body {
   text-align: center;
 }
 
+
+/* TYPOGRAPHY */
+
+.c-header {
+  margin: 50px auto 25px auto;
+
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.c-subheader {
+  margin: 50px auto 25px auto;
+  padding: 10px;
+
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+}
+
 /* LINKS */
 
 a:hover {
@@ -229,18 +251,6 @@ a:hover {
 
 /* RECENT CONTENT */
 
-.c-subheader {
-  margin: 50px auto 25px auto;
-  padding: 10px;
-
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 24px;
-}
-
 .o-module-pair {
   margin: 25px auto;
   padding-bottom: 25px;
@@ -250,7 +260,7 @@ a:hover {
   border-bottom: var(--main-line);
 }
 
-.c-card__text--sub {
+.c-card__header--sub {
   margin-block-start: 0;
   margin-block-end: 0;
 
@@ -268,7 +278,7 @@ a:hover {
   min-height: 220px;
 }
 
-.c-card--first {
+.u-card--first {
   margin-right: 20px; 
 }
 
@@ -291,4 +301,23 @@ a:hover {
 .c-form__edit--sub--images {
   width: 200px;
   height: 200px;
+}
+
+
+
+
+
+/* DON'T FORGET */
+
+/* to Learn */
+
+.c-card__check {
+  width: 150px;
+  height: 150px;
+}
+
+.c-card__date--sub {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 200;
 }
