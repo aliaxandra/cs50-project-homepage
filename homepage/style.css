@@ -321,3 +321,7 @@ a:hover {
   line-height: 24px;
   font-weight: 200;
 }
+
+.c-card__date--today {
+  font-weight: bold;
+}

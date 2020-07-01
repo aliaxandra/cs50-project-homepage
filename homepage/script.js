@@ -415,6 +415,12 @@ if (location.pathname == "/index.html")
             currentDoneLearnCS50 = localStorage.getItem('doneResultLearnCS50');
             // Set values to display to keep in sync when reload the page
             document.querySelector('#doneResultLearnCS50').innerHTML = currentDoneLearnCS50;
+            // If this is today date - change text to 'today' znd make it bold
+            if (currentDoneLearnCS50 == todayDate) {
+                document.querySelector('#doneResultLearnCS50').classList.add('c-card__date--today');
+                document.querySelector('#doneResultLearnCS50').innerHTML = "today";
+            }
+
             // Check whether done clicked in a new day
             if (!(currentDoneLearnCS50 == todayDate))
             {
@@ -444,6 +450,10 @@ if (location.pathname == "/index.html")
         function setStorageLearnEng() {
             currentDoneLearnEng = localStorage.getItem('doneResultLearnEng');
             document.querySelector('#doneResultLearnEng').innerHTML = currentDoneLearnEng;
+            if (currentDoneLearnEng == todayDate) {
+                document.querySelector('#doneResultLearnEng').classList.add('c-card__date--today');
+                document.querySelector('#doneResultLearnEng').innerHTML = "today";
+            }
             if (!(currentDoneLearnEng == todayDate)) {
                 document.querySelector('#doneButtonLearnEng').onclick = populateStorageLearnEng;
             }
