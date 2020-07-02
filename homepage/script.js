@@ -636,6 +636,10 @@ if (location.pathname == "/index.html")
         function setStorageSportExercises() {
             currentDoneSportExercises = localStorage.getItem('doneResultSportExercises');
             document.querySelector('#doneResultSportExercises').innerHTML = currentDoneSportExercises;
+            if (currentDoneSportExercises == todayDate) {
+                document.querySelector('#doneResultSportExercises').classList.add('c-card__date--today');
+                document.querySelector('#doneResultSportExercises').innerHTML = "today";
+            }
             if (!(currentDoneSportExercises == todayDate)) {
                 document.querySelector('#doneButtonSportExercises').onclick = populateStorageSportExercises;
             }
@@ -663,6 +667,10 @@ if (location.pathname == "/index.html")
         function setStorageSportRunning() {
             currentDoneSportRunning = localStorage.getItem('doneResultSportRunning');
             document.querySelector('#doneResultSportRunning').innerHTML = currentDoneSportRunning;
+            if (currentDoneSportRunning == todayDate) {
+                document.querySelector('#doneResultSportRunning').classList.add('c-card__date--today');
+                document.querySelector('#doneResultSportRunning').innerHTML = "today";
+            }
             if (!(currentDoneSportRunning == todayDate)) {
                 document.querySelector('#doneButtonSportRunning').onclick = populateStorageSportRunning;
             }
@@ -690,6 +698,10 @@ if (location.pathname == "/index.html")
         function setStorageSportBike() {
             currentDoneSportBike = localStorage.getItem('doneResultSportBike');
             document.querySelector('#doneResultSportBike').innerHTML = currentDoneSportBike;
+            if (currentDoneSportBike == todayDate) {
+                document.querySelector('#doneResultSportBike').classList.add('c-card__date--today');
+                document.querySelector('#doneResultSportBike').innerHTML = "today";
+            }
             if (!(currentDoneSportBike == todayDate)) {
                 document.querySelector('#doneButtonSportBike').onclick = populateStorageSportBike;
             }
@@ -717,6 +729,10 @@ if (location.pathname == "/index.html")
         function setStorageSportStrength() {
             currentDoneSportStrength = localStorage.getItem('doneResultSportStrength');
             document.querySelector('#doneResultSportStrength').innerHTML = currentDoneSportStrength;
+            if (currentDoneSportStrength == todayDate) {
+                document.querySelector('#doneResultSportStrength').classList.add('c-card__date--today');
+                document.querySelector('#doneResultSportStrength').innerHTML = "today";
+            }
             if (!(currentDoneSportStrength == todayDate)) {
                 document.querySelector('#doneButtonSportStrength').onclick = populateStorageSportStrength;
             }
