@@ -18,7 +18,7 @@ from: https: //csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/
 
 .js-disabled {
   pointer-events: none;
-  color: dimgray;
+  color: var(--second-color);
 }
 
 
@@ -102,6 +102,17 @@ a:hover {
   padding-bottom: 25px;
 }
 
+.u-cursor--pointer {
+  cursor: pointer;
+}
+
+.u-margin--bottom {
+  margin-bottom: 25px;
+}
+
+
+
+
 
 /** 
 --------------------------
@@ -169,6 +180,8 @@ a:hover {
   padding: 0 10px 6px 10px;
   border-bottom: var(--main-line);
   width: max-content;
+
+  color: var(--highlight);
 }
 
 
@@ -188,8 +201,6 @@ a:hover {
   background-color: black;
   border-radius: 5px;
   color: white;
-  
-  cursor: pointer;
 }
 
 
@@ -302,6 +313,10 @@ a:hover {
   max-height: 280px;
 }
 
+.c-card__image--text {
+  max-width: 215px;
+}
+
 .c-form__edit--sub--images {
   width: 200px;
   height: 200px;
@@ -324,11 +339,13 @@ a:hover {
   height: 150px;
 }
 
-.c-card__check-text {
-  width: 200px;
+.c-card__check--text {
+  width: 150px;
 }
 
 .c-card__date--sub {
+  margin-bottom: 0;
+
   font-size: 16px;
   line-height: 24px;
   font-weight: 200;
@@ -337,3 +354,4 @@ a:hover {
 .c-card__date--today {
   font-weight: bold;
 }
+

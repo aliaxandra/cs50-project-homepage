@@ -744,50 +744,7 @@ if (location.pathname == "/index.html")
 
 
 
-    // EDIT DRAWING - DPRN DIARY
-
-    function editDrawDprnDiary()
-    {
-        let editFormDrawDprnDiary = document.querySelector('#editFormDrawDprnDiary');
-        let editButtonDrawDprnDiary = document.querySelector('#editButtonDrawDprnDiary');
-    
-        editButtonDrawDprnDiary.onclick = function () {
-            editFormDrawDprnDiary.classList.remove('js-hide');
-            editButtonDrawDprnDiary.classList.add('js-hide');
-        }
-    
-        if (!localStorage.getItem('resultDrawDprnDiary')) {
-            populateDrawDprnDiary();
-        }
-        else {
-            setDrawDprnDiary();
-        }
-    
-        function populateDrawDprnDiary() {
-            if (document.querySelector('#newDrawDprnDiary').value == "") {
-                editFormDrawDprnDiary.classList.add('js-hide');
-                editButtonDrawDprnDiary.classList.remove('js-hide');
-            }
-            else {
-                localStorage.setItem('resultDrawDprnDiary', document.querySelector('#newDrawDprnDiary').value);
-                setDrawDprnDiary();
-                editFormDrawDprnDiary.classList.add('js-hide');
-                editButtonDrawDprnDiary.classList.remove('js-hide');
-            }
-        }
-    
-        function setDrawDprnDiary() {
-            let currentDrawDprnDiary = localStorage.getItem('resultDrawDprnDiary');
-            document.querySelector('#resultDrawDprnDiary').setAttribute('src', currentDrawDprnDiary);
-        }
-    
-        document.querySelector('#submitDrawDprnDiary').onclick = populateDrawDprnDiary;
-    }
-    editDrawDprnDiary();
-
-
-
-    // BUTTON DRAW - DPRN DIARY
+    // BUTTON DONE - DPRN DIARY
 
     function checkDoneDrawDprnDiary()
     {
@@ -805,6 +762,10 @@ if (location.pathname == "/index.html")
         function setStorageDrawDprnDiary() {
             currentDoneDrawDprnDiary = localStorage.getItem('doneResultDrawDprnDiary');
             document.querySelector('#doneResultDrawDprnDiary').innerHTML = currentDoneDrawDprnDiary;
+            if (currentDoneDrawDprnDiary == todayDate) {
+                document.querySelector('#doneResultDrawDprnDiary').classList.add('c-card__date--today');
+                document.querySelector('#doneResultDrawDprnDiary').innerHTML = "today";
+            }
             if (!(currentDoneDrawDprnDiary == todayDate)) {
                 document.querySelector('#doneButtonDrawDprnDiary').onclick = populateStorageDrawDprnDiary;
             }
@@ -814,50 +775,9 @@ if (location.pathname == "/index.html")
 
 
 
-    // EDIT DRAWING - LINE DRAWING
-
-    function editDrawLineDrawing()
-    {
-        let editFormDrawLineDrawing = document.querySelector('#editFormDrawLineDrawing');
-        let editButtonDrawLineDrawing = document.querySelector('#editButtonDrawLineDrawing');
-    
-        editButtonDrawLineDrawing.onclick = function () {
-            editFormDrawLineDrawing.classList.remove('js-hide');
-            editButtonDrawLineDrawing.classList.add('js-hide');
-        }
-    
-        if (!localStorage.getItem('resultDrawLineDrawing')) {
-            populateDrawLineDrawing();
-        }
-        else {
-            setDrawLineDrawing();
-        }
-    
-        function populateDrawLineDrawing() {
-            if (document.querySelector('#newDrawLineDrawing').value == "") {
-                editFormDrawLineDrawing.classList.add('js-hide');
-                editButtonDrawLineDrawing.classList.remove('js-hide');
-            }
-            else {
-                localStorage.setItem('resultDrawLineDrawing', document.querySelector('#newDrawLineDrawing').value);
-                setDrawLineDrawing();
-                editFormDrawLineDrawing.classList.add('js-hide');
-                editButtonDrawLineDrawing.classList.remove('js-hide');
-            }
-        }
-    
-        function setDrawLineDrawing() {
-            let currentDrawLineDrawing = localStorage.getItem('resultDrawLineDrawing');
-            document.querySelector('#resultDrawLineDrawing').setAttribute('src', currentDrawLineDrawing);
-        }
-    
-        document.querySelector('#submitDrawLineDrawing').onclick = populateDrawLineDrawing;
-    }
-    editDrawLineDrawing();
 
 
-
-    // BUTTON DRAW - LINE DRAWING
+    // BUTTON DONE - LINE DRAWING
 
     function checkDoneDrawLineDrawing()
     {
@@ -875,6 +795,10 @@ if (location.pathname == "/index.html")
         function setStorageDrawLineDrawing() {
             currentDoneDrawLineDrawing = localStorage.getItem('doneResultDrawLineDrawing');
             document.querySelector('#doneResultDrawLineDrawing').innerHTML = currentDoneDrawLineDrawing;
+            if (currentDoneDrawLineDrawing == todayDate) {
+                document.querySelector('#doneResultDrawLineDrawing').classList.add('c-card__date--today');
+                document.querySelector('#doneResultDrawLineDrawing').innerHTML = "today";
+            }
             if (!(currentDoneDrawLineDrawing == todayDate)) {
                 document.querySelector('#doneButtonDrawLineDrawing').onclick = populateStorageDrawLineDrawing;
             }
@@ -884,50 +808,9 @@ if (location.pathname == "/index.html")
 
 
 
-    // EDIT DRAWING - COLOR PENCIL
-
-    function editDrawColorPencil()
-    {
-        let editFormDrawColorPencil = document.querySelector('#editFormDrawColorPencil');
-        let editButtonDrawColorPencil = document.querySelector('#editButtonDrawColorPencil');
-    
-        editButtonDrawColorPencil.onclick = function () {
-            editFormDrawColorPencil.classList.remove('js-hide');
-            editButtonDrawColorPencil.classList.add('js-hide');
-        }
-    
-        if (!localStorage.getItem('resultDrawColorPencil')) {
-            populateDrawColorPencil();
-        }
-        else {
-            setDrawColorPencil();
-        }
-    
-        function populateDrawColorPencil() {
-            if (document.querySelector('#newDrawColorPencil').value == "") {
-                editFormDrawColorPencil.classList.add('js-hide');
-                editButtonDrawColorPencil.classList.remove('js-hide');
-            }
-            else {
-                localStorage.setItem('resultDrawColorPencil', document.querySelector('#newDrawColorPencil').value);
-                setDrawColorPencil();
-                editFormDrawColorPencil.classList.add('js-hide');
-                editButtonDrawColorPencil.classList.remove('js-hide');
-            }
-        }
-    
-        function setDrawColorPencil() {
-            let currentDrawColorPencil = localStorage.getItem('resultDrawColorPencil');
-            document.querySelector('#resultDrawColorPencil').setAttribute('src', currentDrawColorPencil);
-        }
-    
-        document.querySelector('#submitDrawColorPencil').onclick = populateDrawColorPencil;
-    }
-    editDrawColorPencil();
 
 
-
-    // BUTTON DRAW - COLOR PENCIL
+    // BUTTON DONE - COLOR PENCIL
 
     function checkDoneDrawColorPencil()
     {
@@ -945,6 +828,10 @@ if (location.pathname == "/index.html")
         function setStorageDrawColorPencil() {
             currentDoneDrawColorPencil = localStorage.getItem('doneResultDrawColorPencil');
             document.querySelector('#doneResultDrawColorPencil').innerHTML = currentDoneDrawColorPencil;
+            if (currentDoneDrawColorPencil == todayDate) {
+                document.querySelector('#doneResultDrawColorPencil').classList.add('c-card__date--today');
+                document.querySelector('#doneResultDrawColorPencil').innerHTML = "today";
+            }
             if (!(currentDoneDrawColorPencil == todayDate)) {
                 document.querySelector('#doneButtonDrawColorPencil').onclick = populateStorageDrawColorPencil;
             }
@@ -954,50 +841,9 @@ if (location.pathname == "/index.html")
 
 
 
-    // EDIT DRAWING - MISC
-
-    function editFormDrawMisc()
-    {
-        let editFormDrawMisc = document.querySelector('#editFormDrawMisc');
-        let editButtonDrawMisc = document.querySelector('#editButtonDrawMisc');
-    
-        editButtonDrawMisc.onclick = function () {
-            editFormDrawMisc.classList.remove('js-hide');
-            editButtonDrawMisc.classList.add('js-hide');
-        }
-    
-        if (!localStorage.getItem('resultDrawMisc')) {
-            populateDrawMisc();
-        }
-        else {
-            setDrawMisc();
-        }
-    
-        function populateDrawMisc() {
-            if (document.querySelector('#newDrawMisc').value == "") {
-                editFormDrawMisc.classList.add('js-hide');
-                editButtonDrawMisc.classList.remove('js-hide');
-            }
-            else {
-                localStorage.setItem('resultDrawMisc', document.querySelector('#newDrawMisc').value);
-                setDrawMisc();
-                editFormDrawMisc.classList.add('js-hide');
-                editButtonDrawMisc.classList.remove('js-hide');
-            }
-        }
-    
-        function setDrawMisc() {
-            let currentDrawMisc = localStorage.getItem('resultDrawMisc');
-            document.querySelector('#resultDrawMisc').setAttribute('src', currentDrawMisc);
-        }
-    
-        document.querySelector('#submitDrawMisc').onclick = populateDrawMisc;
-    }
-    editFormDrawMisc();
 
 
-
-    // BUTTON DRAW - MISC
+    // BUTTON DONE - MISC
 
     function checkDoneDrawMisc()
     {
@@ -1015,6 +861,10 @@ if (location.pathname == "/index.html")
         function setStorageDrawMisc() {
             currentDoneDrawMisc = localStorage.getItem('doneResultDrawMisc');
             document.querySelector('#doneResultDrawMisc').innerHTML = currentDoneDrawMisc;
+            if (currentDoneDrawMisc == todayDate) {
+                document.querySelector('#doneResultDrawMisc').classList.add('c-card__date--today');
+                document.querySelector('#doneResultDrawMisc').innerHTML = "today";
+            }
             if (!(currentDoneDrawMisc == todayDate)) {
                 document.querySelector('#doneButtonDrawMisc').onclick = populateStorageDrawMisc;
             }
@@ -1089,6 +939,10 @@ if (location.pathname == "/index.html")
         function setStorageCurrentProject() {
             currentDoneCurrentProject = localStorage.getItem('doneResultCurrentProject');
             document.querySelector('#doneResultCurrentProject').innerHTML = currentDoneCurrentProject;
+            if (currentDoneCurrentProject == todayDate) {
+                document.querySelector('#doneResultCurrentProject').classList.add('c-card__date--today');
+                document.querySelector('#doneResultCurrentProject').innerHTML = "today";
+            }
             if (!(currentDoneCurrentProject == todayDate)) {
                 document.querySelector('#doneButtonCurrentProject').onclick = populateStorageCurrentProject;
             }
