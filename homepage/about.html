@@ -1,100 +1,119 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
-<head>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+  <head>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
     <title>Sasha is - About</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div class="wrapper">
-        <!-- Container -->
-        <div class="u-wrapper--center">
-    
-            <!-- Header -->
-            <header class="o-header  o-layout">
-            
-                <div class="c-layout__item">
-            
-                    <!-- Navigation -->
-                    <nav class="o-nav">
-                        <ul class="c-nav__list ">
-                            <li class="c-nav__item">
-                                <a href="/index.html">Home</a>
-                            </li>
-                            <li class="c-nav__item">
-                                <a href="/about.html">About</a>
-                            </li>
-                            <li class="c-nav__item">
-                                <a href="/projects.html" class="c-nav__link">Projects</a>
-                            </li>
-                            <li class="c-nav__item">
-                                <a href="/learning.html" class="c-nav__link">Learning</a>
-                            </li>
-                            <li class="c-nav__item">
-                                <a href="/sport.html" class="c-nav__link">Sport</a>
-                            </li>
-                            <li class="c-nav__item">
-                                <a href="/drawings.html" class="c-nav__link">Drawings</a>
-                            </li>
-                            <li class="c-nav__item">
-                                <a href="/health.html" class="c-nav__link">Health</a>
-                            </li>
-                        </ul>
-                    </nav>
-            
-                    <!-- Main Title  -->
-                    <section>
-            
-                        <h1>About Sasha</h1>
-            
-                        <figure>
-                            <img src="img/zebaka-small.jpg" alt="Logo Zebaka" class="c-header__logo">
-                        </figure>
-            
-                    </section>
-            
-                    <!-- Time -->
-                    <section>
-                        <div id="today"></div>
-                    </section>
-                </div>
-            
-            
-            </header>
-        
-            <!-- Main -->
-            <main class="o-layout">
-                <div class="c-layout__item">
-                    <div class="o-text">
-                        <div class="u-text__left">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae vel est 
-                                dignissimos, ipsam nesciunt, velit maxime aliquid dolorum voluptatibus fuga 
-                                rem commodi sapiente blanditiis nemo asperiores. Voluptatum non minima suscipit?
-                            </p>                        
-                        </div>
-                    </div>
-                </div>
-            </main>
-        
-            <!-- Footer -->
-            <footer class="c-layout__item">
-                <button onclick="scrollToTop()" id="buttonUp" title="Go to top"
-                    type="button" class="btn btn-outline-dark">Up</button>
-            </footer>
-    
-        </div>
+      <!-- Container -->
+      <div class="u-wrapper--center">
+        <!-- Header -->
+        <header class="o-header o-layout">
+          <div class="c-layout__item">
+            <!-- Navigation -->
+            <nav class="o-nav">
+              <ul class="c-nav__list">
+                <li class="c-nav__item">
+                  <a href="/index.html" class="c-nav__link">Home</a>
+                </li>
+                <li class="c-nav__item">
+                  <a href="/about.html" class="c-nav__link">About</a>
+                </li>
+                <li class="c-nav__item">
+                  <a href="/projects.html" class="c-nav__link">Projects</a>
+                </li>
+                <li class="c-nav__item">
+                  <a href="/learning.html" class="c-nav__link">Learning</a>
+                </li>
+                <li class="c-nav__item">
+                  <a href="/sport.html" class="c-nav__link">Sport</a>
+                </li>
+                <li class="c-nav__item">
+                  <a href="/drawings.html" class="c-nav__link">Drawings</a>
+                </li>
+                <li class="c-nav__item">
+                  <a href="/health.html" class="c-nav__link">Health</a>
+                </li>
+              </ul>
+            </nav>
 
+            <!-- Main Title and Logo  -->
+            <section class="o-logo-title">
+              <div class="c-logo-title__overlap">
+                <div class="o-logo-main">
+                  <img
+                    src="img/zebaka-small.jpg"
+                    alt="Logo Zebaka"
+                    class="c-logo-main__header"
+                  />
+                </div>
+                <div class="o-title-main">
+                  <h1 class="c-title-main__header">About Sasha</h1>
+                </div>
+              </div>
+            </section>
+          </div>
+        </header>
+
+        <!-- Main -->
+        <main class="o-layout">
+          <div class="c-layout__item">
+
+            <div class="o-imposter">
+              <img class="c-imposter" src="img/about.jpg" alt="Sasha's workplace">
+            </div>
+
+            <div class="o-text">
+              <div class="c-text  u-text__left">
+                <p>
+                  Sasha, sometimes you get stuck in one emotion or in one
+                  particular issue. Then you become overwhelmed, your life
+                  fragmented and you no longer see the whole picture.
+                </p>
+
+                <p>
+                  This site’s purpose is to help you to see, that your life 
+                  contains multitude of parts. Parts that you can be
+                  thankful that you have. Parts you can be proud that you’ve
+                  made or deserved. Parts that are caring about you. There are
+                  parts where you can ask for help, even if you not used to. And
+                  parts that are asking you to care about them. Parts that are
+                  to be maintained. And some parts that are waiting to be
+                  changed.
+                </p>
+
+                <p>You can come and see them when confused.</p>
+
+                <p>If you continue to keep this place alive.</p>
+              </div>
+            </div>
+
+          </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="c-layout__item">
+          <button
+            onclick="scrollToTop()"
+            id="buttonUp"
+            title="Go to top"
+            type="button"
+            class="btn btn-outline-dark"
+          >
+            Up
+          </button>
+        </footer>
+      </div>
     </div>
-
 
     <!-- Script -->
     <script src="script.js"></script>
-    
-</body>
-
+  </body>
 </html>
