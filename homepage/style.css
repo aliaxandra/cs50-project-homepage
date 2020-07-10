@@ -57,17 +57,28 @@ body {
 
 .c-layout__item {
   text-align: center;
-  margin-bottom: 25px;
+}
+
+.c-layout__item:last-child {
+  margin-bottom: 60px;
 }
 
 
 /* TYPOGRAPHY */
+
+.o-header {
+  text-align: center;
+}
 
 .c-header {
   margin: 50px auto 25px auto;
 
   font-weight: bold;
   font-size: 36px;
+}
+
+.o-subheader {
+  text-align: center;
 }
 
 .c-subheader {
@@ -89,7 +100,20 @@ a:hover {
   text-decoration: none;
 }
 
-/* UTILITY */
+a:active {
+    color: var(--second-color);
+    text-decoration: none;
+}
+
+
+
+
+
+/** 
+--------------------------
+          UTILITY
+--------------------------
+*/
 
 .u-flex--center {
   display: flex;
@@ -111,8 +135,12 @@ a:hover {
   margin-bottom: 25px;
 }
 
-.u-text__left {
+.u-text--left {
   text-align: left;
+}
+
+.u-text--comment {
+  color: lightgrey;
 }
 
 
@@ -123,7 +151,6 @@ a:hover {
           HEADER
 --------------------------
 */
-
 
 /* NAVIGATION */
 
@@ -198,7 +225,6 @@ a:hover {
 --------------------------
 */
 
-
 /* CARD */
 
 .o-card {
@@ -265,6 +291,7 @@ a:hover {
 .c-form__button.c-form__button--sub {
   margin-top: 15px;
 }
+
 
 
 
@@ -363,19 +390,31 @@ a:hover {
 
 
 
-/** 
---------------------------
-           ABOUT
---------------------------
-*/
+/* ABOUT */
 
-/* Imposter */
+/* image */
 
-.c-imposter {
+.c-image {
   width: 100%;
   max-width: 640px;
+  max-height: 640px;
 
   margin-bottom: 25px;
+
+  object-fit: scale-down;
+}
+
+.u-image--has-caption {
+  margin-bottom: 10px;
+}
+
+.c-image-caption {
+  margin-bottom: 25px;
+
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--second-color);
+  text-align: center;
 }
 
 /* Text */
