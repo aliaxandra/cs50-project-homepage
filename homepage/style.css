@@ -36,6 +36,7 @@ from: https: //csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/
 
 body {
   --highlight: #0275D8;
+  --first-color: #212529;
   --second-color: dimgray;
   --main-line: 1px solid;
 }
@@ -85,8 +86,8 @@ body {
   margin: 50px auto 25px auto;
   padding: 10px;
 
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 1px solid var(--first-color);
+  border-bottom: 1px solid var(--first-color);
 
   font-weight: bold;
   font-size: 20px;
@@ -157,6 +158,7 @@ a:active {
 }
 
 .o-icon-box {
+  color: var(--first-color)
 }
 
 .c-icon-box {
@@ -165,7 +167,7 @@ a:active {
 }
 
 .o-content {
-  color: black;
+  color: var(--first-color);
   font-size: 20px;
   line-height: 24px;
   font-weight: 500;
@@ -174,6 +176,7 @@ a:active {
 .c-content__icon {
   margin: 10px;
 }
+
 
 
 
@@ -297,7 +300,7 @@ a:active {
 /* CARD */
 
 .o-card {
-  background-color: black;
+  background-color: var(--first-color);
   border-radius: 5px;
   color: white;
 }
