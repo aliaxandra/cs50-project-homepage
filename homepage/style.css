@@ -37,7 +37,7 @@ from: https: //csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/
 body {
   --highlight: #0275D8;
   --first-color: #212529;
-  --second-color: dimgray;
+  --second-color: grey;
   --light-color: #e8e8e8;
   --main-line: 1px solid;
 }
@@ -73,7 +73,7 @@ body {
 }
 
 .c-header {
-  margin: 50px auto 25px auto;
+  margin: 75px auto 25px auto;
 
   font-weight: bold;
   font-size: 36px;
@@ -81,16 +81,17 @@ body {
 
 .o-subheader {
   text-align: center;
+  color: var(--first-color);
 }
 
 .c-subheader {
-  margin: 50px auto 25px auto;
+  margin: 70px auto 25px auto;
   padding: 10px;
-
+  
   border-top: 1px solid var(--first-color);
   border-bottom: 1px solid var(--first-color);
-
-  font-weight: bold;
+  
+  font-weight: 500;
   font-size: 20px;
   line-height: 24px;
 }
@@ -151,6 +152,7 @@ a:active {
 .o-box {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .c-box {
@@ -165,6 +167,11 @@ a:active {
 .c-icon-box {
   width: 3rem;
   max-height: 3rem;
+}
+
+.c-icon-box--big {
+  width: 180px;
+  max-height: 120px;
 }
 
 .o-content {
@@ -218,6 +225,10 @@ a:active {
 
 .u-borders {
   border: 1px solid red;
+}
+
+.u-small-margin-top {
+  margin-top: 10px;
 }
 
 
@@ -468,6 +479,7 @@ a:active {
 
 
 /* TIMELINE */
+/* from https://www.w3schools.com/howto/howto_css_timeline.asp */
 
 .o-timeline {
 
@@ -574,4 +586,14 @@ a:active {
   color: var(--first-color);
   margin: 4px 22% 4px 22%;
   border-radius: 5px;
+}
+
+/* HACKS */
+
+.-duolingo {
+  width: 150px;
+  margin-left: 13px;
+  margin-bottom: 0px;
+
+  filter: grayscale(50%);
 }
