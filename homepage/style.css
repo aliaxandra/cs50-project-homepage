@@ -196,7 +196,7 @@ a:active {
 }
 
 .u-line--bottom {
-  border-bottom: var(--main-line);
+  border-bottom: 2px solid var(--light-color);
   padding-bottom: 25px;
 }
 
@@ -261,7 +261,7 @@ a:active {
 
 .c-logo-main__header {
   height: 96px;
-  margin-top: 25px;
+  /* margin-top: 25px; */
 }
 
 
@@ -284,12 +284,12 @@ a:active {
 /* TODAY DATE */
 
 .c-date__today {
-  margin: 0 auto 50px auto;
+  margin: 0 auto 80px auto;
   padding: 0 10px 6px 10px;
   border-bottom: var(--main-line);
   width: max-content;
 
-  color: var(--highlight);
+  color: var(--second-color);
 }
 
 
