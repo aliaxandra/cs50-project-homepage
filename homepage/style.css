@@ -38,6 +38,7 @@ body {
   --highlight: #0275D8;
   --first-color: #212529;
   --second-color: dimgray;
+  --light-color: #e8e8e8;
   --main-line: 1px solid;
 }
 
@@ -213,6 +214,10 @@ a:active {
 
 .u-text--comment {
   color: lightgrey;
+}
+
+.u-borders {
+  border: 1px solid red;
 }
 
 
@@ -462,3 +467,111 @@ a:active {
 
 
 
+/* TIMELINE */
+
+.o-timeline {
+
+}
+
+/* The actual timeline (the vertical ruler) */
+.c-timeline {
+  position: relative;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+/* The actual timeline (the vertical ruler) */
+.c-timeline::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  background-color: var(--light-color);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left:-1px;
+}
+
+/* Container around content */
+.c-timeline__container {
+  position: relative;
+  padding: 5px 20px;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.c-timeline__container::after {
+  content:  '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  right: -5px;
+  top: 17px;
+  background-color: var(--light-color);
+  border: 2px solid var(--second-color);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Placing the container to the left */
+.c-timeline__container--left {
+  left: 0;
+}
+
+/* Placing the container to the right */
+.c-timeline__container--right {
+  left: 50%;
+}
+
+/* Arrows to the right container (pointing left) */
+.c-timeline__container--right::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: 14px;
+  height: 0;
+  width: 0;
+  z-index: 1;
+  border: medium solid var(--first-color);
+  border-width: 7px 7px 7px 0;
+  border-color: transparent var(--first-color) transparent transparent;
+}
+
+/* Arrows to the right container (pointing left) */
+.c-timeline__container--left::before {
+  content: '';
+  position: absolute;
+  right: 14px;
+  top: 16px;
+  height: 0;
+  width: 0;
+  z-index: 1;
+  border: medium solid var(--first-color);
+  border-width: 7px 0 7px 7px;
+  border-color: transparent transparent transparent var(--first-color);
+}
+
+/* Fix the circle for containers on the right side */
+.c-timeline__container--right::after {
+  left: -5px;
+}
+
+/* The actual content */
+.c-timeline__content {
+  padding: 7px 0;
+  position: relative;
+  border-radius: 5px;
+  background-color: var(--first-color);
+}
+
+.c-timeline__text {
+  margin-block-end: 0;
+  color: var(--light-color);
+}
+
+.c-timeline__text--note {
+  background-color: yellow;
+  color: var(--first-color);
+  margin: 4px 22% 4px 22%;
+  border-radius: 5px;
+}
