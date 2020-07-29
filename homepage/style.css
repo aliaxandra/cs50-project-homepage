@@ -42,6 +42,7 @@ body {
   --main-line: 1px solid;
 }
 
+
 .wrapper-grid {
   display: grid;
   grid-template-columns: 25px 1fr 25px;
@@ -57,12 +58,45 @@ body {
   grid-column: 2 / 3;
 }
 
+
 .c-layout__item {
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .c-layout__item:last-child {
   margin-bottom: 60px;
+}
+
+.o-data {
+  color: var(--second-color);
+  font-weight: 200;
+  line-height: 1.2;
+}
+
+.c-data {
+  width: 400px;
+  margin: 0 auto;
+  padding: 10px 0;
+  border: 1px solid var(--second-color);
+}
+
+.c-data__row {
+  display: flex;
+  justify-content: center;
+}
+
+.c-data__item {
+  width: 65%;
+  padding: 7px;
+  text-align: left;
+}
+
+.c-data__title {
+  width: 35%;
+  padding: 7px 10px 7px 7px;
+  text-align: right;
+  font-weight: 400;
 }
 
 
@@ -140,7 +174,7 @@ a:active {
 .c-image-caption {
   margin-bottom: 25px;
 
-  font-size: 20px;
+  font-size: 16px;
   line-height: 24px;
   color: var(--second-color);
   text-align: center;

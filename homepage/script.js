@@ -34,46 +34,6 @@ function scrollToTop()
 
 
 
-// SPORT WORKOUT
-
-// WORKOUT 1
-
-// EXPAND 
-function workout1Expand()
-{
-    document.querySelector('#workout1').classList.remove('js-hide');
-    document.querySelector('#buttonWorkout1').classList.add('js-hide');
-}
-
-// HIDE
-
-function workout1Hide()
-{
-    document.querySelector('#workout1').classList.add('js-hide');
-    document.querySelector('#buttonWorkout1').classList.remove('js-hide');
-}
-
-
-
-// WORKOUT 1
-
-// EXPAND 
-function workout2Expand() {
-    document.querySelector('#workout2').classList.remove('js-hide');
-    document.querySelector('#buttonWorkout2').classList.add('js-hide');
-}
-
-// HIDE
-
-function workout2Hide() {
-    document.querySelector('#workout2').classList.add('js-hide');
-    document.querySelector('#buttonWorkout2').classList.remove('js-hide');
-}
-
-
-
-
-
 // DASHBOARD ONLY
 
 if (location.pathname == "/index.html")
