@@ -168,11 +168,11 @@ a:active {
 }
 
 .u-image--has-caption {
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 }
 
 .c-image-caption {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 
   font-size: 16px;
   line-height: 24px;
@@ -276,11 +276,17 @@ a:active {
 
 /* NAVIGATION */
 
+.o-nav {
+  display: flex;
+  justify-content: center;
+}
+
 .c-nav__list {
   display: flex;
   justify-content: space-between;
-  text-align: left;
+  width: 360px;
 
+  text-align: left;
   list-style: none;
   font-family: Helvetica Neue;
   font-style: normal;
