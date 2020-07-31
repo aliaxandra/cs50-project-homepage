@@ -117,6 +117,8 @@ if (location.pathname == "/index.html")
 
 
 
+
+
     // CURRENT GOAL FORM
 
     function editCurrentGoal()
@@ -206,7 +208,6 @@ if (location.pathname == "/index.html")
     editRecentBook();
 
 
-
     // RECENT MOVIE TITLE
 
     function editRecentMovie()
@@ -250,7 +251,6 @@ if (location.pathname == "/index.html")
     editRecentMovie();
 
 
-
     // RECENT PHOTO
 
     function editRecentPhoto()
@@ -291,7 +291,6 @@ if (location.pathname == "/index.html")
         document.querySelector('#submitRecentPhoto').onclick = populateRecentPhoto;
     }
     editRecentPhoto();
-
 
 
     // RECENT DRAWING
@@ -391,7 +390,6 @@ if (location.pathname == "/index.html")
     checkDoneLearnCS50();
 
 
-
     // BUTTON LEARN - ENG
 
     function checkDoneLearnEn()
@@ -420,6 +418,8 @@ if (location.pathname == "/index.html")
         }
     }
     checkDoneLearnEn();
+
+
 
 
 
@@ -453,7 +453,6 @@ if (location.pathname == "/index.html")
     checkDoneConnectChat();
 
 
-
     // BUTTON CONNECT - MEZHAKA
 
     function checkDoneConnectMezhaka()
@@ -482,7 +481,6 @@ if (location.pathname == "/index.html")
         }
     }
     checkDoneConnectMezhaka();
-
 
 
     // BUTTON CONNECT - SASHA D
@@ -515,7 +513,6 @@ if (location.pathname == "/index.html")
     checkDoneConnectSashaD();
 
 
-
     // BUTTON CONNECT - RANDOM
 
     function checkDoneConnectRandom()
@@ -544,7 +541,6 @@ if (location.pathname == "/index.html")
         }
     }
     checkDoneConnectRandom();
-
 
 
     // BUTTON CONNECT - FAMILY
@@ -578,6 +574,8 @@ if (location.pathname == "/index.html")
 
 
 
+
+
     // BUTTON SPORT - EXERCISES
 
     function checkDoneSportExercises()
@@ -606,7 +604,6 @@ if (location.pathname == "/index.html")
         }
     }
     checkDoneSportExercises();
-
 
 
     // BUTTON SPORT - RUNNING
@@ -639,7 +636,6 @@ if (location.pathname == "/index.html")
     checkDoneSportRunning();
 
 
-
     // BUTTON SPORT - BIKE
 
     function checkDoneSportBike()
@@ -668,7 +664,6 @@ if (location.pathname == "/index.html")
         }
     }
     checkDoneSportBike();
-
 
 
     // BUTTON SPORT - STRENGTH
@@ -734,9 +729,6 @@ if (location.pathname == "/index.html")
     checkDoneDrawDprnDiary();
 
 
-
-
-
     // BUTTON DONE - LINE DRAWING
 
     function checkDoneDrawLineDrawing()
@@ -767,9 +759,6 @@ if (location.pathname == "/index.html")
     checkDoneDrawLineDrawing();
 
 
-
-
-
     // BUTTON DONE - COLOR PENCIL
 
     function checkDoneDrawColorPencil()
@@ -798,9 +787,6 @@ if (location.pathname == "/index.html")
         }
     }
     checkDoneDrawColorPencil();
-
-
-
 
 
     // BUTTON DONE - MISC
@@ -878,7 +864,6 @@ if (location.pathname == "/index.html")
         document.querySelector('#submitCurrentProject').onclick = populateCurrentProject;
     }
     editFormCurrentProject();
-
 
 
     // BUTTON - CURRENT PROJECT

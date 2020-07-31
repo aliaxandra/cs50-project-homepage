@@ -521,10 +521,6 @@ a:active {
 /* TIMELINE */
 /* from https://www.w3schools.com/howto/howto_css_timeline.asp */
 
-.o-timeline {
-
-}
-
 /* The actual timeline (the vertical ruler) */
 .c-timeline {
   position: relative;
@@ -627,6 +623,10 @@ a:active {
   margin: 4px 22% 4px 22%;
   border-radius: 5px;
 }
+
+
+
+
 
 /* HACKS */
 
