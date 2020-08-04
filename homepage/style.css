@@ -406,7 +406,6 @@ a:active {
 }
 
 .c-form__button {
-  margin-left: 10px;
   border: 0;
   
   color: white;
@@ -508,6 +507,7 @@ a:active {
 
 .c-card__date--sub {
   margin-bottom: 0;
+  height: 24px;
 
   font-size: 16px;
   line-height: 24px;
