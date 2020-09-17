@@ -251,94 +251,56 @@ if (location.pathname == "/index.html")
     editRecentMovie();
 
 
-    // RECENT PHOTO
-
-    function editRecentPhoto()
-    {
-        let editFormRecentPhoto = document.querySelector('#editFormRecentPhoto');
-        let editButtonRecentPhoto = document.querySelector('#editButtonRecentPhoto');
-    
-        editButtonRecentPhoto.onclick = function () {
-            editFormRecentPhoto.classList.remove('js-hide');
-            resultRecentPhoto.classList.add('js-hide');
-        }
-    
-        if (!localStorage.getItem('resultRecentPhoto')) {
-            populateRecentPhoto();
-        }
-        else {
-            setRecentPhoto();
-        }
-    
-        function populateRecentPhoto() {
-            if (document.querySelector('#newRecentPhoto').value == "") {
-                editFormRecentPhoto.classList.add('js-hide');
-                editButtonRecentPhoto.classList.remove('js-hide');
-            }
-            else {
-                localStorage.setItem('resultRecentPhoto', document.querySelector('#newRecentPhoto').value);
-                setRecentPhoto();
-                editFormRecentPhoto.classList.add('js-hide');
-                editButtonRecentPhoto.classList.remove('js-hide');
-            }
-        }
-    
-        function setRecentPhoto() {
-            let currentRecentPhoto = localStorage.getItem('resultRecentPhoto');
-            document.querySelector('#resultRecentPhoto').setAttribute('src', currentRecentPhoto);
-        }
-    
-        document.querySelector('#submitRecentPhoto').onclick = populateRecentPhoto;
-    }
-    editRecentPhoto();
-
-
-    // RECENT DRAWING
-
-    function editRecentDrawing()
-    {
-        let editFormRecentDrawing = document.querySelector('#editFormRecentDrawing');
-        let editButtonRecentDrawing = document.querySelector('#editButtonRecentDrawing');
-    
-        editButtonRecentDrawing.onclick = function () {
-            editFormRecentDrawing.classList.remove('js-hide');
-            resultRecentDrawing.classList.add('js-hide');
-        }
-    
-        if (!localStorage.getItem('resultRecentDrawing')) {
-            populateRecentDrawing();
-        }
-        else {
-            setRecentDrawing();
-        }
-    
-        function populateRecentDrawing() {
-            if (document.querySelector('#newRecentDrawing').value == "") {
-                editFormRecentDrawing.classList.add('js-hide');
-                editButtonRecentDrawing.classList.remove('js-hide');
-            }
-            else {
-                localStorage.setItem('resultRecentDrawing', document.querySelector('#newRecentDrawing').value);
-                setRecentDrawing();
-                editFormRecentDrawing.classList.add('js-hide');
-                editButtonRecentDrawing.classList.remove('js-hide');
-            }
-        }
-    
-        function setRecentDrawing() {
-            let currentRecentDrawing = localStorage.getItem('resultRecentDrawing');
-            document.querySelector('#resultRecentDrawing').setAttribute('src', currentRecentDrawing);
-        }
-
-        document.querySelector('#submitRecentDrawing').onclick = populateRecentDrawing;
-    }
-    editRecentDrawing();
-
-
 
 
 
     // DONE BUTTONS
+
+    // BUTTON LEARN - CS50
+
+    function checkDoneLearnRSSchool() {
+        // Get values from local storage if it's exist
+        let currentDoneLearnRSSchool = localStorage.getItem('doneResultLearnRSSchool');
+
+        // Check whether the storage object has already been populted
+        if (!localStorage.getItem('doneResultLearnRSSchool')) {
+            // If not - populate with new values when click done button
+            document.querySelector('#doneButtonLearnRSSchool').onclick = populateStorageLearnRSSchool;
+        }
+        // If storage already been populated
+        else {
+            // Set done date
+            setStorageLearnRSSchool();
+        }
+
+        // Populate Storage
+        function populateStorageLearnRSSchool() {
+            // Set key/value
+            localStorage.setItem('doneResultLearnRSSchool', todayDate);
+            // Update  done date
+            setStorageLearnRSSchool();
+        }
+
+        // Set values
+        function setStorageLearnRSSchool() {
+            // Get values from local storage
+            currentDoneLearnRSSchool = localStorage.getItem('doneResultLearnRSSchool');
+            // Set values to display to keep in sync when reload the page
+            document.querySelector('#doneResultLearnRSSchool').innerHTML = currentDoneLearnRSSchool;
+            // If this is today date - change text to 'today' znd make it bold
+            if (currentDoneLearnRSSchool == todayDate) {
+                document.querySelector('#doneResultLearnRSSchool').classList.add('c-card__date--today');
+                document.querySelector('#doneResultLearnRSSchool').innerHTML = "today";
+            }
+
+            // Check whether done clicked in a new day
+            if (!(currentDoneLearnRSSchool == todayDate)) {
+                document.querySelector('#doneButtonLearnRSSchool').onclick = populateStorageLearnRSSchool;
+            }
+        }
+    }
+    checkDoneLearnRSSchool();
+
 
     // BUTTON LEARN - CS50
 
