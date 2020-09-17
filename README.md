@@ -4,7 +4,7 @@
 [CS50 Harvard](https://cs50.harvard.edu/x/2020/) > [Web Track](https://cs50.harvard.edu/x/2020/tracks/web/) > [Homepage Task Page](https://cs50.harvard.edu/x/2020/tracks/web/homepage/)
 
 
-**[Sasha Is](https://sashas-dashboard.netlify.app/index.html)** > [About](https://sasha-is.netlify.app/about.html)
+**[Sasha Is](https://sasha-is.netlify.app/index.html)** > [About](https://sasha-is.netlify.app/about.html)
  
 
 This is a Homepage assignment for CS50 Harvarg programm. I was assigned to do a few pages with CSS and JS and some Bootstrap features. I took it like an apportunity to make something helpful for me, part of the selfcare.
